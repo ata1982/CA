@@ -1,0 +1,28 @@
+tasks:
+  - id: "hello_world_script"
+    name: "Hello World Python Script"
+    description: "Hello Worldを出力するPythonスクリプトを作成"
+    type: "python_script"
+    parameters:
+      filename: "hello_world.py"
+  
+  - id: "flask_todo_app"
+    name: "Flask TODO List App"
+    description: "簡単なTODOリストアプリをFlaskで実装"
+    type: "web_app"
+    parameters:
+      framework: "Flask"
+      features:
+        - "タスクの追加"
+        - "タスクの完了マーク"
+        - "タスクの削除"
+        - "タスク一覧表示"
+  
+  - id: "csv_analysis"
+    name: "CSV Data Analysis"
+    description: "与えられたCSVファイルを分析してサマリーを作成"
+    type: "data_analysis"
+    parameters:
+      input_file: "sample_data.csv"
+      analysis_type: "summary_statistics"
+      output_format: "report"

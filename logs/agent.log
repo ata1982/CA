@@ -1,0 +1,13 @@
+2025-06-05 07:04:59,713 - src.config - INFO - Loaded 3 tasks from tasks/example_tasks.yaml
+2025-06-05 07:04:59,716 - src.config - INFO - Starting task: Hello World Python Script (ID: hello_world_script)
+2025-06-05 07:04:59,718 - src.config - INFO - Executing Claude Code: claude --print Create a Python script that Hello Worldを出力するPythonスクリプトを作成. Save it as hello_world.py.
+2025-06-05 07:04:59,718 - src.config - INFO - Working directory: /Users/YUKI/Desktop/claude-agent-system/workspace/task_hello_world_script
+2025-06-05 07:05:17,093 - src.config - INFO - Task hello_world_script completed successfully
+2025-06-05 07:05:17,096 - src.config - INFO - Starting task: Flask TODO List App (ID: flask_todo_app)
+2025-06-05 07:05:17,100 - src.config - INFO - Executing Claude Code: claude --print Create a Flask web application: 簡単なTODOリストアプリをFlaskで実装. Include all necessary files and dependencies.
+2025-06-05 07:05:17,100 - src.config - INFO - Working directory: /Users/YUKI/Desktop/claude-agent-system/workspace/task_flask_todo_app
+2025-06-05 07:06:13,901 - src.config - INFO - Task flask_todo_app completed successfully
+2025-06-05 07:06:13,902 - src.config - INFO - Starting task: CSV Data Analysis (ID: csv_analysis)
+2025-06-05 07:06:13,905 - src.config - INFO - Executing Claude Code: claude --print Analyze the data file sample_data.csv and 与えられたCSVファイルを分析してサマリーを作成. Create a summary report.
+2025-06-05 07:06:13,905 - src.config - INFO - Working directory: /Users/YUKI/Desktop/claude-agent-system/workspace/task_csv_analysis
+2025-06-05 07:06:58,460 - src.config - INFO - Task csv_analysis completed successfully
