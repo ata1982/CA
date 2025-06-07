@@ -1,0 +1,229 @@
+{
+  "fallback_enhanced": [
+    {
+      "id": "1749213149_59d043b9",
+      "name": "統計学専門家",
+      "text": "教育心理学の研究によると、{learning_theory}に基づく{educational_approach}は{learning_effectiveness}という効果を示している。ブルームの教育目標分類学では{bloom_taxonomy}に相当する。",
+      "timestamp": {
+        "iso": "2025-06-06T10:35:29.137045+00:00",
+        "display": "2025/06/06 10:35:29",
+        "jst_display": "2025/06/06 19:35:29"
+      },
+      "number": 1,
+      "reply_to": null,
+      "likes": 28,
+      "dislikes": 2,
+      "quality": "expert"
+    },
+    {
+      "id": "1749213149_797f1cac",
+      "name": "組織行動学専門家",
+      "text": "統計学的手法による{statistical_method}では、信頼区間95%で{confidence_interval}という結果が得られる。p値は{p_value}で統計的有意性が確認される。",
+      "timestamp": {
+        "iso": "2025-06-06T10:37:29.137080+00:00",
+        "display": "2025/06/06 10:37:29",
+        "jst_display": "2025/06/06 19:37:29"
+      },
+      "number": 2,
+      "reply_to": null,
+      "likes": 20,
+      "dislikes": 0,
+      "quality": "expert"
+    },
+    {
+      "id": "1749213149_6f7a4de7",
+      "name": "環境科学博士（大学教授）",
+      "text": "統計学的手法による{statistical_method}では、信頼区間95%で{confidence_interval}という結果が得られる。p値は{p_value}で統計的有意性が確認される。",
+      "timestamp": {
+        "iso": "2025-06-06T10:49:29.137100+00:00",
+        "display": "2025/06/06 10:49:29",
+        "jst_display": "2025/06/06 19:49:29"
+      },
+      "number": 3,
+      "reply_to": null,
+      "likes": 16,
+      "dislikes": 1,
+      "quality": "expert"
+    },
+    {
+      "id": "1749213149_adde7436",
+      "name": "環境科学博士（研究所勤務）",
+      "text": "社会学の理論から分析すると、今回の{social_phenomenon}はブルデューの{bourdieu_concept}理論で説明できる。特にハビトゥスと{field_analysis}の相互作用が重要だ。",
+      "timestamp": {
+        "iso": "2025-06-06T12:13:29.137115+00:00",
+        "display": "2025/06/06 12:13:29",
+        "jst_display": "2025/06/06 21:13:29"
+      },
+      "number": 4,
+      "reply_to": null,
+      "likes": 38,
+      "dislikes": 2,
+      "quality": "expert"
+    },
+    {
+      "id": "1749213149_b6ca600e",
+      "name": "統計学専門家",
+      "text": "統計学的手法による{statistical_method}では、信頼区間95%で{confidence_interval}という結果が得られる。p値は{p_value}で統計的有意性が確認される。",
+      "timestamp": {
+        "iso": "2025-06-06T11:15:29.137128+00:00",
+        "display": "2025/06/06 11:15:29",
+        "jst_display": "2025/06/06 20:15:29"
+      },
+      "number": 5,
+      "reply_to": null,
+      "likes": 43,
+      "dislikes": 0,
+      "quality": "expert"
+    },
+    {
+      "id": "1749213149_c2549983",
+      "name": "統計学専門家（研究所勤務）",
+      "text": "統計学的手法による{statistical_method}では、信頼区間95%で{confidence_interval}という結果が得られる。p値は{p_value}で統計的有意性が確認される。",
+      "timestamp": {
+        "iso": "2025-06-06T11:41:29.137141+00:00",
+        "display": "2025/06/06 11:41:29",
+        "jst_display": "2025/06/06 20:41:29"
+      },
+      "number": 6,
+      "reply_to": null,
+      "likes": 23,
+      "dislikes": 2,
+      "quality": "expert"
+    },
+    {
+      "id": "1749213149_21c133a1",
+      "name": "おばちゃん",
+      "text": "専門家の{expert_opinion}という意見は参考になる。",
+      "timestamp": {
+        "iso": "2025-06-06T10:46:29.137153+00:00",
+        "display": "2025/06/06 10:46:29",
+        "jst_display": "2025/06/06 19:46:29"
+      },
+      "number": 7,
+      "reply_to": null,
+      "likes": 12,
+      "dislikes": 1,
+      "quality": "constructive"
+    },
+    {
+      "id": "1749213149_c194f4f5",
+      "name": "統計学専門家（研究所勤務）",
+      "text": "組織行動学の観点では、{organizational_behavior}はハーズバーグの{motivation_theory}で説明可能だ。特に{hygiene_factors}と動機要因の区別が重要である。",
+      "timestamp": {
+        "iso": "2025-06-06T11:46:29.137166+00:00",
+        "display": "2025/06/06 11:46:29",
+        "jst_display": "2025/06/06 20:46:29"
+      },
+      "number": 8,
+      "reply_to": null,
+      "likes": 18,
+      "dislikes": 2,
+      "quality": "expert"
+    },
+    {
+      "id": "1749213149_c5337d1f",
+      "name": "主婦",
+      "text": "過去の事例を見ると{historical_perspective}だった。今回は{current_difference}。",
+      "timestamp": {
+        "iso": "2025-06-06T11:50:29.137179+00:00",
+        "display": "2025/06/06 11:50:29",
+        "jst_display": "2025/06/06 20:50:29"
+      },
+      "number": 9,
+      "reply_to": null,
+      "likes": 22,
+      "dislikes": 3,
+      "quality": "constructive"
+    },
+    {
+      "id": "1749213149_3d692fd6",
+      "name": "教育心理学者（博士）",
+      "text": "社会学の理論から分析すると、今回の{social_phenomenon}はブルデューの{bourdieu_concept}理論で説明できる。特にハビトゥスと{field_analysis}の相互作用が重要だ。",
+      "timestamp": {
+        "iso": "2025-06-06T11:10:29.137192+00:00",
+        "display": "2025/06/06 11:10:29",
+        "jst_display": "2025/06/06 20:10:29"
+      },
+      "number": 10,
+      "reply_to": null,
+      "likes": 32,
+      "dislikes": 2,
+      "quality": "expert"
+    },
+    {
+      "id": "1749213149_13987647",
+      "name": "主婦（60歳）",
+      "text": ">>#7\n補足ですが、調査結果によるとという情報もあります。",
+      "timestamp": {
+        "iso": "2025-06-06T10:35:29.137205+00:00",
+        "display": "2025/06/06 10:35:29",
+        "jst_display": "2025/06/06 19:35:29"
+      },
+      "number": 11,
+      "reply_to": 7,
+      "likes": 7,
+      "dislikes": 3,
+      "quality": "reply"
+    },
+    {
+      "id": "1749213149_ee040539",
+      "name": "昭和生まれ",
+      "text": ">>#4\n環境科学博士さんの意見に同感です。特に今回の内容については全くその通りだと思います。",
+      "timestamp": {
+        "iso": "2025-06-06T11:18:29.137217+00:00",
+        "display": "2025/06/06 11:18:29",
+        "jst_display": "2025/06/06 20:18:29"
+      },
+      "number": 12,
+      "reply_to": 4,
+      "likes": 10,
+      "dislikes": 5,
+      "quality": "reply"
+    },
+    {
+      "id": "1749213149_c66cd572",
+      "name": "元公務員",
+      "text": ">>#7\n補足ですが、データを見るとという情報もあります。",
+      "timestamp": {
+        "iso": "2025-06-06T12:20:29.137230+00:00",
+        "display": "2025/06/06 12:20:29",
+        "jst_display": "2025/06/06 21:20:29"
+      },
+      "number": 13,
+      "reply_to": 7,
+      "likes": 6,
+      "dislikes": 4,
+      "quality": "reply"
+    },
+    {
+      "id": "1749213149_b4acdafe",
+      "name": "年金生活者（65歳）",
+      "text": ">>#5\n統計学専門家さんの意見も分かりますが、異なる視点という視点もあるのではないでしょうか。",
+      "timestamp": {
+        "iso": "2025-06-06T11:37:29.137242+00:00",
+        "display": "2025/06/06 11:37:29",
+        "jst_display": "2025/06/06 20:37:29"
+      },
+      "number": 14,
+      "reply_to": 5,
+      "likes": 3,
+      "dislikes": 3,
+      "quality": "reply"
+    },
+    {
+      "id": "1749213149_942b761d",
+      "name": "子育て終了組",
+      "text": ">>#9\n主婦さんの意見も分かりますが、異なる視点という視点もあるのではないでしょうか。",
+      "timestamp": {
+        "iso": "2025-06-06T11:14:29.137255+00:00",
+        "display": "2025/06/06 11:14:29",
+        "jst_display": "2025/06/06 20:14:29"
+      },
+      "number": 15,
+      "reply_to": 9,
+      "likes": 1,
+      "dislikes": 3,
+      "quality": "reply"
+    }
+  ]
+}

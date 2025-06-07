@@ -1,0 +1,729 @@
+{
+  "app_store": [
+    {
+      "rank": 1,
+      "name": "荒野行動",
+      "category": "Finance",
+      "rating": 3.5,
+      "downloads": "6357万+",
+      "price": "¥2520",
+      "change": "↑",
+      "change_value": -4
+    },
+    {
+      "rank": 2,
+      "name": "ドリームアドベンチャーキングダム",
+      "category": "Finance",
+      "rating": 3.7,
+      "downloads": "9500万+",
+      "price": "¥2806",
+      "change": "↓",
+      "change_value": 8
+    },
+    {
+      "rank": 3,
+      "name": "ドリームアクションヒーロー",
+      "category": "Games",
+      "rating": 4.5,
+      "downloads": "9883万+",
+      "price": "Free",
+      "change": "→",
+      "change_value": 8
+    },
+    {
+      "rank": 4,
+      "name": "Twitter",
+      "category": "Entertainment",
+      "rating": 4.2,
+      "downloads": "865万+",
+      "price": "¥2172",
+      "change": "→",
+      "change_value": 13
+    },
+    {
+      "rank": 5,
+      "name": "プロセカ",
+      "category": "Entertainment",
+      "rating": 3.5,
+      "downloads": "8028万+",
+      "price": "Free",
+      "change": "↓",
+      "change_value": 9
+    },
+    {
+      "rank": 6,
+      "name": "ウマ娘",
+      "category": "Entertainment",
+      "rating": 3.5,
+      "downloads": "4341万+",
+      "price": "Free",
+      "change": "↑",
+      "change_value": -4
+    },
+    {
+      "rank": 7,
+      "name": "プロセカ",
+      "category": "Games",
+      "rating": 4.6,
+      "downloads": "1127万+",
+      "price": "Free",
+      "change": "→",
+      "change_value": 12
+    },
+    {
+      "rank": 8,
+      "name": "ウマ娘",
+      "category": "Games",
+      "rating": 4.9,
+      "downloads": "7231万+",
+      "price": "Free",
+      "change": "↑",
+      "change_value": 0
+    },
+    {
+      "rank": 9,
+      "name": "スーパーパズルキングダム",
+      "category": "Entertainment",
+      "rating": 4.5,
+      "downloads": "1781万+",
+      "price": "¥2661",
+      "change": "↓",
+      "change_value": 6
+    },
+    {
+      "rank": 10,
+      "name": "FGO",
+      "category": "Entertainment",
+      "rating": 4.3,
+      "downloads": "1179万+",
+      "price": "¥1872",
+      "change": "↑",
+      "change_value": 0
+    },
+    {
+      "rank": 11,
+      "name": "ウマ娘",
+      "category": "Entertainment",
+      "rating": 4.1,
+      "downloads": "1037万+",
+      "price": "¥2973",
+      "change": "↓",
+      "change_value": 0
+    },
+    {
+      "rank": 12,
+      "name": "Instagram",
+      "category": "Finance",
+      "rating": 4.1,
+      "downloads": "5718万+",
+      "price": "¥1524",
+      "change": "↓",
+      "change_value": -1
+    },
+    {
+      "rank": 13,
+      "name": "ハイパーRPGサーガ",
+      "category": "Entertainment",
+      "rating": 3.9,
+      "downloads": "4624万+",
+      "price": "Free",
+      "change": "→",
+      "change_value": 0
+    },
+    {
+      "rank": 14,
+      "name": "マジックパズルクエスト",
+      "category": "Social",
+      "rating": 4.7,
+      "downloads": "6611万+",
+      "price": "Free",
+      "change": "↓",
+      "change_value": -3
+    },
+    {
+      "rank": 15,
+      "name": "ポケモンGO",
+      "category": "Productivity",
+      "rating": 4.5,
+      "downloads": "3479万+",
+      "price": "¥723",
+      "change": "→",
+      "change_value": 5
+    },
+    {
+      "rank": 16,
+      "name": "スーパーバトルマスター",
+      "category": "Social",
+      "rating": 3.7,
+      "downloads": "4402万+",
+      "price": "Free",
+      "change": "↑",
+      "change_value": -5
+    },
+    {
+      "rank": 17,
+      "name": "ドリームバトルレジェンド",
+      "category": "Entertainment",
+      "rating": 4.8,
+      "downloads": "4821万+",
+      "price": "Free",
+      "change": "↑",
+      "change_value": 15
+    },
+    {
+      "rank": 18,
+      "name": "PUBG",
+      "category": "Productivity",
+      "rating": 3.6,
+      "downloads": "3015万+",
+      "price": "¥848",
+      "change": "→",
+      "change_value": 15
+    },
+    {
+      "rank": 19,
+      "name": "LINE",
+      "category": "Finance",
+      "rating": 4.8,
+      "downloads": "1752万+",
+      "price": "Free",
+      "change": "↓",
+      "change_value": 0
+    },
+    {
+      "rank": 20,
+      "name": "プロセカ",
+      "category": "Productivity",
+      "rating": 3.9,
+      "downloads": "3839万+",
+      "price": "Free",
+      "change": "↑",
+      "change_value": 4
+    }
+  ],
+  "live_streaming": [
+    {
+      "rank": 1,
+      "name": "配信者900",
+      "platform": "ニコ生",
+      "category": "料理",
+      "viewers": 47260,
+      "status": "LIVE",
+      "duration": "8時間20分",
+      "thumbnail": "stream_thumb_3.jpg",
+      "verified": true
+    },
+    {
+      "rank": 2,
+      "name": "ゆうゲーマー",
+      "platform": "Twitch",
+      "category": "料理",
+      "viewers": 46324,
+      "status": "LIVE",
+      "duration": "4時間35分",
+      "thumbnail": "stream_thumb_5.jpg",
+      "verified": false
+    },
+    {
+      "rank": 3,
+      "name": "配信者789",
+      "platform": "ツイキャス",
+      "category": "勉強",
+      "viewers": 41164,
+      "status": "LIVE",
+      "duration": "8時間19分",
+      "thumbnail": "stream_thumb_6.jpg",
+      "verified": true
+    },
+    {
+      "rank": 4,
+      "name": "ゆうゲーマー",
+      "platform": "ニコ生",
+      "category": "ASMR",
+      "viewers": 40137,
+      "status": "LIVE",
+      "duration": "2時間28分",
+      "thumbnail": "stream_thumb_15.jpg",
+      "verified": true
+    },
+    {
+      "rank": 5,
+      "name": "配信者571",
+      "platform": "ニコ生",
+      "category": "アート",
+      "viewers": 33863,
+      "status": "LIVE",
+      "duration": "2時間34分",
+      "thumbnail": "stream_thumb_8.jpg",
+      "verified": false
+    },
+    {
+      "rank": 6,
+      "name": "配信者814",
+      "platform": "Twitch",
+      "category": "アート",
+      "viewers": 30991,
+      "status": "LIVE",
+      "duration": "2時間42分",
+      "thumbnail": "stream_thumb_7.jpg",
+      "verified": false
+    },
+    {
+      "rank": 7,
+      "name": "りんch",
+      "platform": "ニコ生",
+      "category": "歌ってみた",
+      "viewers": 29183,
+      "status": "LIVE",
+      "duration": "6時間41分",
+      "thumbnail": "stream_thumb_13.jpg",
+      "verified": true
+    },
+    {
+      "rank": 8,
+      "name": "配信者567",
+      "platform": "ツイキャス",
+      "category": "コラボ",
+      "viewers": 28769,
+      "status": "LIVE",
+      "duration": "6時間36分",
+      "thumbnail": "stream_thumb_10.jpg",
+      "verified": true
+    },
+    {
+      "rank": 9,
+      "name": "配信者879",
+      "platform": "ニコ生",
+      "category": "勉強",
+      "viewers": 28557,
+      "status": "LIVE",
+      "duration": "3時間59分",
+      "thumbnail": "stream_thumb_2.jpg",
+      "verified": true
+    },
+    {
+      "rank": 10,
+      "name": "まおTV",
+      "platform": "YouTube Live",
+      "category": "ASMR",
+      "viewers": 28543,
+      "status": "LIVE",
+      "duration": "8時間51分",
+      "thumbnail": "stream_thumb_12.jpg",
+      "verified": true
+    },
+    {
+      "rank": 11,
+      "name": "ゆうTV",
+      "platform": "Twitch",
+      "category": "料理",
+      "viewers": 24328,
+      "status": "LIVE",
+      "duration": "5時間47分",
+      "thumbnail": "stream_thumb_9.jpg",
+      "verified": true
+    },
+    {
+      "rank": 12,
+      "name": "ひめGaming",
+      "platform": "ツイキャス",
+      "category": "ASMR",
+      "viewers": 21101,
+      "status": "LIVE",
+      "duration": "6時間52分",
+      "thumbnail": "stream_thumb_14.jpg",
+      "verified": false
+    },
+    {
+      "rank": 13,
+      "name": "まおLIVE",
+      "platform": "Twitch",
+      "category": "ゲーム",
+      "viewers": 20607,
+      "status": "LIVE",
+      "duration": "5時間53分",
+      "thumbnail": "stream_thumb_11.jpg",
+      "verified": false
+    },
+    {
+      "rank": 14,
+      "name": "あきGaming",
+      "platform": "Twitch",
+      "category": "コラボ",
+      "viewers": 17126,
+      "status": "LIVE",
+      "duration": "7時間29分",
+      "thumbnail": "stream_thumb_1.jpg",
+      "verified": false
+    },
+    {
+      "rank": 15,
+      "name": "配信者755",
+      "platform": "ニコ生",
+      "category": "雑談",
+      "viewers": 10804,
+      "status": "LIVE",
+      "duration": "3時間31分",
+      "thumbnail": "stream_thumb_4.jpg",
+      "verified": false
+    }
+  ],
+  "sns_buzz": [
+    {
+      "rank": 1,
+      "keyword": "サプライズ発表",
+      "platform": "Twitter",
+      "buzz_type": "バズり中",
+      "mentions": 489953,
+      "growth_rate": "+1082%",
+      "related_tags": [
+        "#話題",
+        "#拡散希望"
+      ],
+      "peak_time": "23時頃"
+    },
+    {
+      "rank": 2,
+      "keyword": "ミーム",
+      "platform": "Instagram",
+      "buzz_type": "急上昇",
+      "mentions": 381619,
+      "growth_rate": "+758%",
+      "related_tags": [
+        "#拡散希望",
+        "#音楽",
+        "#ゲーム",
+        "#バズり中"
+      ],
+      "peak_time": "10時頃"
+    },
+    {
+      "rank": 3,
+      "keyword": "ゲーム配信",
+      "platform": "Twitter",
+      "buzz_type": "バイラル",
+      "mentions": 348616,
+      "growth_rate": "+849%",
+      "related_tags": [
+        "#アニメ",
+        "#トレンド",
+        "#話題"
+      ],
+      "peak_time": "6時頃"
+    },
+    {
+      "rank": 4,
+      "keyword": "炎上騒動",
+      "platform": "Twitter",
+      "buzz_type": "話題",
+      "mentions": 430771,
+      "growth_rate": "+1117%",
+      "related_tags": [
+        "#話題",
+        "#バズり中",
+        "#ゲーム",
+        "#エンタメ"
+      ],
+      "peak_time": "19時頃"
+    },
+    {
+      "rank": 5,
+      "keyword": "バーチャルYouTuber",
+      "platform": "Instagram",
+      "buzz_type": "話題",
+      "mentions": 32761,
+      "growth_rate": "+1455%",
+      "related_tags": [
+        "#配信",
+        "#トレンド",
+        "#アニメ",
+        "#拡散希望"
+      ],
+      "peak_time": "22時頃"
+    },
+    {
+      "rank": 6,
+      "keyword": "声優結婚",
+      "platform": "Twitter",
+      "buzz_type": "話題",
+      "mentions": 138818,
+      "growth_rate": "+491%",
+      "related_tags": [
+        "#バズり中",
+        "#エンタメ"
+      ],
+      "peak_time": "22時頃"
+    },
+    {
+      "rank": 7,
+      "keyword": "新作アニメ",
+      "platform": "TikTok",
+      "buzz_type": "話題",
+      "mentions": 120885,
+      "growth_rate": "+1039%",
+      "related_tags": [
+        "#拡散希望",
+        "#アニメ",
+        "#急上昇",
+        "#話題"
+      ],
+      "peak_time": "4時頃"
+    },
+    {
+      "rank": 8,
+      "keyword": "コラボ企画",
+      "platform": "Twitter",
+      "buzz_type": "話題",
+      "mentions": 178344,
+      "growth_rate": "+726%",
+      "related_tags": [
+        "#音楽",
+        "#配信",
+        "#ゲーム",
+        "#話題"
+      ],
+      "peak_time": "8時頃"
+    },
+    {
+      "rank": 9,
+      "keyword": "新機能",
+      "platform": "Twitter",
+      "buzz_type": "バイラル",
+      "mentions": 480927,
+      "growth_rate": "+1346%",
+      "related_tags": [
+        "#拡散希望",
+        "#ゲーム"
+      ],
+      "peak_time": "7時頃"
+    },
+    {
+      "rank": 10,
+      "keyword": "インフルエンサー",
+      "platform": "Instagram",
+      "buzz_type": "話題",
+      "mentions": 12705,
+      "growth_rate": "+1848%",
+      "related_tags": [
+        "#配信",
+        "#アニメ"
+      ],
+      "peak_time": "7時頃"
+    }
+  ],
+  "crypto": [
+    {
+      "rank": 1,
+      "name": "Bitcoin (BTC)",
+      "symbol": "BTC",
+      "price": "¥31,739.70",
+      "change_24h": "+17.32%",
+      "volume_24h": "¥3745億",
+      "market_cap": "¥262兆",
+      "trend": "🔥"
+    },
+    {
+      "rank": 2,
+      "name": "Ethereum (ETH)",
+      "symbol": "ETH",
+      "price": "¥39,626.17",
+      "change_24h": "-2.60%",
+      "volume_24h": "¥5915億",
+      "market_cap": "¥317兆",
+      "trend": "📉"
+    },
+    {
+      "rank": 3,
+      "name": "Cardano (ADA)",
+      "symbol": "ADA",
+      "price": "¥21,004.82",
+      "change_24h": "+22.42%",
+      "volume_24h": "¥1020億",
+      "market_cap": "¥432兆",
+      "trend": "🔥"
+    },
+    {
+      "rank": 4,
+      "name": "Solana (SOL)",
+      "symbol": "SOL",
+      "price": "¥4,691.65",
+      "change_24h": "-3.99%",
+      "volume_24h": "¥1296億",
+      "market_cap": "¥290兆",
+      "trend": "📉"
+    },
+    {
+      "rank": 5,
+      "name": "Dogecoin (DOGE)",
+      "symbol": "DOGE",
+      "price": "¥49,530.92",
+      "change_24h": "-8.15%",
+      "volume_24h": "¥361億",
+      "market_cap": "¥34兆",
+      "trend": "📉"
+    },
+    {
+      "rank": 6,
+      "name": "Shiba Inu (SHIB)",
+      "symbol": "SHIB",
+      "price": "¥36,499.01",
+      "change_24h": "+6.62%",
+      "volume_24h": "¥7949億",
+      "market_cap": "¥433兆",
+      "trend": "📈"
+    },
+    {
+      "rank": 7,
+      "name": "Polygon (MATIC)",
+      "symbol": "MATIC",
+      "price": "¥5,090.55",
+      "change_24h": "+12.40%",
+      "volume_24h": "¥2251億",
+      "market_cap": "¥444兆",
+      "trend": "🔥"
+    },
+    {
+      "rank": 8,
+      "name": "Chainlink (LINK)",
+      "symbol": "LINK",
+      "price": "¥46,145.73",
+      "change_24h": "+0.14%",
+      "volume_24h": "¥8476億",
+      "market_cap": "¥149兆",
+      "trend": "📈"
+    },
+    {
+      "rank": 9,
+      "name": "Avalanche (AVAX)",
+      "symbol": "AVAX",
+      "price": "¥11,151.65",
+      "change_24h": "-2.25%",
+      "volume_24h": "¥1722億",
+      "market_cap": "¥380兆",
+      "trend": "📉"
+    },
+    {
+      "rank": 10,
+      "name": "Polkadot (DOT)",
+      "symbol": "DOT",
+      "price": "¥32,387.14",
+      "change_24h": "+0.65%",
+      "volume_24h": "¥4745億",
+      "market_cap": "¥33兆",
+      "trend": "📈"
+    }
+  ],
+  "youtube_trending": [
+    {
+      "rank": 1,
+      "title": "【検証】話題のアプリを24時間やり続けた結果",
+      "channel": "グルメレポート",
+      "category": "ゲーム",
+      "views": "131万回",
+      "upload_time": "13時間前",
+      "duration": "30:35",
+      "likes": "2万",
+      "comments": "6918件"
+    },
+    {
+      "rank": 2,
+      "title": "【ドッキリ】突然サプライズを仕掛けてみた",
+      "channel": "アニメ解説ch",
+      "category": "テクノロジー",
+      "views": "812万回",
+      "upload_time": "13時間前",
+      "duration": "18:33",
+      "likes": "40万",
+      "comments": "3921件"
+    },
+    {
+      "rank": 3,
+      "title": "【雑談】最近あった出来事について",
+      "channel": "グルメレポート",
+      "category": "エンタメ",
+      "views": "521万回",
+      "upload_time": "23時間前",
+      "duration": "22:27",
+      "likes": "32万",
+      "comments": "8787件"
+    },
+    {
+      "rank": 4,
+      "title": "【コラボ】人気VTuberと初共演してみた！",
+      "channel": "スポーツ情報",
+      "category": "ニュース",
+      "views": "617万回",
+      "upload_time": "15時間前",
+      "duration": "17:29",
+      "likes": "8万",
+      "comments": "4189件"
+    },
+    {
+      "rank": 5,
+      "title": "【衝撃】新作ゲームをプレイしてみた結果www",
+      "channel": "エンタメ情報局",
+      "category": "ニュース",
+      "views": "90万回",
+      "upload_time": "21時間前",
+      "duration": "20:43",
+      "likes": "45万",
+      "comments": "9625件"
+    },
+    {
+      "rank": 6,
+      "title": "【歌ってみた】話題の楽曲をカバー",
+      "channel": "スポーツ情報",
+      "category": "テクノロジー",
+      "views": "636万回",
+      "upload_time": "2時間前",
+      "duration": "19:26",
+      "likes": "24万",
+      "comments": "9102件"
+    },
+    {
+      "rank": 7,
+      "title": "【コラボ】人気VTuberと初共演してみた！",
+      "channel": "ファッション情報",
+      "category": "スポーツ",
+      "views": "878万回",
+      "upload_time": "8時間前",
+      "duration": "1:19",
+      "likes": "27万",
+      "comments": "8269件"
+    },
+    {
+      "rank": 8,
+      "title": "【速報】あの人気配信者の正体が判明！？",
+      "channel": "音楽チャンネル",
+      "category": "ゲーム",
+      "views": "918万回",
+      "upload_time": "23時間前",
+      "duration": "28:31",
+      "likes": "40万",
+      "comments": "6673件"
+    },
+    {
+      "rank": 9,
+      "title": "【コラボ】人気VTuberと初共演してみた！",
+      "channel": "グルメレポート",
+      "category": "音楽",
+      "views": "822万回",
+      "upload_time": "15時間前",
+      "duration": "16:59",
+      "likes": "46万",
+      "comments": "9734件"
+    },
+    {
+      "rank": 10,
+      "title": "【料理】簡単で美味しいレシピ紹介",
+      "channel": "バラエティ配信",
+      "category": "ニュース",
+      "views": "636万回",
+      "upload_time": "19時間前",
+      "duration": "12:23",
+      "likes": "48万",
+      "comments": "368件"
+    }
+  ],
+  "last_updated": "2025-06-06T14:05:31.567691+00:00"
+}

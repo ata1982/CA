@@ -145,6 +145,104 @@ python src/agent.py health
 - rich: 美しいコンソール出力
 - psutil: システムリソース監視
 
+## AWS EC2へのデプロイ
+
+Claude Agent SystemをAWS EC2インスタンスにデプロイして、クラウド上で実行できます。
+
+### 前提条件
+
+1. AWSアカウント
+2. AWS CLIのインストールと設定
+3. 適切なIAM権限（EC2、セキュリティグループの作成権限）
+
+### セットアップ手順
+
+#### 1. AWS依存関係のインストール
+
+```bash
+cd deploy
+pip install -r requirements_aws.txt
+```
+
+#### 2. AWS CLIの設定（初回のみ）
+
+```bash
+aws configure
+# AWS Access Key ID、Secret Access Key、リージョン（ap-northeast-1推奨）を入力
+```
+
+#### 3. AWS環境のセットアップ
+
+```bash
+# キーペアとセキュリティグループを作成
+python aws_setup.py
+```
+
+#### 4. EC2インスタンスの起動
+
+```bash
+# t2.micro（無料枠）インスタンスを起動
+python ec2_launcher.py
+```
+
+#### 5. エージェントのデプロイ
+
+```bash
+# コードをEC2にデプロイ
+python deploy_agent.py
+```
+
+### リモート管理
+
+`manage_remote.py`を使用して、ローカルからEC2インスタンスを管理できます：
+
+```bash
+# インスタンス情報の確認
+python manage_remote.py info
+
+# エージェントのステータス確認
+python manage_remote.py status
+
+# ログの表示
+python manage_remote.py logs
+
+# エージェントの再起動
+python manage_remote.py restart
+
+# SSH接続情報の表示
+python manage_remote.py ssh
+
+# インスタンスの停止
+python manage_remote.py stop
+
+# インスタンスの削除（料金発生を防ぐため）
+python manage_remote.py terminate
+```
+
+### デプロイ構成
+
+```
+deploy/
+├── aws_setup.py          # AWS環境セットアップ（キーペア、セキュリティグループ）
+├── ec2_launcher.py       # EC2インスタンスの起動・停止・削除
+├── setup_instance.sh     # インスタンス初期設定スクリプト
+├── deploy_agent.py       # アプリケーションのデプロイ
+├── manage_remote.py      # リモート管理CLI
+└── requirements_aws.txt  # AWS関連の依存関係
+```
+
+### セキュリティに関する注意
+
+- 本番環境では、セキュリティグループのSSH接続元IPを制限してください
+- EC2インスタンスのIAMロールを適切に設定してください
+- 秘密鍵（`~/.ssh/claude-agent-key.pem`）は安全に管理してください
+
+### コスト管理
+
+- 使用しない時はインスタンスを停止（`python manage_remote.py stop`）
+- 不要になったらインスタンスを削除（`python manage_remote.py terminate`）
+- t2.microインスタンスは無料枠の対象ですが、転送量などで料金が発生する場合があります
+
 ## ライセンス
 
 このプロジェクトはMITライセンスの下で公開されています。

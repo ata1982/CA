@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="todo-app">
+    <h1>TODOリスト</h1>
+    
+    <form class="add-form" action="{{ url_for('add_todo') }}" method="POST">
+        <input type="text" name="title" placeholder="新しいタスクを入力..." required>
+        <button type="submit">追加</button>
+    </form>
+    
+    <div class="todo-list">
+        {% for todo in todos %}
+        <div class="todo-item {% if todo.completed %}completed{% endif %}">
+            <span class="todo-title">{{ todo.title }}</span>
+            <div class="todo-actions">
+                <a href="{{ url_for('complete_todo', id=todo.id) }}" class="btn-complete">
+                    {% if todo.completed %}未完了{% else %}完了{% endif %}
+                </a>
+                <a href="{{ url_for('delete_todo', id=todo.id) }}" class="btn-delete">削除</a>
+            </div>
+        </div>
+        {% endfor %}
+        
+        {% if not todos %}
+        <p class="empty-message">タスクがありません。新しいタスクを追加してください。</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

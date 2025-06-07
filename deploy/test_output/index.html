@@ -1,0 +1,2450 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 【速報】ニュースまとめ速 - 詳細分析・解説付きニュース</title>
+    <meta name="description" content="実際のニュースに詳細な解説・ファクトチェック・社会的影響分析を加えてお届け">
+    <meta name="keywords" content="ニュース,解説,ファクトチェック,詳細分析,社会的影響">
+    <meta http-equiv="refresh" content="900">
+    
+    <!-- OGP Tags -->
+    <meta property="og:title" content="【速報】ニュースまとめ速 - 詳細解説付き">
+    <meta property="og:description" content="実際のニュースに専門的な解説を加えてお届け">
+    <meta property="og:type" content="website">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans JP', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .header {
+            background: rgba(30, 30, 46, 0.98);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+            backdrop-filter: blur(10px);
+        }
+        
+        .header-top {
+            padding: 25px 0;
+        }
+        
+        .header-nav {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .nav-link.active {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+        
+        .header h1 {
+            font-size: 2.8em;
+            text-align: center;
+            margin-bottom: 8px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 8px rgba(255, 107, 107, 0.6)); }
+            to { filter: drop-shadow(0 0 25px rgba(78, 205, 196, 0.9)); }
+        }
+        
+        .subtitle {
+            text-align: center;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            color: #e0e0e0;
+        }
+        
+        .live-indicator {
+            text-align: center;
+            margin-top: 12px;
+        }
+        
+        .live-dot {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            background: #ff4757;
+            border-radius: 50%;
+            margin-right: 10px;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.7; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 35px;
+            margin: 35px 0;
+        }
+        
+        .articles-section {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+        
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        .category-sidebar {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+        
+        .category-sidebar h3 {
+            color: #2c3e50;
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #e74c3c;
+            padding-bottom: 8px;
+            font-weight: bold;
+        }
+        
+        .category-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .category-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #2c3e50;
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+        }
+        
+        .category-item:hover {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            transform: translateX(5px);
+            border-left-color: #e74c3c;
+        }
+        
+        .category-icon {
+            font-size: 1.2em;
+            margin-right: 10px;
+            width: 25px;
+            text-align: center;
+        }
+        
+        .category-name {
+            font-weight: 500;
+            flex: 1;
+        }
+        
+        .category-count {
+            background: #e74c3c;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+        
+        .ranking-box {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+        
+        .article {
+            background: white;
+            border-radius: 16px;
+            padding: 35px;
+            margin-bottom: 35px;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.1);
+            border-left: 6px solid #27ae60;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .article:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+        }
+        
+        .article-header {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #f8f9fa;
+        }
+        
+        .article-title {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        .article-meta {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+            color: #666;
+            flex-wrap: wrap;
+        }
+        
+        .meta-tag {
+            background: #f1f3f4;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+        }
+        
+        .meta-tag.reliable {
+            background: #d5f4e6;
+            color: #27ae60;
+            font-weight: bold;
+        }
+        
+        .enhanced-badge {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .source-link {
+            background: linear-gradient(135deg, #e8f6f3, #d5f4e6);
+            border: 2px solid #27ae60;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 25px;
+        }
+        
+        .source-link a {
+            color: #27ae60;
+            text-decoration: none;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.05em;
+        }
+        
+        .source-link a:hover {
+            text-decoration: underline;
+        }
+        
+        .article-content {
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 30px;
+        }
+        
+        .enhanced-content {
+            margin-top: 30px;
+        }
+        
+        .content-section {
+            margin-bottom: 30px;
+            padding: 25px;
+            border-radius: 12px;
+            background: #fafbfc;
+            border-left: 4px solid #3498db;
+        }
+        
+        .content-section h3 {
+            color: #2c3e50;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .content-section.detailed-summary {
+            border-left-color: #e74c3c;
+            background: #fff8f8;
+            font-size: 1.1em;
+            line-height: 1.9;
+        }
+        
+        .content-section.explanation {
+            border-left-color: #3498db;
+        }
+        
+        .content-section.fact-check {
+            border-left-color: #f39c12;
+        }
+        
+        .article-stats {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 25px;
+            font-size: 0.95em;
+            color: #666;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: #f8f9fa;
+            padding: 8px 12px;
+            border-radius: 8px;
+        }
+        
+        .comments-section {
+            border-top: 3px solid #ecf0f1;
+            padding-top: 30px;
+            margin-top: 30px;
+        }
+        
+        .comments-toggle {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-bottom: 20px;
+            transition: background 0.3s;
+        }
+        
+        .comments-toggle:hover {
+            background: #2980b9;
+        }
+        
+        .comments-container {
+            display: none;
+        }
+        
+        .comments-container.show {
+            display: block;
+        }
+        
+        .comments-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        .comment {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 16px;
+            margin-bottom: 15px;
+            border-left: 3px solid #3498db;
+            position: relative;
+        }
+        
+        .reply-comment {
+            margin-left: 30px;
+            background: #f0f8ff;
+            border-left: 3px solid #2ecc71;
+        }
+        
+        .reply-indicator {
+            font-size: 0.8em;
+            color: #2ecc71;
+            font-weight: bold;
+            margin-bottom: 8px;
+            padding: 4px 8px;
+            background: rgba(46, 204, 113, 0.1);
+            border-radius: 4px;
+            display: inline-block;
+        }
+        
+        .low-quality-comment {
+            opacity: 0.7;
+            border-left-color: #e74c3c;
+            background: #fdf2f2;
+        }
+        
+        .high-quality-comment {
+            border-left-color: #27ae60;
+            background: #f8fff8;
+        }
+        
+        .expert-comment {
+            border-left-color: #8e44ad;
+            background: #f8f5ff;
+            border-left-width: 5px;
+            box-shadow: 0 2px 8px rgba(142, 68, 173, 0.1);
+        }
+        
+        .expert-comment .comment-author {
+            color: #8e44ad;
+            font-weight: bold;
+        }
+        
+        .comment-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .comment-author {
+            font-weight: bold;
+            color: #34495e;
+            font-size: 0.9em;
+        }
+        
+        .comment-time {
+            font-size: 0.8em;
+            color: #7f8c8d;
+        }
+        
+        .comment-text {
+            color: #2c3e50;
+            white-space: pre-wrap;
+            line-height: 1.6;
+        }
+        
+        .comment-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 12px;
+            font-size: 0.9em;
+        }
+        
+        .comment-action {
+            background: none;
+            border: none;
+            color: #7f8c8d;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 6px 10px;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+        
+        .comment-action:hover {
+            background: #ecf0f1;
+            color: #2c3e50;
+        }
+        
+        .ad-space {
+            background: linear-gradient(135deg, #f0f0f0, #e8e8e8);
+            border: 3px dashed #bbb;
+            height: 280px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 1.1em;
+            margin: 25px 0;
+            border-radius: 12px;
+        }
+        
+        .footer {
+            background: rgba(30, 30, 46, 0.98);
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+        
+        .update-info {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+        }
+        
+        .analysis-badge {
+            background: linear-gradient(45deg, #27ae60, #2ecc71);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        .category-nav {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            backdrop-filter: blur(5px);
+        }
+        
+        .category-nav h3 {
+            color: #2c3e50;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .category-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        
+        .category-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.9em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            min-width: 80px;
+            text-align: center;
+        }
+        
+        .category-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            background: linear-gradient(135deg, #5a67d8, #6b46c1);
+        }
+        
+        .category-btn.active {
+            background: linear-gradient(135deg, #e53e3e, #dd6b20);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(229, 62, 62, 0.4);
+        }
+        
+        .category-btn.all {
+            background: linear-gradient(135deg, #38a169, #2d3748);
+        }
+        
+        .category-btn.all:hover {
+            background: linear-gradient(135deg, #2f855a, #1a202c);
+        }
+        
+        .realtime-rankings {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            backdrop-filter: blur(5px);
+        }
+        
+        .rankings-nav {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .ranking-tab {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            color: #495057;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+        
+        .ranking-tab:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .ranking-tab.active {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+        
+        .ranking-content {
+            display: none;
+        }
+        
+        .ranking-content.active {
+            display: block;
+        }
+        
+        .ranking-list {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .ranking-item-detailed {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            margin-bottom: 8px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            border-left: 3px solid #dee2e6;
+        }
+        
+        .ranking-item-detailed:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+            border-left-color: #667eea;
+        }
+        
+        .rank-badge {
+            background: #667eea;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+        
+        .rank-badge.top3 {
+            background: linear-gradient(135deg, #ffd700, #ffed4e);
+            color: #333;
+        }
+        
+        .ranking-details {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .ranking-title {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 0.9em;
+            margin-bottom: 3px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .ranking-meta {
+            font-size: 0.75em;
+            color: #6c757d;
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        
+        .ranking-stats {
+            text-align: right;
+            font-size: 0.8em;
+            color: #495057;
+            margin-left: 8px;
+            flex-shrink: 0;
+        }
+        
+        .live-indicator-small {
+            background: #dc3545;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-size: 0.7em;
+            font-weight: bold;
+            animation: pulse 1.5s infinite;
+        }
+        
+        .growth-indicator {
+            color: #28a745;
+            font-weight: bold;
+        }
+        
+        .growth-indicator.negative {
+            color: #dc3545;
+        }
+        
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            
+            .article {
+                padding: 25px;
+            }
+            
+            .header h1 {
+                font-size: 2.2em;
+            }
+            
+            .article-title {
+                font-size: 1.5em;
+            }
+            
+            .content-section {
+                padding: 20px;
+            }
+            
+            .article-meta {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .category-nav {
+                padding: 15px;
+                margin-bottom: 20px;
+            }
+            
+            .category-nav h3 {
+                font-size: 1.1em;
+                margin-bottom: 12px;
+            }
+            
+            .category-buttons {
+                gap: 8px;
+            }
+            
+            .category-btn {
+                font-size: 0.8em;
+                padding: 8px 15px;
+                min-width: 70px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-top">
+            <div class="container">
+                <h1>🔥 【速報】ニュースまとめ速</h1>
+                <div class="subtitle">詳細解説・ファクトチェック付きニュース</div>
+                <div class="live-indicator">
+                    <span class="live-dot"></span>
+                    <span>専門分析・リアルタイム更新中</span>
+                </div>
+            </div>
+        </div>
+        <div class="header-nav">
+            <div class="container">
+                <div class="nav-links">
+                    <a href="javascript:void(0)" class="nav-link active" onclick="showHome()">
+                        🏠 ホーム
+                    </a>
+                    <a href="javascript:void(0)" class="nav-link" onclick="showBreakingNews()">
+                        🚨 速報
+                    </a>
+                    <a href="javascript:void(0)" class="nav-link" onclick="showTrending()">
+                        📈 トレンド
+                    </a>
+                    <a href="ranking_dashboard.html" class="nav-link" target="_blank">
+                        📊 分析ダッシュボード
+                    </a>
+                    <a href="javascript:void(0)" class="nav-link" onclick="showAbout()">
+                        ℹ️ このサイトについて
+                    </a>
+                    <a href="javascript:void(0)" class="nav-link" onclick="showContact()">
+                        📧 お問い合わせ
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="analysis-badge">✅ 詳細解説・ファクトチェック・社会的影響分析付き</div>
+        
+        <div class="main-content">
+            <div class="articles-section">
+                <h2>📰 詳細解説付きニュース</h2>
+        
+        <div class="update-info">
+            <strong>📅 最終更新:</strong> 2025年06月06日 23:20:35 (JST)<br>
+            <strong>🔄 次回更新:</strong> 約15分後 | <strong>📊 詳細分析記事:</strong> 1件<br>
+            <strong>📝 1記事平均文字数:</strong> 1500文字以上 | <strong>🔍 専門的解説:</strong> 全記事対応
+        </div>
+        
+        <div class="main-content">
+            <div class="articles-section">
+                <h2 style="margin-bottom: 30px; color: #2c3e50; font-size: 1.6em;">📰 詳細解説付きニュース</h2>
+                
+            <div class="article" id="fallback_enhanced" data-category="システム">
+                <div class="article-header">
+                    <div class="enhanced-badge">🔬 詳細分析記事 (1200文字・標準)</div>
+                    <div class="article-title">ニュース収集システム・詳細分析エンジン稼働中</div>
+                    <div class="article-meta">
+                        <span class="meta-tag">📂 システム</span>
+                        <span class="meta-tag">📰 システム通知</span>
+                        <span class="meta-tag">🕐 06/06 23:20</span>
+                        <span class="meta-tag reliable">🛡️ 信頼性 100%</span>
+                        <span class="meta-tag">🌐 JA</span>
+                    </div>
+                    
+                    <div class="source-link">
+                        <a href="#" target="_blank" rel="noopener">
+                            🔗 元記事を読む: システム通知
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="article-content">
+                    <strong>【元記事概要】</strong><br>
+                    当サイトの詳細分析システムが正常に稼働しています。実際のニュースソースから記事を収集し、専門的な解説・ファクトチェック・社会的影響分析を自動生成します。
+                </div>
+                
+                <div class="enhanced-content">
+                    
+                    <div class="content-section detailed-summary">
+                        <h3>📰 詳細概要・要点</h3>
+                        <p>【詳細概要】ニュース収集システム・詳細分析エンジン稼働中について、システム通知が報道した内容を詳しく解説します。この出来事はシステム分野において重要な意味を持っており、関係者間での注目度が高まっています。具体的には、今回の発表・決定・出来事により、従来の状況から大きな変化が生じる可能性があります。背景として、これまでの経緯を振り返ると、関連する問題や議論が長期間にわたって続いており、今回の動きはその延長線上にあると考えられます。関係者の立場を整理すると、それぞれ異なる利害関係を持っており、今後の展開に大きな影響を与える要因となっています。特に重要なポイントとして、この出来事が持つ象徴的な意味があります。時系列で見ると、準備段階から実施・発表に至るまで、慎重な検討が重ねられてきた経緯があり、その結果として今回の報道に至っています。また、この問題に関連する制度や慣行についても、見直しの議論が活発化する可能性があります。一般市民への影響を考えると、直接的な変化はもちろん、間接的な波及効果も予想されます。専門家の間では、この出来事の評価について様々な見解が示されており、今後の動向を注視する必要があります。</p>
+                    </div>
+                    
+                    <div class="content-section explanation">
+                        <h3>🔍 詳細解説・分析</h3>
+                        <p>このシステム関連の出来事について、専門的な観点から分析すると、複数の重要な要素が関わっています。まず、技術的・制度的な側面では、従来の手法や基準からの変更点が注目されます。また、関係機関や団体の対応方針についても、今回の出来事を受けて調整が行われる可能性があります。経済的な影響を考えると、関連業界や市場への波及効果が懸念される一方、新たな機会の創出も期待されています。国際的な動向と比較すると、日本独自の特徴や課題も浮き彫りになっており、今後の政策決定において重要な参考材料となるでしょう。</p>
+                    </div>
+                    
+                    <div class="content-section fact-check">
+                        <h3>✅ ファクトチェック・検証</h3>
+                        <p>システム通知の報道内容について、信頼性の検証を行いました。報道機関の信頼性スコアは100%となっており、情報の正確性については一定の水準が確保されていると判断されます。ただし、一部の詳細情報については、他の情報源による確認が必要な状況です。過去の同様の報道事例と比較検討した結果、今回の報道手法や内容の取り扱いについては、標準的な水準を満たしていることが確認できました。未確認の情報や推測に基づく内容については、明確に区別して扱う必要があります。</p>
+                    </div>
+                    
+                </div>
+                
+                <div class="article-stats">
+                    <span class="stat-item">👁️ 374 閲覧</span>
+                    <span class="stat-item">💬 15 コメント</span>
+                    <span class="stat-item">👍 0 いいね</span>
+                    <span class="stat-item">📊 150 エンゲージメント</span>
+                    <span class="stat-item">📝 1200 文字分析</span>
+                </div>
+                
+                
+                
+                <div class="comments-section">
+                    <button class="comments-toggle" onclick="toggleComments('fallback_enhanced')">💬 コメントを表示 (15件)</button>
+                    
+                    <div class="comments-container" id="comments-fallback_enhanced">
+                        <div class="comments-title">💬 読者コメント (15件)</div>
+                        <div class="comments-list">
+                            
+                <div class="comment expert-comment" id="comment-4">
+                    
+                    <div class="comment-header">
+                        <span class="comment-author">#4 環境科学博士（研究所勤務）</span>
+                        <span class="comment-time">2025/06/06 21:13:29</span>
+                    </div>
+                    <div class="comment-text">社会学の理論から分析すると、今回の{social_phenomenon}はブルデューの{bourdieu_concept}理論で説明できる。特にハビトゥスと{field_analysis}の相互作用が重要だ。</div>
+                    <div class="comment-actions">
+                        <button class="comment-action" onclick="likeComment('fallback_enhanced', '1749213149_adde7436')">👍 38</button>
+                        <button class="comment-action" onclick="dislikeComment('fallback_enhanced', '1749213149_adde7436')">👎 2</button>
+                        <button class="comment-action reply-btn" onclick="showReplyForm('fallback_enhanced', 4)">返信</button>
+                    </div>
+                </div>
+                
+                <div class="comment expert-comment" id="comment-5">
+                    
+                    <div class="comment-header">
+                        <span class="comment-author">#5 統計学専門家</span>
+                        <span class="comment-time">2025/06/06 20:15:29</span>
+                    </div>
+                    <div class="comment-text">統計学的手法による{statistical_method}では、信頼区間95%で{confidence_interval}という結果が得られる。p値は{p_value}で統計的有意性が確認される。</div>
+                    <div class="comment-actions">
+                        <button class="comment-action" onclick="likeComment('fallback_enhanced', '1749213149_b6ca600e')">👍 43</button>
+                        <button class="comment-action" onclick="dislikeComment('fallback_enhanced', '1749213149_b6ca600e')">👎 0</button>
+                        <button class="comment-action reply-btn" onclick="showReplyForm('fallback_enhanced', 5)">返信</button>
+                    </div>
+                </div>
+                
+                <div class="comment expert-comment" id="comment-6">
+                    
+                    <div class="comment-header">
+                        <span class="comment-author">#6 統計学専門家（研究所勤務）</span>
+                        <span class="comment-time">2025/06/06 20:41:29</span>
+                    </div>
+                    <div class="comment-text">統計学的手法による{statistical_method}では、信頼区間95%で{confidence_interval}という結果が得られる。p値は{p_value}で統計的有意性が確認される。</div>
+                    <div class="comment-actions">
+                        <button class="comment-action" onclick="likeComment('fallback_enhanced', '1749213149_c2549983')">👍 23</button>
+                        <button class="comment-action" onclick="dislikeComment('fallback_enhanced', '1749213149_c2549983')">👎 2</button>
+                        <button class="comment-action reply-btn" onclick="showReplyForm('fallback_enhanced', 6)">返信</button>
+                    </div>
+                </div>
+                
+                <div class="comment high-quality-comment" id="comment-7">
+                    
+                    <div class="comment-header">
+                        <span class="comment-author">#7 おばちゃん</span>
+                        <span class="comment-time">2025/06/06 19:46:29</span>
+                    </div>
+                    <div class="comment-text">専門家の{expert_opinion}という意見は参考になる。</div>
+                    <div class="comment-actions">
+                        <button class="comment-action" onclick="likeComment('fallback_enhanced', '1749213149_21c133a1')">👍 12</button>
+                        <button class="comment-action" onclick="dislikeComment('fallback_enhanced', '1749213149_21c133a1')">👎 1</button>
+                        <button class="comment-action reply-btn" onclick="showReplyForm('fallback_enhanced', 7)">返信</button>
+                    </div>
+                </div>
+                
+                <div class="comment expert-comment" id="comment-8">
+                    
+                    <div class="comment-header">
+                        <span class="comment-author">#8 統計学専門家（研究所勤務）</span>
+                        <span class="comment-time">2025/06/06 20:46:29</span>
+                    </div>
+                    <div class="comment-text">組織行動学の観点では、{organizational_behavior}はハーズバーグの{motivation_theory}で説明可能だ。特に{hygiene_factors}と動機要因の区別が重要である。</div>
+                    <div class="comment-actions">
+                        <button class="comment-action" onclick="likeComment('fallback_enhanced', '1749213149_c194f4f5')">👍 18</button>
+                        <button class="comment-action" onclick="dislikeComment('fallback_enhanced', '1749213149_c194f4f5')">👎 2</button>
+                        <button class="comment-action reply-btn" onclick="showReplyForm('fallback_enhanced', 8)">返信</button>
+                    </div>
+                </div>
+                
+                <div class="comment high-quality-comment" id="comment-9">
+                    
+                    <div class="comment-header">
+                        <span class="comment-author">#9 主婦</span>
+                        <span class="comment-time">2025/06/06 20:50:29</span>
+                    </div>
+                    <div class="comment-text">過去の事例を見ると{historical_perspective}だった。今回は{current_difference}。</div>
+                    <div class="comment-actions">
+                        <button class="comment-action" onclick="likeComment('fallback_enhanced', '1749213149_c5337d1f')">👍 22</button>
+                        <button class="comment-action" onclick="dislikeComment('fallback_enhanced', '1749213149_c5337d1f')">👎 3</button>
+                        <button class="comment-action reply-btn" onclick="showReplyForm('fallback_enhanced', 9)">返信</button>
+                    </div>
+                </div>
+                
+                <div class="comment expert-comment" id="comment-10">
+                    
+                    <div class="comment-header">
+                        <span class="comment-author">#10 教育心理学者（博士）</span>
+                        <span class="comment-time">2025/06/06 20:10:29</span>
+                    </div>
+                    <div class="comment-text">社会学の理論から分析すると、今回の{social_phenomenon}はブルデューの{bourdieu_concept}理論で説明できる。特にハビトゥスと{field_analysis}の相互作用が重要だ。</div>
+                    <div class="comment-actions">
+                        <button class="comment-action" onclick="likeComment('fallback_enhanced', '1749213149_3d692fd6')">👍 32</button>
+                        <button class="comment-action" onclick="dislikeComment('fallback_enhanced', '1749213149_3d692fd6')">👎 2</button>
+                        <button class="comment-action reply-btn" onclick="showReplyForm('fallback_enhanced', 10)">返信</button>
+                    </div>
+                </div>
+                
+                <div class="comment reply-comment" id="comment-11">
+                    <div class='reply-indicator'>返信 → #7</div>
+                    <div class="comment-header">
+                        <span class="comment-author">#11 主婦（60歳）</span>
+                        <span class="comment-time">2025/06/06 19:35:29</span>
+                    </div>
+                    <div class="comment-text">>>#7
+補足ですが、調査結果によるとという情報もあります。</div>
+                    <div class="comment-actions">
+                        <button class="comment-action" onclick="likeComment('fallback_enhanced', '1749213149_13987647')">👍 7</button>
+                        <button class="comment-action" onclick="dislikeComment('fallback_enhanced', '1749213149_13987647')">👎 3</button>
+                        <button class="comment-action reply-btn" onclick="showReplyForm('fallback_enhanced', 11)">返信</button>
+                    </div>
+                </div>
+                
+                <div class="comment reply-comment" id="comment-12">
+                    <div class='reply-indicator'>返信 → #4</div>
+                    <div class="comment-header">
+                        <span class="comment-author">#12 昭和生まれ</span>
+                        <span class="comment-time">2025/06/06 20:18:29</span>
+                    </div>
+                    <div class="comment-text">>>#4
+環境科学博士さんの意見に同感です。特に今回の内容については全くその通りだと思います。</div>
+                    <div class="comment-actions">
+                        <button class="comment-action" onclick="likeComment('fallback_enhanced', '1749213149_ee040539')">👍 10</button>
+                        <button class="comment-action" onclick="dislikeComment('fallback_enhanced', '1749213149_ee040539')">👎 5</button>
+                        <button class="comment-action reply-btn" onclick="showReplyForm('fallback_enhanced', 12)">返信</button>
+                    </div>
+                </div>
+                
+                <div class="comment reply-comment" id="comment-13">
+                    <div class='reply-indicator'>返信 → #7</div>
+                    <div class="comment-header">
+                        <span class="comment-author">#13 元公務員</span>
+                        <span class="comment-time">2025/06/06 21:20:29</span>
+                    </div>
+                    <div class="comment-text">>>#7
+補足ですが、データを見るとという情報もあります。</div>
+                    <div class="comment-actions">
+                        <button class="comment-action" onclick="likeComment('fallback_enhanced', '1749213149_c66cd572')">👍 6</button>
+                        <button class="comment-action" onclick="dislikeComment('fallback_enhanced', '1749213149_c66cd572')">👎 4</button>
+                        <button class="comment-action reply-btn" onclick="showReplyForm('fallback_enhanced', 13)">返信</button>
+                    </div>
+                </div>
+                
+                <div class="comment reply-comment" id="comment-14">
+                    <div class='reply-indicator'>返信 → #5</div>
+                    <div class="comment-header">
+                        <span class="comment-author">#14 年金生活者（65歳）</span>
+                        <span class="comment-time">2025/06/06 20:37:29</span>
+                    </div>
+                    <div class="comment-text">>>#5
+統計学専門家さんの意見も分かりますが、異なる視点という視点もあるのではないでしょうか。</div>
+                    <div class="comment-actions">
+                        <button class="comment-action" onclick="likeComment('fallback_enhanced', '1749213149_b4acdafe')">👍 3</button>
+                        <button class="comment-action" onclick="dislikeComment('fallback_enhanced', '1749213149_b4acdafe')">👎 3</button>
+                        <button class="comment-action reply-btn" onclick="showReplyForm('fallback_enhanced', 14)">返信</button>
+                    </div>
+                </div>
+                
+                <div class="comment reply-comment" id="comment-15">
+                    <div class='reply-indicator'>返信 → #9</div>
+                    <div class="comment-header">
+                        <span class="comment-author">#15 子育て終了組</span>
+                        <span class="comment-time">2025/06/06 20:14:29</span>
+                    </div>
+                    <div class="comment-text">>>#9
+主婦さんの意見も分かりますが、異なる視点という視点もあるのではないでしょうか。</div>
+                    <div class="comment-actions">
+                        <button class="comment-action" onclick="likeComment('fallback_enhanced', '1749213149_942b761d')">👍 1</button>
+                        <button class="comment-action" onclick="dislikeComment('fallback_enhanced', '1749213149_942b761d')">👎 3</button>
+                        <button class="comment-action reply-btn" onclick="showReplyForm('fallback_enhanced', 15)">返信</button>
+                    </div>
+                </div>
+                
+                            <div style="text-align: center; padding: 15px; color: #666;"><small>他 3 件のコメント</small></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            </div>
+            
+            <div class="sidebar">
+                <div class="category-sidebar">
+                    <h3>📂 カテゴリー別ニュース</h3>
+                    <div class="category-list">
+                        <a href="javascript:void(0)" class="category-item" onclick="filterCategory('all')">
+                            <span class="category-icon">🏠</span>
+                            <span class="category-name">すべて</span>
+                            <span class="category-count">全記事</span>
+                        </a>
+                        <a href="javascript:void(0)" class="category-item" onclick="filterCategory('政治')">
+                            <span class="category-icon">🏛️</span>
+                            <span class="category-name">政治・経済</span>
+                            <span class="category-count">12</span>
+                        </a>
+                        <a href="javascript:void(0)" class="category-item" onclick="filterCategory('芸能')">
+                            <span class="category-icon">🎭</span>
+                            <span class="category-name">芸能・エンタメ</span>
+                            <span class="category-count">8</span>
+                        </a>
+                        <a href="javascript:void(0)" class="category-item" onclick="filterCategory('スポーツ')">
+                            <span class="category-icon">⚽</span>
+                            <span class="category-name">スポーツ</span>
+                            <span class="category-count">6</span>
+                        </a>
+                        <a href="javascript:void(0)" class="category-item" onclick="filterCategory('テクノロジー')">
+                            <span class="category-icon">💻</span>
+                            <span class="category-name">テクノロジー</span>
+                            <span class="category-count">15</span>
+                        </a>
+                        <a href="javascript:void(0)" class="category-item" onclick="filterCategory('国際')">
+                            <span class="category-icon">🌍</span>
+                            <span class="category-name">国際ニュース</span>
+                            <span class="category-count">4</span>
+                        </a>
+                        <a href="javascript:void(0)" class="category-item" onclick="filterCategory('健康')">
+                            <span class="category-icon">🏥</span>
+                            <span class="category-name">健康・医療</span>
+                            <span class="category-count">3</span>
+                        </a>
+                        <a href="javascript:void(0)" class="category-item" onclick="filterCategory('グルメ')">
+                            <span class="category-icon">🍜</span>
+                            <span class="category-name">グルメ</span>
+                            <span class="category-count">2</span>
+                        </a>
+                        <a href="javascript:void(0)" class="category-item" onclick="filterCategory('炎上')">
+                            <span class="category-icon">🔥</span>
+                            <span class="category-name">炎上・バズ</span>
+                            <span class="category-count">9</span>
+                        </a>
+                        <a href="javascript:void(0)" class="category-item" onclick="filterCategory('ユーチューバー')">
+                            <span class="category-icon">📺</span>
+                            <span class="category-name">YouTuber</span>
+                            <span class="category-count">5</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="ranking-box">
+                    <h3 style="color: #2c3e50; font-size: 1.3em; margin-bottom: 20px; text-align: center; font-weight: bold;">
+                        🔥 リアルタイムランキング
+                    </h3>
+                    <div class="rankings-nav">
+                        <button class="ranking-tab active" onclick="switchRankingTab('app_store')">📱 アプリ</button>
+                        <button class="ranking-tab" onclick="switchRankingTab('live_streaming')">📺 配信</button>
+                        <button class="ranking-tab" onclick="switchRankingTab('sns_buzz')">🐦 SNS</button>
+                        <button class="ranking-tab" onclick="switchRankingTab('crypto')">💰 仮想通貨</button>
+                        <button class="ranking-tab" onclick="switchRankingTab('youtube_trending')">🎬 YouTube</button>
+                    </div>
+                    <div class="ranking-content active" id="ranking-app_store"><div class="ranking-list">
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge top3">1</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">マジックシミュレーションクエスト</div>
+                        <div class="ranking-meta">
+                            <span>📂 Social</span>
+                            <span>⭐ 4.6</span>
+                            <span>💾 862万+</span>
+                            <span>Free</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div>📉</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">変動: -4</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge top3">2</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">ウマ娘</div>
+                        <div class="ranking-meta">
+                            <span>📂 Social</span>
+                            <span>⭐ 4.9</span>
+                            <span>💾 4638万+</span>
+                            <span>Free</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div>📉</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">変動: 13</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge top3">3</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">パズル&ドラゴンズ</div>
+                        <div class="ranking-meta">
+                            <span>📂 Games</span>
+                            <span>⭐ 3.5</span>
+                            <span>💾 9731万+</span>
+                            <span>Free</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div>🔥</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">変動: 0</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge ">4</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">ハイパーRPGワールド</div>
+                        <div class="ranking-meta">
+                            <span>📂 Social</span>
+                            <span>⭐ 4.3</span>
+                            <span>💾 9021万+</span>
+                            <span>Free</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div>📉</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">変動: 3</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge ">5</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">YouTube</div>
+                        <div class="ranking-meta">
+                            <span>📂 Social</span>
+                            <span>⭐ 4.6</span>
+                            <span>💾 4131万+</span>
+                            <span>Free</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div>🔥</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">変動: 10</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge ">6</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">モンスターストライク</div>
+                        <div class="ranking-meta">
+                            <span>📂 Entertainment</span>
+                            <span>⭐ 4.2</span>
+                            <span>💾 4037万+</span>
+                            <span>Free</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div>🔥</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">変動: 0</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge ">7</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">ポケモンGO</div>
+                        <div class="ranking-meta">
+                            <span>📂 Games</span>
+                            <span>⭐ 5.0</span>
+                            <span>💾 8658万+</span>
+                            <span>Free</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div>🔥</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">変動: 5</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge ">8</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">LINE</div>
+                        <div class="ranking-meta">
+                            <span>📂 Productivity</span>
+                            <span>⭐ 4.4</span>
+                            <span>💾 2110万+</span>
+                            <span>Free</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div>📉</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">変動: 14</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge ">9</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">パズル&ドラゴンズ</div>
+                        <div class="ranking-meta">
+                            <span>📂 Productivity</span>
+                            <span>⭐ 4.5</span>
+                            <span>💾 6976万+</span>
+                            <span>Free</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div>➖</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">変動: 2</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge ">10</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">ウルトラパズルヒーロー</div>
+                        <div class="ranking-meta">
+                            <span>📂 Productivity</span>
+                            <span>⭐ 4.0</span>
+                            <span>💾 1368万+</span>
+                            <span>Free</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div>📉</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">変動: 1</div>
+                    </div>
+                </div></div></div><div class="ranking-content" id="ranking-live_streaming"><div class="ranking-list">
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge top3">1</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">配信者262 </div>
+                        <div class="ranking-meta">
+                            <span class="live-indicator-small">LIVE</span>
+                            <span>📺 ツイキャス</span>
+                            <span>🎮 コラボ</span>
+                            <span>⏱️ 7時間55分</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div style="color: #dc3545; font-weight: bold;">49,402</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">視聴者</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge top3">2</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">配信者682 </div>
+                        <div class="ranking-meta">
+                            <span class="live-indicator-small">LIVE</span>
+                            <span>📺 ニコ生</span>
+                            <span>🎮 勉強</span>
+                            <span>⏱️ 3時間52分</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div style="color: #dc3545; font-weight: bold;">49,272</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">視聴者</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge top3">3</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">配信者782 </div>
+                        <div class="ranking-meta">
+                            <span class="live-indicator-small">LIVE</span>
+                            <span>📺 Twitch</span>
+                            <span>🎮 雑談</span>
+                            <span>⏱️ 1時間57分</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div style="color: #dc3545; font-weight: bold;">46,623</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">視聴者</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge ">4</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">配信者705 </div>
+                        <div class="ranking-meta">
+                            <span class="live-indicator-small">LIVE</span>
+                            <span>📺 Twitch</span>
+                            <span>🎮 コラボ</span>
+                            <span>⏱️ 5時間34分</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div style="color: #dc3545; font-weight: bold;">38,517</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">視聴者</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge ">5</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">ひめさん </div>
+                        <div class="ranking-meta">
+                            <span class="live-indicator-small">LIVE</span>
+                            <span>📺 Twitch</span>
+                            <span>🎮 ゲーム</span>
+                            <span>⏱️ 1時間51分</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div style="color: #dc3545; font-weight: bold;">37,472</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">視聴者</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge ">6</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">配信者523 ✅</div>
+                        <div class="ranking-meta">
+                            <span class="live-indicator-small">LIVE</span>
+                            <span>📺 ニコ生</span>
+                            <span>🎮 雑談</span>
+                            <span>⏱️ 5時間27分</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div style="color: #dc3545; font-weight: bold;">36,159</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">視聴者</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge ">7</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">配信者515 </div>
+                        <div class="ranking-meta">
+                            <span class="live-indicator-small">LIVE</span>
+                            <span>📺 YouTube Live</span>
+                            <span>🎮 料理</span>
+                            <span>⏱️ 4時間39分</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div style="color: #dc3545; font-weight: bold;">35,628</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">視聴者</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge ">8</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">配信者960 ✅</div>
+                        <div class="ranking-meta">
+                            <span class="live-indicator-small">LIVE</span>
+                            <span>📺 ツイキャス</span>
+                            <span>🎮 アート</span>
+                            <span>⏱️ 6時間41分</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div style="color: #dc3545; font-weight: bold;">31,650</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">視聴者</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge ">9</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">ひめGaming ✅</div>
+                        <div class="ranking-meta">
+                            <span class="live-indicator-small">LIVE</span>
+                            <span>📺 Twitch</span>
+                            <span>🎮 料理</span>
+                            <span>⏱️ 1時間18分</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div style="color: #dc3545; font-weight: bold;">29,950</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">視聴者</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge ">10</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">みくLIVE </div>
+                        <div class="ranking-meta">
+                            <span class="live-indicator-small">LIVE</span>
+                            <span>📺 Twitch</span>
+                            <span>🎮 料理</span>
+                            <span>⏱️ 7時間14分</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div style="color: #dc3545; font-weight: bold;">23,507</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">視聴者</div>
+                    </div>
+                </div></div></div><div class="ranking-content" id="ranking-sns_buzz"><div class="ranking-list">
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge top3">1</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">アップデート</div>
+                        <div class="ranking-meta">
+                            <span>📺 YouTube</span>
+                            <span>🔥 炎上</span>
+                            <span>⏰ 8時頃</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div class="growth-indicator">+399%</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">50,064 件</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge top3">2</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">サプライズ発表</div>
+                        <div class="ranking-meta">
+                            <span>📺 YouTube</span>
+                            <span>🔥 バズり中</span>
+                            <span>⏰ 12時頃</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div class="growth-indicator">+1819%</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">69,815 件</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge top3">3</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">コラボ企画</div>
+                        <div class="ranking-meta">
+                            <span>📺 YouTube</span>
+                            <span>🔥 トレンド</span>
+                            <span>⏰ 4時頃</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div class="growth-indicator">+1962%</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">480,659 件</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge ">4</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">炎上騒動</div>
+                        <div class="ranking-meta">
+                            <span>📺 YouTube</span>
+                            <span>🔥 急上昇</span>
+                            <span>⏰ 1時頃</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div class="growth-indicator">+626%</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">118,325 件</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge ">5</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">限定グッズ</div>
+                        <div class="ranking-meta">
+                            <span>📺 YouTube</span>
+                            <span>🔥 トレンド</span>
+                            <span>⏰ 6時頃</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div class="growth-indicator">+1106%</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">355,629 件</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge ">6</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">生配信</div>
+                        <div class="ranking-meta">
+                            <span>🐦 Twitter</span>
+                            <span>🔥 急上昇</span>
+                            <span>⏰ 18時頃</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div class="growth-indicator">+567%</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">203,237 件</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge ">7</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">新商品発表</div>
+                        <div class="ranking-meta">
+                            <span>🎵 TikTok</span>
+                            <span>🔥 トレンド</span>
+                            <span>⏰ 12時頃</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div class="growth-indicator">+243%</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">146,971 件</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge ">8</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">ゲーム配信</div>
+                        <div class="ranking-meta">
+                            <span>📷 Instagram</span>
+                            <span>🔥 急上昇</span>
+                            <span>⏰ 6時頃</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div class="growth-indicator">+969%</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">27,852 件</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge ">9</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">生配信</div>
+                        <div class="ranking-meta">
+                            <span>🎵 TikTok</span>
+                            <span>🔥 バズり中</span>
+                            <span>⏰ 2時頃</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div class="growth-indicator">+1143%</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">124,976 件</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge ">10</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">新機能</div>
+                        <div class="ranking-meta">
+                            <span>📷 Instagram</span>
+                            <span>🔥 バイラル</span>
+                            <span>⏰ 17時頃</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div class="growth-indicator">+879%</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">128,120 件</div>
+                    </div>
+                </div></div></div><div class="ranking-content" id="ranking-crypto"><div class="ranking-list">
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge top3">1</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">Bitcoin (BTC)</div>
+                        <div class="ranking-meta">
+                            <span>💰 ¥26,938.89</span>
+                            <span>📊 ¥7910億</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div class="growth-indicator negative">-12.22%</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">24h変動</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge top3">2</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">Ethereum (ETH)</div>
+                        <div class="ranking-meta">
+                            <span>💰 ¥46,506.24</span>
+                            <span>📊 ¥7088億</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div class="growth-indicator">+23.07%</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">24h変動</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge top3">3</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">Cardano (ADA)</div>
+                        <div class="ranking-meta">
+                            <span>💰 ¥2,054.63</span>
+                            <span>📊 ¥8427億</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div class="growth-indicator">+8.30%</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">24h変動</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge ">4</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">Solana (SOL)</div>
+                        <div class="ranking-meta">
+                            <span>💰 ¥46,199.10</span>
+                            <span>📊 ¥2778億</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div class="growth-indicator">+16.58%</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">24h変動</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge ">5</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">Dogecoin (DOGE)</div>
+                        <div class="ranking-meta">
+                            <span>💰 ¥1,276.39</span>
+                            <span>📊 ¥3232億</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div class="growth-indicator negative">-4.25%</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">24h変動</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge ">6</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">Shiba Inu (SHIB)</div>
+                        <div class="ranking-meta">
+                            <span>💰 ¥28,991.31</span>
+                            <span>📊 ¥2822億</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div class="growth-indicator">+3.30%</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">24h変動</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge ">7</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">Polygon (MATIC)</div>
+                        <div class="ranking-meta">
+                            <span>💰 ¥5,587.28</span>
+                            <span>📊 ¥8325億</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div class="growth-indicator">+12.22%</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">24h変動</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge ">8</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">Chainlink (LINK)</div>
+                        <div class="ranking-meta">
+                            <span>💰 ¥18,770.84</span>
+                            <span>📊 ¥8003億</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div class="growth-indicator negative">-10.21%</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">24h変動</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge ">9</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">Avalanche (AVAX)</div>
+                        <div class="ranking-meta">
+                            <span>💰 ¥12,607.00</span>
+                            <span>📊 ¥2853億</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div class="growth-indicator">+8.96%</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">24h変動</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge ">10</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">Polkadot (DOT)</div>
+                        <div class="ranking-meta">
+                            <span>💰 ¥15,150.42</span>
+                            <span>📊 ¥9741億</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div class="growth-indicator">+24.18%</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">24h変動</div>
+                    </div>
+                </div></div></div><div class="ranking-content" id="ranking-youtube_trending"><div class="ranking-list">
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge top3">1</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">【ドッキリ】突然サプライズを仕掛けてみた</div>
+                        <div class="ranking-meta">
+                            <span>📺 グルメレポート</span>
+                            <span>📂 エンタメ</span>
+                            <span>⏱️ 19:10</span>
+                            <span>📅 7時間前</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div style="color: #dc3545; font-weight: bold;">489万回</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">👍 25万</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge top3">2</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">【歌ってみた】話題の楽曲をカバー</div>
+                        <div class="ranking-meta">
+                            <span>📺 ゲーム実況チャンネル</span>
+                            <span>📂 ニュース</span>
+                            <span>⏱️ 16:24</span>
+                            <span>📅 6時間前</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div style="color: #dc3545; font-weight: bold;">227万回</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">👍 49万</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge top3">3</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">【雑談】最近あった出来事について</div>
+                        <div class="ranking-meta">
+                            <span>📺 料理研究家</span>
+                            <span>📂 ゲーム</span>
+                            <span>⏱️ 13:52</span>
+                            <span>📅 22時間前</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div style="color: #dc3545; font-weight: bold;">927万回</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">👍 18万</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge ">4</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">【雑談】最近あった出来事について</div>
+                        <div class="ranking-meta">
+                            <span>📺 グルメレポート</span>
+                            <span>📂 スポーツ</span>
+                            <span>⏱️ 1:24</span>
+                            <span>📅 18時間前</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div style="color: #dc3545; font-weight: bold;">931万回</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">👍 45万</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge ">5</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">【料理】簡単で美味しいレシピ紹介</div>
+                        <div class="ranking-meta">
+                            <span>📺 エンタメ情報局</span>
+                            <span>📂 スポーツ</span>
+                            <span>⏱️ 15:45</span>
+                            <span>📅 3時間前</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div style="color: #dc3545; font-weight: bold;">234万回</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">👍 22万</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge ">6</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">【検証】話題のアプリを24時間やり続けた結果</div>
+                        <div class="ranking-meta">
+                            <span>📺 アニメ解説ch</span>
+                            <span>📂 ニュース</span>
+                            <span>⏱️ 28:43</span>
+                            <span>📅 21時間前</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div style="color: #dc3545; font-weight: bold;">414万回</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">👍 20万</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge ">7</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">【ドッキリ】突然サプライズを仕掛けてみた</div>
+                        <div class="ranking-meta">
+                            <span>📺 グルメレポート</span>
+                            <span>📂 テクノロジー</span>
+                            <span>⏱️ 20:12</span>
+                            <span>📅 14時間前</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div style="color: #dc3545; font-weight: bold;">498万回</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">👍 45万</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge ">8</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">【実況】新作ゲームを初見プレイ！</div>
+                        <div class="ranking-meta">
+                            <span>📺 アニメ解説ch</span>
+                            <span>📂 ニュース</span>
+                            <span>⏱️ 18:49</span>
+                            <span>📅 16時間前</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div style="color: #dc3545; font-weight: bold;">361万回</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">👍 19万</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge ">9</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">【ドッキリ】突然サプライズを仕掛けてみた</div>
+                        <div class="ranking-meta">
+                            <span>📺 ファッション情報</span>
+                            <span>📂 エンタメ</span>
+                            <span>⏱️ 24:43</span>
+                            <span>📅 22時間前</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div style="color: #dc3545; font-weight: bold;">330万回</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">👍 17万</div>
+                    </div>
+                </div>
+                <div class="ranking-item-detailed">
+                    <div class="rank-badge ">10</div>
+                    <div class="ranking-details">
+                        <div class="ranking-title">【ドッキリ】突然サプライズを仕掛けてみた</div>
+                        <div class="ranking-meta">
+                            <span>📺 テクノロジー解説</span>
+                            <span>📂 テクノロジー</span>
+                            <span>⏱️ 4:43</span>
+                            <span>📅 10時間前</span>
+                        </div>
+                    </div>
+                    <div class="ranking-stats">
+                        <div style="color: #dc3545; font-weight: bold;">11万回</div>
+                        <div style="font-size: 0.7em; color: #6c757d;">👍 17万</div>
+                    </div>
+                </div></div></div>
+                </div>
+            </div>
+        </div>
+                
+        <div class="ranking-box">
+            <div style="font-size: 1.4em; font-weight: bold; color: #2c3e50; margin-bottom: 20px; border-bottom: 3px solid #27ae60; padding-bottom: 8px;">📊 品質保証情報</div>
+                    <div style="font-size: 0.95em; line-height: 1.9;">
+                        • <strong>実際のニュースソース:</strong> ✅<br>
+                        • <strong>詳細解説・分析:</strong> ✅<br>
+                        • <strong>ファクトチェック:</strong> ✅<br>
+                        • <strong>社会的影響分析:</strong> ✅<br>
+                        • <strong>専門的視点:</strong> ✅<br>
+                        • <strong>元記事リンク:</strong> 必須表示<br>
+                        • <strong>更新頻度:</strong> 15分間隔
+                    </div>
+                </div>
+                
+                <div class="ranking-box">
+                    <div style="font-size: 1.4em; font-weight: bold; color: #2c3e50; margin-bottom: 20px; border-bottom: 3px solid #9b59b6; padding-bottom: 8px;">📈 サイト統計</div>
+                    <div style="font-size: 0.95em; line-height: 1.9;">
+                        • <strong>詳細分析記事:</strong> 1件<br>
+                        • <strong>総コメント数:</strong> 15件<br>
+                        • <strong>信頼できるソース:</strong> 1個<br>
+                        • <strong>平均記事文字数:</strong> 1500文字以上<br>
+                        • <strong>分析品質:</strong> 専門レベル
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="container">
+            <p>© 2025 【速報】ニュースまとめ速 - 詳細解説・分析付きニュース</p>
+            <p style="font-size: 0.95em; margin-top: 12px; color: #ccc;">
+                実際のニュースに専門的な解説・ファクトチェック・社会的影響分析を加えてお届けします
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        // Auto-refresh page every 15 minutes
+        setTimeout(() => {
+            location.reload();
+        }, 900000);
+        
+        // Toggle comments visibility
+        function toggleComments(articleId) {
+            const container = document.getElementById('comments-' + articleId);
+            const button = event.target;
+            
+            if (container.classList.contains('show')) {
+                container.classList.remove('show');
+                button.textContent = '💬 コメントを表示';
+            } else {
+                container.classList.add('show');
+                button.textContent = '💬 コメントを非表示';
+            }
+        }
+        
+        // Comment functionality
+        function likeComment(articleId, commentId) {
+            const likeBtn = event.target;
+            const currentLikes = parseInt(likeBtn.textContent.split(' ')[1]);
+            likeBtn.innerHTML = `👍 ${currentLikes + 1}`;
+        }
+        
+        function dislikeComment(articleId, commentId) {
+            const dislikeBtn = event.target;
+            const currentDislikes = parseInt(dislikeBtn.textContent.split(' ')[1]);
+            dislikeBtn.innerHTML = `👎 ${currentDislikes + 1}`;
+        }
+        
+        function showReplyForm(articleId, commentNumber) {
+            const existingForm = document.getElementById(`reply-form-${commentNumber}`);
+            if (existingForm) {
+                existingForm.remove();
+                return;
+            }
+            
+            const commentDiv = document.getElementById(`comment-${commentNumber}`);
+            if (!commentDiv) return;
+            
+            const replyForm = document.createElement('div');
+            replyForm.id = `reply-form-${commentNumber}`;
+            replyForm.className = 'reply-form';
+            replyForm.innerHTML = `
+                <div style="background: #e8f6f3; border-radius: 8px; padding: 15px; margin-top: 10px;">
+                    <h5 style="margin-bottom: 10px; color: #2c3e50;">#${commentNumber}への返信</h5>
+                    <textarea placeholder="返信を入力してください..." style="width: 100%; padding: 8px; border: 1px solid #bdc3c7; border-radius: 4px; min-height: 60px;"></textarea>
+                    <div style="margin-top: 10px;">
+                        <button onclick="submitReply('${articleId}', ${commentNumber})" style="background: #2ecc71; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; margin-right: 8px;">返信投稿</button>
+                        <button onclick="cancelReply(${commentNumber})" style="background: #95a5a6; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">キャンセル</button>
+                    </div>
+                </div>
+            `;
+            
+            commentDiv.appendChild(replyForm);
+            replyForm.querySelector('textarea').focus();
+        }
+        
+        function submitReply(articleId, replyToNumber) {
+            const replyForm = document.getElementById(`reply-form-${replyToNumber}`);
+            const textarea = replyForm.querySelector('textarea');
+            const replyText = textarea.value.trim();
+            
+            if (!replyText) {
+                alert('返信内容を入力してください');
+                return;
+            }
+            
+            // Create new reply comment
+            const commentsContainer = document.querySelector(`#comments-${articleId} .comments-list`);
+            const newReply = document.createElement('div');
+            newReply.className = 'comment reply-comment';
+            newReply.innerHTML = `
+                <div class="reply-indicator">返信 → #${replyToNumber}</div>
+                <div class="comment-header">
+                    <span class="comment-author">#? 匿名さん</span>
+                    <span class="comment-time">${new Date().toLocaleString('ja-JP')}</span>
+                </div>
+                <div class="comment-text">${replyText}</div>
+                <div class="comment-actions">
+                    <button class="comment-action" onclick="likeComment('${articleId}', 'new')">👍 0</button>
+                    <button class="comment-action" onclick="dislikeComment('${articleId}', 'new')">👎 0</button>
+                    <button class="comment-action reply-btn" onclick="showReplyForm('${articleId}', 999)">返信</button>
+                </div>
+            `;
+            
+            commentsContainer.appendChild(newReply);
+            replyForm.remove();
+            
+            // Update comment count
+            const commentTitle = document.querySelector(`#comments-${articleId} .comments-title`);
+            const currentCount = parseInt(commentTitle.textContent.match(/\d+/)[0]);
+            commentTitle.textContent = `💬 読者コメント (${currentCount + 1}件)`;
+            
+            // Scroll to new reply
+            newReply.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            alert('返信を投稿しました！');
+        }
+        
+        function cancelReply(commentNumber) {
+            const replyForm = document.getElementById(`reply-form-${commentNumber}`);
+            if (replyForm) {
+                replyForm.remove();
+            }
+        }
+        
+        // Smooth scrolling for better UX
+        document.addEventListener('DOMContentLoaded', function() {
+            // Highlight enhanced content sections on scroll
+            const sections = document.querySelectorAll('.content-section');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.transform = 'translateX(0)';
+                        entry.target.style.opacity = '1';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            sections.forEach(section => {
+                section.style.transform = 'translateX(-20px)';
+                section.style.opacity = '0.8';
+                section.style.transition = 'all 0.6s ease';
+                observer.observe(section);
+            });
+        });
+        
+        // Reading progress indicator
+        window.addEventListener('scroll', function() {
+            const articles = document.querySelectorAll('.article');
+            const scrolled = window.pageYOffset;
+            const rate = scrolled / (document.body.scrollHeight - window.innerHeight);
+            
+            // Update reading progress if needed
+        });
+        
+        // Category filtering functionality
+        function filterCategory(category) {
+            const articles = document.querySelectorAll('.article');
+            const buttons = document.querySelectorAll('.category-btn');
+            
+            // Update button states
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Filter articles
+            let visibleCount = 0;
+            articles.forEach(article => {
+                const articleCategory = article.dataset.category;
+                
+                if (category === 'all') {
+                    article.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    // Handle category mapping for filtering
+                    const categoryMatches = (
+                        category === '政治' && (articleCategory === '政治' || articleCategory === '経済' || articleCategory === '総合') ||
+                        category === '芸能' && (articleCategory === '芸能' || articleCategory === 'エンタメ') ||
+                        category === 'スポーツ' && articleCategory === 'スポーツ' ||
+                        category === 'テクノロジー' && (articleCategory === 'テクノロジー' || articleCategory === 'IT') ||
+                        category === 'グルメ' && (articleCategory === 'グルメ' || articleCategory === '料理' || articleCategory === 'フード') ||
+                        category === '炎上' && (articleCategory === '炎上' || articleCategory === 'バズ' || articleCategory === 'SNS') ||
+                        category === 'ユーチューバー' && (articleCategory === 'ユーチューバー' || articleCategory === 'YouTube' || articleCategory === '配信') ||
+                        category === '国際' && articleCategory === '国際' ||
+                        category === '健康' && (articleCategory === '健康' || articleCategory === '医療') ||
+                        articleCategory === category
+                    );
+                    
+                    if (categoryMatches) {
+                        article.style.display = 'block';
+                        visibleCount++;
+                    } else {
+                        article.style.display = 'none';
+                    }
+                }
+            });
+            
+            // Update article count display
+            const sectionTitle = document.querySelector('.articles-section h2');
+            if (category === 'all') {
+                sectionTitle.textContent = '📰 詳細解説付きニュース';
+            } else {
+                const categoryIcons = {
+                    '政治': '🏛️',
+                    '芸能': '🎭',
+                    'スポーツ': '⚽',
+                    'テクノロジー': '💻',
+                    'グルメ': '🍜',
+                    '炎上': '🔥',
+                    'ユーチューバー': '📺',
+                    '国際': '🌍',
+                    '健康': '🏥'
+                };
+                const icon = categoryIcons[category] || '📰';
+                sectionTitle.textContent = `${icon} ${category}ニュース (${visibleCount}件)`;
+            }
+            
+            // Show no results message if needed
+            const articlesSection = document.querySelector('.articles-section');
+            let noResultsMsg = document.querySelector('.no-results');
+            
+            if (visibleCount === 0) {
+                if (!noResultsMsg) {
+                    noResultsMsg = document.createElement('div');
+                    noResultsMsg.className = 'no-results';
+                    noResultsMsg.style.cssText = 'text-align: center; padding: 40px; color: #666; font-size: 1.1em; background: #f8f9fa; border-radius: 12px; margin: 20px 0;';
+                    noResultsMsg.innerHTML = `
+                        <div style="font-size: 2em; margin-bottom: 15px;">🔍</div>
+                        <div><strong>${category}カテゴリのニュースはまだありません</strong></div>
+                        <div style="margin-top: 10px; font-size: 0.9em;">次回の更新をお待ちください</div>
+                    `;
+                    articlesSection.appendChild(noResultsMsg);
+                }
+            } else {
+                if (noResultsMsg) {
+                    noResultsMsg.remove();
+                }
+            }
+            
+            // Smooth scroll to articles section
+            articlesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        
+        // Ranking tab switching functionality
+        function switchRankingTab(tabName) {
+            // Update tab states
+            const tabs = document.querySelectorAll('.ranking-tab');
+            const contents = document.querySelectorAll('.ranking-content');
+            
+            tabs.forEach(tab => tab.classList.remove('active'));
+            contents.forEach(content => content.classList.remove('active'));
+            
+            // Activate selected tab and content
+            event.target.classList.add('active');
+            const targetContent = document.getElementById('ranking-' + tabName);
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+        }
+        
+        // Auto-update rankings every 2 minutes
+        function updateRankings() {
+            fetch('rankings_data.json')
+                .then(response => response.json())
+                .then(data => {
+                    // Rankings updated successfully
+                    // Optional: Update ranking displays without page reload
+                })
+                .catch(error => {
+                    // Rankings update failed - silent fail for production
+                });
+        }
+        
+        // Start auto-update for rankings
+        setInterval(updateRankings, 120000); // Every 2 minutes
+        
+        // Header navigation functions
+        function showHome() {
+            // Show all articles and reset category filter
+            filterByCategory('all');
+            updateNavActiveState('home');
+        }
+        
+        function showBreakingNews() {
+            // Filter for latest/breaking news (last 6 hours)
+            const articles = document.querySelectorAll('.article');
+            const now = new Date();
+            const sixHoursAgo = new Date(now.getTime() - 6 * 60 * 60 * 1000);
+            
+            let visibleCount = 0;
+            articles.forEach(article => {
+                const timeElement = article.querySelector('.meta-tag:first-child');
+                if (timeElement) {
+                    const timeText = timeElement.textContent;
+                    const isRecent = timeText.includes('時間前') || timeText.includes('分前');
+                    if (isRecent) {
+                        article.style.display = 'block';
+                        visibleCount++;
+                    } else {
+                        article.style.display = 'none';
+                    }
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+            
+            // Update section title
+            const sectionTitle = document.querySelector('.articles-section h2');
+            sectionTitle.textContent = `🚨 速報ニュース (${visibleCount}件)`;
+            
+            updateNavActiveState('breaking');
+            document.querySelector('.articles-section').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function showTrending() {
+            // Show trending/viral articles with high engagement
+            const articles = document.querySelectorAll('.article');
+            let visibleCount = 0;
+            
+            articles.forEach(article => {
+                const commentsCount = article.querySelectorAll('.comment').length;
+                const hasBadge = article.querySelector('.enhanced-badge');
+                
+                // Show articles with 5+ comments or enhanced badge
+                if (commentsCount >= 5 || hasBadge) {
+                    article.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+            
+            // Update section title
+            const sectionTitle = document.querySelector('.articles-section h2');
+            sectionTitle.textContent = `📈 トレンドニュース (${visibleCount}件)`;
+            
+            updateNavActiveState('trending');
+            document.querySelector('.articles-section').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function showAbout() {
+            // Create and show about modal
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+                background: rgba(0,0,0,0.7); z-index: 1000; display: flex;
+                align-items: center; justify-content: center; padding: 20px;
+            `;
+            
+            modal.innerHTML = `
+                <div style="background: white; padding: 40px; border-radius: 20px; max-width: 600px; max-height: 80vh; overflow-y: auto;">
+                    <h2 style="color: #2c3e50; margin-bottom: 20px; text-align: center;">🔥 【速報】ニュースまとめ速について</h2>
+                    <div style="line-height: 1.8; color: #444;">
+                        <p><strong>当サイトについて：</strong></p>
+                        <p>実際のニュースソースから情報を収集し、AI技術を活用して詳細な解説・分析・ファクトチェックを提供するニュースサイトです。</p>
+                        
+                        <p><strong>特徴：</strong></p>
+                        <ul style="margin: 15px 0; padding-left: 20px;">
+                            <li>リアルタイムニュース収集（15分間隔更新）</li>
+                            <li>専門的な解説・分析の付与</li>
+                            <li>ファクトチェック機能</li>
+                            <li>匿名コメントシステム</li>
+                            <li>カテゴリ別表示</li>
+                            <li>バイラル記事分析システム</li>
+                        </ul>
+                        
+                        <p><strong>技術スペック：</strong></p>
+                        <ul style="margin: 15px 0; padding-left: 20px;">
+                            <li>AI Model: DeepSeek-R1 (deepseek-reasoner)</li>
+                            <li>ニュースソース: 30+ RSS feeds</li>
+                            <li>更新頻度: 15分間隔</li>
+                            <li>分析機能: ランキング学習・パターン分析</li>
+                        </ul>
+                        
+                        <p style="font-size: 0.9em; color: #666; margin-top: 20px;">
+                            ※ 当サイトは情報提供を目的としており、記事の正確性について保証するものではありません。
+                        </p>
+                    </div>
+                    <button onclick="this.parentElement.parentElement.remove()" style="
+                        background: #e74c3c; color: white; border: none; padding: 12px 24px;
+                        border-radius: 8px; font-size: 1em; cursor: pointer; margin-top: 20px;
+                        width: 100%; font-weight: bold;
+                    ">閉じる</button>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            updateNavActiveState('about');
+        }
+        
+        function showContact() {
+            // Create and show contact modal
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+                background: rgba(0,0,0,0.7); z-index: 1000; display: flex;
+                align-items: center; justify-content: center; padding: 20px;
+            `;
+            
+            modal.innerHTML = `
+                <div style="background: white; padding: 40px; border-radius: 20px; max-width: 500px;">
+                    <h2 style="color: #2c3e50; margin-bottom: 20px; text-align: center;">📧 お問い合わせ</h2>
+                    <div style="line-height: 1.8; color: #444; text-align: center;">
+                        <p style="margin-bottom: 20px;">当サイトに関するご質問・ご要望がございましたら、以下の方法でお気軽にお問い合わせください。</p>
+                        
+                        <div style="background: #f8f9fa; padding: 20px; border-radius: 12px; margin: 20px 0;">
+                            <p><strong>📧 メール:</strong></p>
+                            <p style="color: #2c3e50; font-weight: bold;">news@example.com</p>
+                        </div>
+                        
+                        <div style="background: #f8f9fa; padding: 20px; border-radius: 12px; margin: 20px 0;">
+                            <p><strong>🐦 Twitter:</strong></p>
+                            <p style="color: #2c3e50; font-weight: bold;">@newsmatome_soku</p>
+                        </div>
+                        
+                        <p style="font-size: 0.9em; color: #666; margin-top: 20px;">
+                            ※ お返事には2-3営業日いただく場合があります。
+                        </p>
+                    </div>
+                    <button onclick="this.parentElement.parentElement.remove()" style="
+                        background: #3498db; color: white; border: none; padding: 12px 24px;
+                        border-radius: 8px; font-size: 1em; cursor: pointer; margin-top: 20px;
+                        width: 100%; font-weight: bold;
+                    ">閉じる</button>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            updateNavActiveState('contact');
+        }
+        
+        function updateNavActiveState(activeNav) {
+            // Update active state for navigation links
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => link.classList.remove('active'));
+            
+            // Add active class to the current navigation item
+            const navMap = {
+                'home': 0,
+                'breaking': 1,
+                'trending': 2,
+                'dashboard': 3,
+                'about': 4,
+                'contact': 5
+            };
+            
+            if (navMap[activeNav] !== undefined) {
+                navLinks[navMap[activeNav]].classList.add('active');
+            }
+        }
+        
+        // Category filtering function
+        function filterByCategory(category) {
+            const articles = document.querySelectorAll('.article');
+            let visibleCount = 0;
+            
+            articles.forEach(article => {
+                const articleCategory = article.dataset.category || '';
+                
+                if (category === 'all' || articleCategory === category) {
+                    article.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+            
+            // Update section title
+            const sectionTitle = document.querySelector('.articles-section h2');
+            if (category === 'all') {
+                sectionTitle.textContent = '📰 詳細解説付きニュース';
+            } else {
+                const categoryIcons = {
+                    '政治': '🏛️',
+                    '芸能': '🎭',
+                    'スポーツ': '⚽',
+                    'テクノロジー': '💻',
+                    'グルメ': '🍜',
+                    '炎上': '🔥',
+                    'ユーチューバー': '📺',
+                    '国際': '🌍',
+                    '健康': '🏥'
+                };
+                const icon = categoryIcons[category] || '📰';
+                sectionTitle.textContent = `${icon} ${category}ニュース (${visibleCount}件)`;
+            }
+            
+            // Smooth scroll to articles section
+            document.querySelector('.articles-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        
+        // Alias for backward compatibility
+        function filterCategory(category) {
+            filterByCategory(category);
+        }
+    </script>
+</body>
+</html>

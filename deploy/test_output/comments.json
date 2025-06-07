@@ -1,0 +1,124 @@
+{
+  "fallback_enhanced": [
+    {
+      "id": "1749208944_c2655221",
+      "name": "通りすがり",
+      "text": "はいはい",
+      "timestamp": {
+        "iso": "2025-06-06T09:57:24.793583+00:00",
+        "display": "2025/06/06 09:57:24",
+        "jst_display": "2025/06/06 18:57:24"
+      },
+      "number": 1,
+      "reply_to": null,
+      "likes": 0,
+      "dislikes": 15,
+      "quality": "low_quality"
+    },
+    {
+      "id": "1749208944_4706445a",
+      "name": "元公務員",
+      "text": "地域によって{regional_variation}があるのも事実だ。",
+      "timestamp": {
+        "iso": "2025-06-06T10:26:24.793610+00:00",
+        "display": "2025/06/06 10:26:24",
+        "jst_display": "2025/06/06 19:26:24"
+      },
+      "number": 2,
+      "reply_to": null,
+      "likes": 25,
+      "dislikes": 0,
+      "quality": "constructive"
+    },
+    {
+      "id": "1749208944_a75f848f",
+      "name": "元教師（46歳）",
+      "text": "長期的な視点で見ると{long_term_view}が重要だ。",
+      "timestamp": {
+        "iso": "2025-06-06T10:20:24.793630+00:00",
+        "display": "2025/06/06 10:20:24",
+        "jst_display": "2025/06/06 19:20:24"
+      },
+      "number": 3,
+      "reply_to": null,
+      "likes": 11,
+      "dislikes": 3,
+      "quality": "constructive"
+    },
+    {
+      "id": "1749208944_825fea33",
+      "name": "還暦過ぎ",
+      "text": "過去の事例を見ると{historical_perspective}だった。今回は{current_difference}。",
+      "timestamp": {
+        "iso": "2025-06-06T09:31:24.793646+00:00",
+        "display": "2025/06/06 09:31:24",
+        "jst_display": "2025/06/06 18:31:24"
+      },
+      "number": 4,
+      "reply_to": null,
+      "likes": 10,
+      "dislikes": 3,
+      "quality": "constructive"
+    },
+    {
+      "id": "1749208944_0acfd1d9",
+      "name": "昭和生まれ",
+      "text": "結局は{usual_outcome}になる。期待するだけ無駄。",
+      "timestamp": {
+        "iso": "2025-06-06T10:28:24.793659+00:00",
+        "display": "2025/06/06 10:28:24",
+        "jst_display": "2025/06/06 19:28:24"
+      },
+      "number": 5,
+      "reply_to": null,
+      "likes": 14,
+      "dislikes": 5,
+      "quality": "critical"
+    },
+    {
+      "id": "1749208944_9979e929",
+      "name": "元公務員（62歳）",
+      "text": ">>#4\n貴重な意見をありがとうございます。実体験があるからという理由で賛成します。",
+      "timestamp": {
+        "iso": "2025-06-06T10:17:24.793672+00:00",
+        "display": "2025/06/06 10:17:24",
+        "jst_display": "2025/06/06 19:17:24"
+      },
+      "number": 6,
+      "reply_to": 4,
+      "likes": 6,
+      "dislikes": 0,
+      "quality": "reply"
+    },
+    {
+      "id": "1749208944_d9c2ad22",
+      "name": "人生の先輩（60歳）",
+      "text": ">>#4\n具体的な方法について詳しく教えていただけませんか？",
+      "timestamp": {
+        "iso": "2025-06-06T11:17:24.793685+00:00",
+        "display": "2025/06/06 11:17:24",
+        "jst_display": "2025/06/06 20:17:24"
+      },
+      "number": 7,
+      "reply_to": 4,
+      "likes": 4,
+      "dislikes": 5,
+      "quality": "reply"
+    },
+    {
+      "id": "1749208944_0ff216b8",
+      "name": "都市部在住",
+      "text": ">>#6\n実施体制について詳しく教えていただけませんか？",
+      "timestamp": {
+        "iso": "2025-06-06T10:57:24.793698+00:00",
+        "display": "2025/06/06 10:57:24",
+        "jst_display": "2025/06/06 19:57:24"
+      },
+      "number": 8,
+      "reply_to": 6,
+      "likes": 9,
+      "dislikes": 3,
+      "quality": "reply"
+    }
+  ]
+}

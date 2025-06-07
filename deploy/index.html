@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google News スタイル - ニュース</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Google Sans, Roboto, arial, sans-serif;
+            background: #fff;
+            color: #202124;
+            line-height: 1.58;
+        }
+        
+        .header {
+            background: #fff;
+            border-bottom: 1px solid #dadce0;
+            padding: 12px 24px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+        
+        .logo {
+            font-size: 22px;
+            font-weight: 400;
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        
+        .nav-tabs {
+            display: flex;
+            gap: 32px;
+        }
+        
+        .nav-tab {
+            color: #5f6368;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 8px 0;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+        
+        .nav-tab:hover,
+        .nav-tab.active {
+            color: #1a73e8;
+            border-bottom-color: #1a73e8;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+        
+        .section {
+            margin-bottom: 48px;
+        }
+        
+        .section-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: #202124;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #dadce0;
+        }
+        
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        
+        .article-card {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s;
+            padding: 16px;
+            border-radius: 8px;
+        }
+        
+        .article-card:hover {
+            background: #f8f9fa;
+        }
+        
+        .article-title {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.4;
+            color: #202124;
+            margin-bottom: 8px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            color: #5f6368;
+            margin-bottom: 8px;
+        }
+        
+        .source {
+            font-weight: 500;
+        }
+        
+        .timestamp {
+            color: #70757a;
+        }
+        
+        .article-summary {
+            font-size: 14px;
+            color: #5f6368;
+            line-height: 1.4;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .top-stories {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 32px;
+            margin-bottom: 48px;
+        }
+        
+        .main-story {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .main-story .article-title {
+            font-size: 28px;
+            font-weight: 400;
+            margin-bottom: 12px;
+        }
+        
+        .main-story .article-summary {
+            font-size: 16px;
+            margin-bottom: 16px;
+        }
+        
+        .side-stories {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+        
+        .side-story {
+            padding-bottom: 24px;
+            border-bottom: 1px solid #dadce0;
+        }
+        
+        .side-story:last-child {
+            border-bottom: none;
+        }
+        
+        .category-badge {
+            display: inline-block;
+            background: #e8f0fe;
+            color: #1a73e8;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        
+        .update-time {
+            text-align: center;
+            color: #5f6368;
+            font-size: 12px;
+            margin: 32px 0;
+            padding: 16px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 0 16px;
+            }
+            
+            .nav-tabs {
+                gap: 16px;
+                overflow-x: auto;
+            }
+            
+            .container {
+                padding: 16px;
+            }
+            
+            .top-stories {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            
+            .main-story .article-title {
+                font-size: 22px;
+            }
+            
+            .articles-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <a href="#" class="logo">Google ニュース</a>
+            <nav class="nav-tabs">
+                <a href="#" class="nav-tab active">トップ</a>
+                <a href="#" class="nav-tab">日本</a>
+                <a href="#" class="nav-tab">国際</a>
+                <a href="#" class="nav-tab">ビジネス</a>
+                <a href="#" class="nav-tab">テクノロジー</a>
+                <a href="#" class="nav-tab">エンタメ</a>
+                <a href="#" class="nav-tab">スポーツ</a>
+                <a href="#" class="nav-tab">サイエンス</a>
+                <a href="#" class="nav-tab">健康</a>
+            </nav>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="update-time">
+            最終更新: 2025年06月07日 05:54 | 取得記事数: 75件 | RSS ソース数: 59件
+        </div>
+
+        <div class="top-stories">
+            <a href="https://www.gizmodo.jp/2025/06/descente_allterrain_untrimmed_seamless_h-s_shirt.html" class="main-story" target="_blank">
+                <div class="category-badge">テクノロジー</div>
+                <h1 class="article-title">めちゃ軽で肌あたりも良き。はっ水加工だから、雨の日も強いシャツ</h1>
+                <div class="article-meta">
+                    <span class="source">Gizmodo Japan</span>
+                    <span>•</span>
+                    <span class="timestamp">Fri, 06 Ju</span>
+                </div>
+                <p class="article-summary">Image:DESCENTE気温はそこまで高くはないももの、さっそくズズズっと雨のシーズンに突入した今日このごろ。今回は、はっ水素材で、どんな雨でもへっちゃらで涼し気なハーフスリーブシャツをご紹介しましょう。特殊な技術素材でストレスフリーImage:DESCENTEご紹介するのは、スポーツブランドDESCENTE（デサント）のファッション性を融合させたハイエンドコレクション、DESCENTEALL</p>
+            </a>
+            
+            <div class="side-stories">
+
+                <a href="https://www.gizmodo.jp/2025/06/almost-40-of-worlds-glaciers-already-doomed-due-to-climate-crisis.html" class="article-card side-story" target="_blank">
+                    <div class="category-badge">テクノロジー</div>
+                    <h3 class="article-title">氷河の39%がすでに消失確定。そこから先は「0.1度」の違いで運命が変わる</h3>
+                    <div class="article-meta">
+                        <span class="source">Gizmodo Japan</span>
+                        <span>•</span>
+                        <span class="timestamp">Fri, 06 Ju</span>
+                    </div>
+                </a>
+
+                <a href="https://www.gizmodo.jp/2025/06/wwdc25_gizmodo.html" class="article-card side-story" target="_blank">
+                    <div class="category-badge">テクノロジー</div>
+                    <h3 class="article-title">【月曜の夜26時から】WWDC25、ギズモードはリアルタイムで情報をお届けします</h3>
+                    <div class="article-meta">
+                        <span class="source">Gizmodo Japan</span>
+                        <span>•</span>
+                        <span class="timestamp">Fri, 06 Ju</span>
+                    </div>
+                </a>
+
+                <a href="https://www.gizmodo.jp/2025/06/worlds-first-red-paint.html" class="article-card side-story" target="_blank">
+                    <div class="category-badge">テクノロジー</div>
+                    <h3 class="article-title">ネアンデルタール人が4万年前に残した「赤い点」の謎</h3>
+                    <div class="article-meta">
+                        <span class="source">Gizmodo Japan</span>
+                        <span>•</span>
+                        <span class="timestamp">Fri, 06 Ju</span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">総合 (20件)</h2>
+            <div class="articles-grid">
+
+                <a href="http://www3.nhk.or.jp/news/html/20250607/k10014828541000.html" class="article-card" target="_blank">
+                    <h3 class="article-title">赤澤経済再生相 米財務省へ ベッセント財務長官と閣僚交渉か</h3>
+                    <div class="article-meta">
+                        <span class="source">NHK ニュース</span>
+                        <span>•</span>
+                        <span class="timestamp">Sat, 07 Ju</span>
+                    </div>
+                    <p class="article-summary">赤澤経済再生担当大臣は日本時間の7日朝4時すぎワシントンのアメリカ財務省に入りました。ベッセント財務長官とアメリカの関税措置をめぐる閣僚交渉に臨んでいるものとみられます。</p>
+                </a>
+
+                <a href="http://www3.nhk.or.jp/news/html/20250607/k10014828471000.html" class="article-card" target="_blank">
+                    <h3 class="article-title">大川原化工機えん罪事件 2審判決 都と国 上告しない方向で検討</h3>
+                    <div class="article-meta">
+                        <span class="source">NHK ニュース</span>
+                        <span>•</span>
+                        <span class="timestamp">Sat, 07 Ju</span>
+                    </div>
+                    <p class="article-summary">横浜市の化学機械メーカー「大川原化工機」の社長ら3人が不正輸出の疑いで逮捕され、その後無実が明らかになったえん罪事件をめぐり、警視庁公安部と検察の捜査の違法性を認めて賠償を命じた民事裁判の2審の判決について、都と国が上告しない方向で検討を進めていることが関係者への取材でわかりました。都と国は上告の期限となる今月11日までに最終的な判断をすることにしています。</p>
+                </a>
+
+                <a href="http://www3.nhk.or.jp/news/html/20250607/k10014828381000.html" class="article-card" target="_blank">
+                    <h3 class="article-title">備蓄米の販売 小売業者と精米余力ある卸売業者の連携が課題に</h3>
+                    <div class="article-meta">
+                        <span class="source">NHK ニュース</span>
+                        <span>•</span>
+                        <span class="timestamp">Sat, 07 Ju</span>
+                    </div>
+                    <p class="article-summary">随意契約の備蓄米の店頭販売が各地で始まる中、この流れを安定的に続けるカギと言われているのが「精米」です。備蓄米を調達した小売業者と精米の余力があるコメの卸売業者をどのようにつないでいくかが課題になっています。</p>
+                </a>
+
+                <a href="http://www3.nhk.or.jp/news/html/20250607/k10014828521000.html" class="article-card" target="_blank">
+                    <h3 class="article-title">佳子さま ブラジル サンパウロで日系人団体の歓迎行事に出席</h3>
+                    <div class="article-meta">
+                        <span class="source">NHK ニュース</span>
+                        <span>•</span>
+                        <span class="timestamp">Sat, 07 Ju</span>
+                    </div>
+                    <p class="article-summary">世界最大の日系人社会があるブラジルを公式訪問している秋篠宮ご夫妻の次女の佳子さまは、日系人が多く暮らす最大都市サンパウロで歓迎行事に臨まれました。</p>
+                </a>
+
+                <a href="http://www3.nhk.or.jp/news/html/20250607/k10014828531000.html" class="article-card" target="_blank">
+                    <h3 class="article-title">千葉 交差点で男性が意識不明 ひき逃げ事件として捜査</h3>
+                    <div class="article-meta">
+                        <span class="source">NHK ニュース</span>
+                        <span>•</span>
+                        <span class="timestamp">Sat, 07 Ju</span>
+                    </div>
+                    <p class="article-summary">6日夜、千葉市稲毛区の交差点で男性が意識のない状態で倒れているのがみつかりました。直前に車が自転車をはねてそのまま走り去ったという目撃情報があり、警察がひき逃げ事件として捜査しています。</p>
+                </a>
+
+                <a href="https://news.yahoo.co.jp/pickup/6541376?source=rss" class="article-card" target="_blank">
+                    <h3 class="article-title">小泉氏 コメ市場に口先介入強める</h3>
+                    <div class="article-meta">
+                        <span class="source">Yahoo!ニュース - 主要</span>
+                        <span>•</span>
+                        <span class="timestamp">Fri, 06 Ju</span>
+                    </div>
+                    <p class="article-summary"></p>
+                </a>
+
+                <a href="https://news.yahoo.co.jp/pickup/6541386?source=rss" class="article-card" target="_blank">
+                    <h3 class="article-title">万博水上ショー再開見送り 菌検出</h3>
+                    <div class="article-meta">
+                        <span class="source">Yahoo!ニュース - 主要</span>
+                        <span>•</span>
+                        <span class="timestamp">Fri, 06 Ju</span>
+                    </div>
+                    <p class="article-summary"></p>
+                </a>
+
+                <a href="https://news.yahoo.co.jp/pickup/6541372?source=rss" class="article-card" target="_blank">
+                    <h3 class="article-title">小6が体育で睾丸を損傷 緊急手術</h3>
+                    <div class="article-meta">
+                        <span class="source">Yahoo!ニュース - 主要</span>
+                        <span>•</span>
+                        <span class="timestamp">Fri, 06 Ju</span>
+                    </div>
+                    <p class="article-summary"></p>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">経済 (10件)</h2>
+            <div class="articles-grid">
+
+                <a href="https://jp.reuters.com/markets/us/6MURCYO6LNMJBI22EIOQRJKZZA-2025-06-06/" class="article-card" target="_blank">
+                    <h3 class="article-title">米国株式市場＝反発、雇用統計受け景気懸念緩和　テスラに買い戻し</h3>
+                    <div class="article-meta">
+                        <span class="source">ロイター（経済）</span>
+                        <span>•</span>
+                        <span class="timestamp">Fri, 06 Ju</span>
+                    </div>
+                    <p class="article-summary">米国株式市場は反発して終了した。５月の米雇用統計が堅調で景気懸念が和らいだことに加え、前日に急落した電気自動車（ＥＶ）大手テスラが上昇に転じたことで押し上げられた。</p>
+                </a>
+
+                <a href="https://jp.reuters.com/markets/commodities/OT3E4BG6RVJMLJUM5SGCV2P7ZM-2025-06-06/" class="article-card" target="_blank">
+                    <h3 class="article-title">米、中国の原発向け関連機器の輸出許可を停止＝関係筋</h3>
+                    <div class="article-meta">
+                        <span class="source">ロイター（経済）</span>
+                        <span>•</span>
+                        <span class="timestamp">Fri, 06 Ju</span>
+                    </div>
+                    <p class="article-summary">米国はここ数日で、中国の原子力発電所向けに原子力関連機器を販売するサプライヤーのライセンスを停止したもよう。事情に詳しい４人の関係者が明らかにした。</p>
+                </a>
+
+                <a href="https://jp.reuters.com/markets/japan/funds/ZYRWQJQFLZLFZKYHXL2SKFYQ7Y-2025-06-06/" class="article-card" target="_blank">
+                    <h3 class="article-title">シカゴ日経平均先物（6日）</h3>
+                    <div class="article-meta">
+                        <span class="source">ロイター（経済）</span>
+                        <span>•</span>
+                        <span class="timestamp">Fri, 06 Ju</span>
+                    </div>
+                    <p class="article-summary"></p>
+                </a>
+
+                <a href="https://jp.reuters.com/markets/us/5F35PLSEM5NO3K7OFSMEWEVP7I-2025-06-06/" class="article-card" target="_blank">
+                    <h3 class="article-title">ＮＹ外為市場＝ドル上昇、雇用統計受け利下げ急がずとの見方</h3>
+                    <div class="article-meta">
+                        <span class="source">ロイター（経済）</span>
+                        <span>•</span>
+                        <span class="timestamp">Fri, 06 Ju</span>
+                    </div>
+                    <p class="article-summary">ニューヨーク外為市場でドルが主要通貨に対し上昇した。５月の米雇用統計で労働市場が底堅く推移していることが示され、連邦準備理事会（ＦＲＢ）は利下げを急がないとの見方が改めて裏付けられた。</p>
+                </a>
+
+                <a href="https://jp.reuters.com/markets/europe/GDMGYGUTHVOWXC73PA5CABYCMQ-2025-06-06/" class="article-card" target="_blank">
+                    <h3 class="article-title">欧州市場サマリー（6日）</h3>
+                    <div class="article-meta">
+                        <span class="source">ロイター（経済）</span>
+                        <span>•</span>
+                        <span class="timestamp">Fri, 06 Ju</span>
+                    </div>
+                    <p class="article-summary">＜ロンドン株式市場＞　上昇して取引を終えた。雇用統計を受けて米国の景気減速に対する懸念が和らいだことで、金融など幅広い銘柄が買われた。中型株で構成するＦＴＳＥ２５０種指数は０．４２％高。週間では０．６１％高。ＦＴＳＥ１００種は週間で０．７５％上昇した。
+５月の米雇用統計で非農業部門雇用者数の伸びは前月から減速したものの、賃金上昇が堅調で経済拡大が当面続くとの見方が強まった。関税措置の不確実性から経</p>
+                </a>
+
+                <a href="https://toyokeizai.net/articles/-/882392?utm_source=rss&utm_medium=http&utm_campaign=link_back" class="article-card" target="_blank">
+                    <h3 class="article-title">エミン氏｢日経平均は来年5万円､30年に7万円超｣ | 最新の週刊東洋経済 | 東洋経済オンライン</h3>
+                    <div class="article-meta">
+                        <span class="source">東洋経済オンライン</span>
+                        <span>•</span>
+                        <span class="timestamp">Sat, 07 Ju</span>
+                    </div>
+                    <p class="article-summary">トランプ米大統領の発言次第で激動する株式相場。日本企業の今期業績は6年ぶりに減益となる見通しだが、…</p>
+                </a>
+
+                <a href="https://toyokeizai.net/articles/-/882764?utm_source=rss&utm_medium=http&utm_campaign=link_back" class="article-card" target="_blank">
+                    <h3 class="article-title">ユニクロのポロシャツを着て失敗する人の盲点 | 今さら聞けないビジネスファッションの作法 | 東洋経済オンライン</h3>
+                    <div class="article-meta">
+                        <span class="source">東洋経済オンライン</span>
+                        <span>•</span>
+                        <span class="timestamp">Sat, 07 Ju</span>
+                    </div>
+                    <p class="article-summary">「色は合っているのに、ポロシャツ姿がパッとしない」——そんな悩みを耳にします。近年は紳士服量販店で…</p>
+                </a>
+
+                <a href="https://toyokeizai.net/articles/-/882612?utm_source=rss&utm_medium=http&utm_campaign=link_back" class="article-card" target="_blank">
+                    <h3 class="article-title">かつやの｢539円モーニング｣に深く酔いしれる朝 | チェーン店最強のモーニングを探して | 東洋経済オンライン</h3>
+                    <div class="article-meta">
+                        <span class="source">東洋経済オンライン</span>
+                        <span>•</span>
+                        <span class="timestamp">Sat, 07 Ju</span>
+                    </div>
+                    <p class="article-summary">『マツコの知らない世界』（TBS系）にも出演した、チェーン店の外食モーニングをこよなく愛するライター…</p>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">テクノロジー (20件)</h2>
+            <div class="articles-grid">
+
+                <a href="https://gigazine.net/news/20250606-markdown-ios-notes-john-gruber/" class="article-card" target="_blank">
+                    <h3 class="article-title">iPhoneの「メモ」がMarkdownに対応予定と報じられるもMarkdown発明者は「メモにMarkdownは不要」とコメント</h3>
+                    <div class="article-meta">
+                        <span class="source">GIGAZINE</span>
+                        <span>•</span>
+                        <span class="timestamp">Fri, 06 Ju</span>
+                    </div>
+                    <p class="article-summary">Markdownはシンプルな記号を使って見出しや太字といったテキストの装飾を指定しつつ文章を執筆できるマークアップ言語です。このMarkdownにAppleの「メモ(Notes)」が対応することが報道されているのですが、Markdownの発明者であるジョン・グルーバー氏は「メモにMarkdown機能は不要だ」という持論を展開しています。<p><b><a href="https://gigazine</p>
+                </a>
+
+                <a href="https://gigazine.net/news/20250606-keep-going-create/" class="article-card" target="_blank">
+                    <h3 class="article-title">作品を公開したのに誰も反応してくれない状態でも延々と作り続けるために必要な考え方</h3>
+                    <div class="article-meta">
+                        <span class="source">GIGAZINE</span>
+                        <span>•</span>
+                        <span class="timestamp">Fri, 06 Ju</span>
+                    </div>
+                    <p class="article-summary">「継続は力なり」という言葉があるように、たとえ最初は見向きもされないような作品だったとしても、とにかく作り続けることが大切だとよく言われます。そうは言っても誰にも注目されないというのは悲しいもの。そんな状況を乗り越えるためのアドバイスを、スポーツ系アプリ「Swift」などを開発したジート・メータ氏が語っています。<p><b><a href="https://gigazine.net/news/20</p>
+                </a>
+
+                <a href="https://gigazine.net/news/20250606-eleven-labs-eleven-v3/" class="article-card" target="_blank">
+                    <h3 class="article-title">日本語にも対応したテキスト読み上げモデル「Eleven v3」で実際にGIGAZINEの記事を音声化するとこうなる</h3>
+                    <div class="article-meta">
+                        <span class="source">GIGAZINE</span>
+                        <span>•</span>
+                        <span class="timestamp">Fri, 06 Ju</span>
+                    </div>
+                    <p class="article-summary">AI企業・ElevenLabsの開発するText to Speech(テキスト読み上げ)モデル「Eleven」のバージョン3アルファ版に当たる「Eleven v3(alpha)」が2025年6月6日にリリースされました。Eleven v3(alpha)では、これまで切望されてきた日本語の読み上げが可能になり、さらにこれまでのモデルにはなかった「感情」と「対話」が可能になっています。<p><b><a</p>
+                </a>
+
+                <a href="https://gigazine.net/news/20250606-wing-walmart-drone-delivery/" class="article-card" target="_blank">
+                    <h3 class="article-title">ウォルマートがドローン配達の規模をさらに100店舗拡大へ、Google兄弟企業のWingが協力</h3>
+                    <div class="article-meta">
+                        <span class="source">GIGAZINE</span>
+                        <span>•</span>
+                        <span class="timestamp">Fri, 06 Ju</span>
+                    </div>
+                    <p class="article-summary">2021年からドローン配達を展開しているアメリカの大手小売店チェーン・ウォルマートが、さらにアトランタやヒューストンなどの都市の合計100店舗でより迅速に荷物を届けられるドローン配達を導入する方針を明らかにしました。これで、ウォルマートのドローン配達が利用可能な州は5つに増えます。<p><b><a href="https://gigazine.net/news/20250606&#45;wing&</p>
+                </a>
+
+                <a href="https://gigazine.net/news/20250606-sdam-remember-episode/" class="article-card" target="_blank">
+                    <h3 class="article-title">記憶に視覚的要素が欠けており過去の出来事を心の中で「追体験」する能力が低い「SDAM(重度の自伝的記憶障害)」とは？「アファンタジア」との関連は？</h3>
+                    <div class="article-meta">
+                        <span class="source">GIGAZINE</span>
+                        <span>•</span>
+                        <span class="timestamp">Fri, 06 Ju</span>
+                    </div>
+                    <p class="article-summary">心の中でイメージを思い浮かべられず、過去の記憶を映像のようにして振り返ることができない「アファンタジア」という状態にある人は、人口の約2～5％ほど存在するといわれています。自身をアファンタジアだと認めるマルコ・ジャンコッティ氏は、アファンタジアに加えて個人的な体験を一人称視点で鮮明に思い出すことができないという「重度の自伝的記憶障害(SDAM)」、あるいはそれに近い症状を患っていると公表し、SDA</p>
+                </a>
+
+                <a href="https://www.itmedia.co.jp/business/articles/2506/07/news008.html" class="article-card" target="_blank">
+                    <h3 class="article-title">[ITmedia ビジネスオンライン] まさかの「備蓄米ブーム」到来……　米の価格は下落するのか？　各社の「仕入れ量」「取り組み」総まとめ</h3>
+                    <div class="article-meta">
+                        <span class="source">ITmedia</span>
+                        <span>•</span>
+                        <span class="timestamp">Sat, 07 Ju</span>
+                    </div>
+                    <p class="article-summary">空前の米価高騰で、備蓄米ブームが起きている。各社の取り組みをまとめる。</p>
+                </a>
+
+                <a href="https://www.itmedia.co.jp/mobile/articles/2506/06/news112.html" class="article-card" target="_blank">
+                    <h3 class="article-title">[ITmedia Mobile] JTOWER、ドコモから取得した鉄塔でキャリア4社の共用開始　オープンRAN対応の5G共用無線機も発表</h3>
+                    <div class="article-meta">
+                        <span class="source">ITmedia</span>
+                        <span>•</span>
+                        <span class="timestamp">Fri, 06 Ju</span>
+                    </div>
+                    <p class="article-summary">JTOWERがは6月6日、通信事業者から取得した通信鉄塔において、4キャリアによるタワーシェアリングの運用を初めて開始すると発表した。沖縄県の鉄塔にて、各キャリアの準備が整い次第、順次運用をスタートさせる予定だ。あわせて、JTOWERは国内で初めてとなるオープンRAN対応の5G Sub6帯域共用無線機の開発を完了した。</p>
+                </a>
+
+                <a href="https://www.itmedia.co.jp/news/articles/2506/06/news110.html" class="article-card" target="_blank">
+                    <h3 class="article-title">[ITmedia News] 愛知県で、NHK放送料の「一部未払い」発覚　最長32年間、未払い金額は計2000万円超</h3>
+                    <div class="article-meta">
+                        <span class="source">ITmedia</span>
+                        <span>•</span>
+                        <span class="timestamp">Fri, 06 Ju</span>
+                    </div>
+                    <p class="article-summary">愛知県は、県が管理する一部のテレビ放送受信機器において、NHKとの放送受信契約が未契約だったと発表した。未払い金額は2071万9630円で、速やかに支払い手続きを進めるとしている。</p>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">国際 (10件)</h2>
+            <div class="articles-grid">
+
+                <a href="https://edition.cnn.com/webview/politics/live-news/trump-indictment-stormy-daniels-news-04-03-23/index.html" class="article-card" target="_blank">
+                    <h3 class="article-title">Trump pleads not guilty to 34 felony counts</h3>
+                    <div class="article-meta">
+                        <span class="source">CNN</span>
+                        <span>•</span>
+                        <span class="timestamp"></span>
+                    </div>
+                    <p class="article-summary"></p>
+                </a>
+
+                <a href="https://www.cnn.com/videos/politics/2023/04/05/maggie-haberman-donald-trump-speech-indictment-reaction-sot-cnntm-vpx.cnn" class="article-card" target="_blank">
+                    <h3 class="article-title">Haberman reveals why Trump attacked judge and his family in speech</h3>
+                    <div class="article-meta">
+                        <span class="source">CNN</span>
+                        <span>•</span>
+                        <span class="timestamp">Wed, 05 Ap</span>
+                    </div>
+                    <p class="article-summary">CNN political contributor Maggie Haberman explains the reasoning behind Donald Trump's attacks on the judge and his family during a speech at his Mar-a-Lago resort after he was arraigned on felony cha</p>
+                </a>
+
+                <a href="https://www.cnn.com/collections/intl-trump-040223/" class="article-card" target="_blank">
+                    <h3 class="article-title">What to know about the Trump indictment on the eve of his court appearance</h3>
+                    <div class="article-meta">
+                        <span class="source">CNN</span>
+                        <span>•</span>
+                        <span class="timestamp">Wed, 05 Ap</span>
+                    </div>
+                    <p class="article-summary"></p>
+                </a>
+
+                <a href="https://cnn.it/411KYN7" class="article-card" target="_blank">
+                    <h3 class="article-title">READ: Trump indictment related to hush money payment</h3>
+                    <div class="article-meta">
+                        <span class="source">CNN</span>
+                        <span>•</span>
+                        <span class="timestamp"></span>
+                    </div>
+                    <p class="article-summary"></p>
+                </a>
+
+                <a href="https://edition.cnn.com/webview/europe/live-news/russia-ukraine-war-news-04-03-23/index.html" class="article-card" target="_blank">
+                    <h3 class="article-title">Russian authorities detain suspect over St. Petersburg cafe blast</h3>
+                    <div class="article-meta">
+                        <span class="source">CNN</span>
+                        <span>•</span>
+                        <span class="timestamp"></span>
+                    </div>
+                    <p class="article-summary"></p>
+                </a>
+
+                <a href="https://www.theguardian.com/us-news/2025/jun/06/migrants-djibouti-ice" class="article-card" target="_blank">
+                    <h3 class="article-title">Group stranded with Ice in Djibouti shipping container after removal from US</h3>
+                    <div class="article-meta">
+                        <span class="source">Guardian</span>
+                        <span>•</span>
+                        <span class="timestamp">Fri, 06 Ju</span>
+                    </div>
+                    <p class="article-summary"><p>Deportees and officers are ‘ill’ and face risks after flight to South Sudan was stopped by US court in late May</p><p>A group of men removed from the US to <a href="https://www.theguardian.com/worl</p>
+                </a>
+
+                <a href="https://www.theguardian.com/environment/2025/jun/05/dehorning-rhinos-deters-poachers-rangers-helicopters-aoe" class="article-card" target="_blank">
+                    <h3 class="article-title">Dehorning rhinos reduces poaching by 80%, study finds</h3>
+                    <div class="article-meta">
+                        <span class="source">Guardian</span>
+                        <span>•</span>
+                        <span class="timestamp">Thu, 05 Ju</span>
+                    </div>
+                    <p class="article-summary"><p>Cutting off the animals’ horns more effective than traditional protection methods such as rangers and costs less, say experts</p><p>Cutting the horns off rhinos causes a large reduction in poaching</p>
+                </a>
+
+                <a href="https://www.theguardian.com/film/2025/jun/05/idris-elba-i-want-to-build-the-african-odeon" class="article-card" target="_blank">
+                    <h3 class="article-title">Idris Elba: ‘I want to build the African Odeon’</h3>
+                    <div class="article-meta">
+                        <span class="source">Guardian</span>
+                        <span>•</span>
+                        <span class="timestamp">Thu, 05 Ju</span>
+                    </div>
+                    <p class="article-summary"><p>Speaking at an SXSW London event, the actor outlined his desire to ignite the cinema experience for a new generation across the continent </p><p>Idris Elba has spoken of his ambition to create the </p>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">ユーチューバー (10件)</h2>
+            <div class="articles-grid">
+
+                <a href="https://blog.youtube/inside-youtube/dreamcon-recap-2025/" class="article-card" target="_blank">
+                    <h3 class="article-title">Behind-the-scenes at DreamCon: How YouTube fueled connection & community</h3>
+                    <div class="article-meta">
+                        <span class="source">YouTube Creator Blog</span>
+                        <span>•</span>
+                        <span class="timestamp">Tue, 03 Ju</span>
+                    </div>
+                    <p class="article-summary"><img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/DSC04452.max-600x600.format-webp.webp" />Experience DreamCon! Get a behind-the-scenes look at creator-focused events, YouTube'</p>
+                </a>
+
+                <a href="https://blog.youtube/culture-and-trends/trending-now-june-2025/" class="article-card" target="_blank">
+                    <h3 class="article-title">Trending now: Italian brainrot, NFL schedule release videos, 100 men vs 1 gorilla & more</h3>
+                    <div class="article-meta">
+                        <span class="source">YouTube Creator Blog</span>
+                        <span>•</span>
+                        <span class="timestamp">Mon, 02 Ju</span>
+                    </div>
+                    <p class="article-summary"><img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/June-Trending-Hero.max-600x600.format-webp.webp" />Uncover the latest YouTube trends in gaming, memes, sports and animation wi</p>
+                </a>
+
+                <a href="https://blog.youtube/creator-and-artist-stories/turning-views-into-ventures-with-doctor-fashion/" class="article-card" target="_blank">
+                    <h3 class="article-title">Turning views into ventures with Doctor Fashion</h3>
+                    <div class="article-meta">
+                        <span class="source">YouTube Creator Blog</span>
+                        <span>•</span>
+                        <span class="timestamp">Mon, 02 Ju</span>
+                    </div>
+                    <p class="article-summary"></p>
+                </a>
+
+                <a href="https://blog.youtube/news-and-events/youtube-may-2025-quiz/" class="article-card" target="_blank">
+                    <h3 class="article-title">How well do you know YouTube's May announcements?</h3>
+                    <div class="article-meta">
+                        <span class="source">YouTube Creator Blog</span>
+                        <span>•</span>
+                        <span class="timestamp">Fri, 30 Ma</span>
+                    </div>
+                    <p class="article-summary"><img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/BINK_YouTube_UX_Updates_v4.max-600x600.format-webp.webp" />Take our quiz to prove how much you know about our big May news, in</p>
+                </a>
+
+                <a href="https://blog.youtube/culture-and-trends/formula-one/" class="article-card" target="_blank">
+                    <h3 class="article-title">Accelerating F1: The YouTube creators driving the sport's new era</h3>
+                    <div class="article-meta">
+                        <span class="source">YouTube Creator Blog</span>
+                        <span>•</span>
+                        <span class="timestamp">Fri, 23 Ma</span>
+                    </div>
+                    <p class="article-summary">Celebrate the creators and drivers who put you in the cockpit, revealing the untold stories and complex tech behind Formula 1.</p>
+                </a>
+
+                <a href="https://www.tubefilter.com/2025/06/05/mrbeast-beau-avril-youtube-exec-head-media-brand-partnerships/" class="article-card" target="_blank">
+                    <h3 class="article-title">MrBeast taps former YouTube, TikTok, and Meta exec to get him more brand and media partnerships</h3>
+                    <div class="article-meta">
+                        <span class="source">TubeFilter</span>
+                        <span>•</span>
+                        <span class="timestamp">Thu, 05 Ju</span>
+                    </div>
+                    <p class="article-summary"><p><img alt="" class="attachment-featured-image size-featured-image wp-post-image" height="720" src="https://www.tubefilter.com/wp-content/uploads/2025/06/beau.jpg" style="float: left; margin: 0 15px </p>
+                </a>
+
+                <a href="https://www.tubefilter.com/2025/06/05/democrats-speaking-with-american-men-youtube-study/" class="article-card" target="_blank">
+                    <h3 class="article-title">Democrats are spending $20 million trying to get Joe Rogan listeners to like them</h3>
+                    <div class="article-meta">
+                        <span class="source">TubeFilter</span>
+                        <span>•</span>
+                        <span class="timestamp">Thu, 05 Ju</span>
+                    </div>
+                    <p class="article-summary"><p><img alt="" class="attachment-featured-image size-featured-image wp-post-image" height="1600" src="https://www.tubefilter.com/wp-content/uploads/2025/06/luke-michael-Tdwu35bCUj0-unsplash.jpg" style</p>
+                </a>
+
+                <a href="https://www.tubefilter.com/2025/06/05/the-try-guys-tried-making-their-own-streaming-serivce-and-its-working-with-vimeos-tools/" class="article-card" target="_blank">
+                    <h3 class="article-title">The Try Guys tried making their own streaming service–and it’s working, with Vimeo’s tools</h3>
+                    <div class="article-meta">
+                        <span class="source">TubeFilter</span>
+                        <span>•</span>
+                        <span class="timestamp">Thu, 05 Ju</span>
+                    </div>
+                    <p class="article-summary"><p><img alt="" class="attachment-featured-image size-featured-image wp-post-image" height="905" src="https://www.tubefilter.com/wp-content/uploads/2025/06/try-guys.jpg" style="float: left; margin: 0 1</p>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">炎上 (5件)</h2>
+            <div class="articles-grid">
+
+                <a href="https://www.buzzfeed.com/jp/kenjiando/doraemon-future" class="article-card" target="_blank">
+                    <h3 class="article-title">【さようなら、ドラえもん】最終回みたいな話が第6巻に掲載されている理由は？</h3>
+                    <div class="article-meta">
+                        <span class="source">BuzzFeed Japan</span>
+                        <span>•</span>
+                        <span class="timestamp">Thu, 05 Ju</span>
+                    </div>
+                    <p class="article-summary"><h1>国民的なキャラクターとなった『ドラえもん』。第6巻の巻末にある「さようなら、ドラえもん」は、スタート当初の苦難に満ちた歴史を今に伝えています。</h1><p><img src="https://img.buzzfeed.com/buzzfeed-static/static/2025-06/03/09/subbuzz/MBiRWWDWp.jpg?crop=1081:721;234,432&a</p>
+                </a>
+
+                <a href="https://www.buzzfeed.com/jp/buzzfeedjapanshopping/rakuten-ss-bags" class="article-card" target="_blank">
+                    <h3 class="article-title">【楽天スーパーSALE3選】かわいすぎる…！夏にぴったりフルラのバケットバッグが半額ですと！？</h3>
+                    <div class="article-meta">
+                        <span class="source">BuzzFeed Japan</span>
+                        <span>•</span>
+                        <span class="timestamp">Fri, 06 Ju</span>
+                    </div>
+                    <p class="article-summary"><h1>6月4日20時スタートの楽天スーパーSALEの目玉は半額セール！ FURLA（フルラ） 、 MARNI（マル二） の半額になっているバッグを紹介します。</h1><p><img src="https://img.buzzfeed.com/buzzfeed-static/static/2025-06/04/05/thumb/bQGQ6z0XK.jpg?crop=3650:2433;0,0&a</p>
+                </a>
+
+                <a href="https://www.buzzfeed.com/jp/hironakobashi/kikare-takunai" class="article-card" target="_blank">
+                    <h3 class="article-title">【恐怖】直感で画像を選んでいくと「一番聞かれたくないこと」がバレる診断</h3>
+                    <div class="article-meta">
+                        <span class="source">BuzzFeed Japan</span>
+                        <span>•</span>
+                        <span class="timestamp">Sat, 19 Au</span>
+                    </div>
+                    <p class="article-summary"><h1>それは聞かないでェ…</h1><p><img src="https://img.buzzfeed.com/buzzfeed-static/static/2017-08/16/23/enhanced/buzzfeed-prod-fastlane-02/original-27839-1502941730-3.jpg?crop=1520:1009;45,53&amp;resize=1250:83</p>
+                </a>
+
+                <a href="https://www.buzzfeed.com/jp/hikaruyoza/classic-q" class="article-card" target="_blank">
+                    <h3 class="article-title">真のクラシック好きにしかわからない！音楽用語クイズ</h3>
+                    <div class="article-meta">
+                        <span class="source">BuzzFeed Japan</span>
+                        <span>•</span>
+                        <span class="timestamp">Tue, 20 Ju</span>
+                    </div>
+                    <p class="article-summary"><h1>正しく読める？</h1><p><img src="https://img.buzzfeed.com/buzzfeed-static/static/2017-06/20/1/tmp/buzzfeed-prod-fastlane-01/8dd4a5c028e8b4958bdd558b483637f5-1.jpg?crop=625:415;0,0&amp;resize=1250:830" /><</p>
+                </a>
+
+                <a href="https://www.buzzfeed.com/jp/hiroshiishii/noutore6" class="article-card" target="_blank">
+                    <h3 class="article-title">助けて…この「文字クイズ」が難しすぎて分からないんです</h3>
+                    <div class="article-meta">
+                        <span class="source">BuzzFeed Japan</span>
+                        <span>•</span>
+                        <span class="timestamp">Sun, 07 No</span>
+                    </div>
+                    <p class="article-summary"><h1>「十」→「た」、「一」→「ひ」、「＝」→「め」。それでは「ル」は？</h1><p><img src="https://img.buzzfeed.com/buzzfeed-static/static/2021-11/5/5/asset/81add2bb0349/sub-buzz-2903-1636091702-24.jpg?crop=625:417;0,0&amp;resize=1250:8</p>
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

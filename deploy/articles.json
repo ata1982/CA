@@ -1,0 +1,682 @@
+{
+  "articles": [
+    {
+      "title": "赤澤経済再生相 米財務省へ ベッセント財務長官と閣僚交渉か",
+      "url": "http://www3.nhk.or.jp/news/html/20250607/k10014828541000.html",
+      "source": "NHK ニュース",
+      "category": "総合",
+      "published": "Sat, 07 Jun 2025 05:09:30 +0900",
+      "summary": "赤澤経済再生担当大臣は日本時間の7日朝4時すぎワシントンのアメリカ財務省に入りました。ベッセント財務長官とアメリカの関税措置をめぐる閣僚交渉に臨んでいるものとみられます。",
+      "fetch_timestamp": "2025-06-07T05:53:59.864990"
+    },
+    {
+      "title": "大川原化工機えん罪事件 2審判決 都と国 上告しない方向で検討",
+      "url": "http://www3.nhk.or.jp/news/html/20250607/k10014828471000.html",
+      "source": "NHK ニュース",
+      "category": "総合",
+      "published": "Sat, 07 Jun 2025 01:20:47 +0900",
+      "summary": "横浜市の化学機械メーカー「大川原化工機」の社長ら3人が不正輸出の疑いで逮捕され、その後無実が明らかになったえん罪事件をめぐり、警視庁公安部と検察の捜査の違法性を認めて賠償を命じた民事裁判の2審の判決について、都と国が上告しない方向で検討を進めていることが関係者への取材でわかりました。都と国は上告の期限となる今月11日までに最終的な判断をすることにしています。",
+      "fetch_timestamp": "2025-06-07T05:53:59.865023"
+    },
+    {
+      "title": "備蓄米の販売 小売業者と精米余力ある卸売業者の連携が課題に",
+      "url": "http://www3.nhk.or.jp/news/html/20250607/k10014828381000.html",
+      "source": "NHK ニュース",
+      "category": "総合",
+      "published": "Sat, 07 Jun 2025 05:04:38 +0900",
+      "summary": "随意契約の備蓄米の店頭販売が各地で始まる中、この流れを安定的に続けるカギと言われているのが「精米」です。備蓄米を調達した小売業者と精米の余力があるコメの卸売業者をどのようにつないでいくかが課題になっています。",
+      "fetch_timestamp": "2025-06-07T05:53:59.865034"
+    },
+    {
+      "title": "佳子さま ブラジル サンパウロで日系人団体の歓迎行事に出席",
+      "url": "http://www3.nhk.or.jp/news/html/20250607/k10014828521000.html",
+      "source": "NHK ニュース",
+      "category": "総合",
+      "published": "Sat, 07 Jun 2025 05:12:44 +0900",
+      "summary": "世界最大の日系人社会があるブラジルを公式訪問している秋篠宮ご夫妻の次女の佳子さまは、日系人が多く暮らす最大都市サンパウロで歓迎行事に臨まれました。",
+      "fetch_timestamp": "2025-06-07T05:53:59.865044"
+    },
+    {
+      "title": "千葉 交差点で男性が意識不明 ひき逃げ事件として捜査",
+      "url": "http://www3.nhk.or.jp/news/html/20250607/k10014828531000.html",
+      "source": "NHK ニュース",
+      "category": "総合",
+      "published": "Sat, 07 Jun 2025 05:25:19 +0900",
+      "summary": "6日夜、千葉市稲毛区の交差点で男性が意識のない状態で倒れているのがみつかりました。直前に車が自転車をはねてそのまま走り去ったという目撃情報があり、警察がひき逃げ事件として捜査しています。",
+      "fetch_timestamp": "2025-06-07T05:53:59.865054"
+    },
+    {
+      "title": "小泉氏 コメ市場に口先介入強める",
+      "url": "https://news.yahoo.co.jp/pickup/6541376?source=rss",
+      "source": "Yahoo!ニュース - 主要",
+      "category": "総合",
+      "published": "Fri, 06 Jun 2025 12:38:19 GMT",
+      "summary": "",
+      "fetch_timestamp": "2025-06-07T05:53:59.997286"
+    },
+    {
+      "title": "万博水上ショー再開見送り 菌検出",
+      "url": "https://news.yahoo.co.jp/pickup/6541386?source=rss",
+      "source": "Yahoo!ニュース - 主要",
+      "category": "総合",
+      "published": "Fri, 06 Jun 2025 14:43:03 GMT",
+      "summary": "",
+      "fetch_timestamp": "2025-06-07T05:53:59.997311"
+    },
+    {
+      "title": "小6が体育で睾丸を損傷 緊急手術",
+      "url": "https://news.yahoo.co.jp/pickup/6541372?source=rss",
+      "source": "Yahoo!ニュース - 主要",
+      "category": "総合",
+      "published": "Fri, 06 Jun 2025 12:04:36 GMT",
+      "summary": "",
+      "fetch_timestamp": "2025-06-07T05:53:59.997321"
+    },
+    {
+      "title": "息子の前で妻殺され 涙見せない訳",
+      "url": "https://news.yahoo.co.jp/pickup/6541382?source=rss",
+      "source": "Yahoo!ニュース - 主要",
+      "category": "総合",
+      "published": "Fri, 06 Jun 2025 13:49:00 GMT",
+      "summary": "",
+      "fetch_timestamp": "2025-06-07T05:53:59.997331"
+    },
+    {
+      "title": "番組でセクハラ アナがTV局提訴",
+      "url": "https://news.yahoo.co.jp/pickup/6541356?source=rss",
+      "source": "Yahoo!ニュース - 主要",
+      "category": "総合",
+      "published": "Fri, 06 Jun 2025 09:25:23 GMT",
+      "summary": "",
+      "fetch_timestamp": "2025-06-07T05:53:59.997340"
+    },
+    {
+      "title": "空自T4練習機が飛行再開へ　防衛力の影響懸念、墜落原因はまだ不明",
+      "url": "http://www.asahi.com/articles/AST662JQ1T66UTIL00RM.html?ref=rss",
+      "source": "朝日新聞デジタル",
+      "category": "総合",
+      "published": "",
+      "summary": "",
+      "fetch_timestamp": "2025-06-07T05:54:00.153706"
+    },
+    {
+      "title": "ミャンマー拠点詐欺「リクルーター」か　30代男を逮捕　愛知県警",
+      "url": "http://www.asahi.com/articles/AST664JDST66OIPE01QM.html?ref=rss",
+      "source": "朝日新聞デジタル",
+      "category": "総合",
+      "published": "",
+      "summary": "",
+      "fetch_timestamp": "2025-06-07T05:54:00.153730"
+    },
+    {
+      "title": "「違法捜査」確定へ、上告断念を検討　大川原化工機冤罪事件",
+      "url": "http://www.asahi.com/articles/AST665442T66UTIL03WM.html?ref=rss",
+      "source": "朝日新聞デジタル",
+      "category": "総合",
+      "published": "",
+      "summary": "",
+      "fetch_timestamp": "2025-06-07T05:54:00.153741"
+    },
+    {
+      "title": "万博の水上ショー、当分休止　レジオネラ属菌検出で",
+      "url": "http://www.asahi.com/articles/AST664WV3T66PTIL00MM.html?ref=rss",
+      "source": "朝日新聞デジタル",
+      "category": "総合",
+      "published": "",
+      "summary": "",
+      "fetch_timestamp": "2025-06-07T05:54:00.153751"
+    },
+    {
+      "title": "津波の予見、ハードル上げた高裁　東電旧経営陣「責任認めず」の論拠",
+      "url": "http://www.asahi.com/articles/AST663TV6T66UTIL02NM.html?ref=rss",
+      "source": "朝日新聞デジタル",
+      "category": "総合",
+      "published": "",
+      "summary": "",
+      "fetch_timestamp": "2025-06-07T05:54:00.153761"
+    },
+    {
+      "title": "兵庫の維新議員、離党相次ぐ　斎藤知事や泉房穂氏支持の会派へ",
+      "url": "https://mainichi.jp/articles/20250605/k00/00m/010/291000c",
+      "source": "毎日新聞",
+      "category": "総合",
+      "published": "",
+      "summary": "",
+      "fetch_timestamp": "2025-06-07T05:54:00.354887"
+    },
+    {
+      "title": "毒親から新しい父親像まで　「母性」問う名著が紡いだケアの物語",
+      "url": "https://mainichi.jp/articles/20250606/k00/00m/040/252000c",
+      "source": "毎日新聞",
+      "category": "総合",
+      "published": "",
+      "summary": "",
+      "fetch_timestamp": "2025-06-07T05:54:00.354913"
+    },
+    {
+      "title": "「投げ銭」スパチャは政治資金？　「ネットどぶ板」追いつかぬ法制度",
+      "url": "https://mainichi.jp/articles/20250606/k00/00m/010/367000c",
+      "source": "毎日新聞",
+      "category": "総合",
+      "published": "",
+      "summary": "",
+      "fetch_timestamp": "2025-06-07T05:54:00.354922"
+    },
+    {
+      "title": "BTS、完全復帰で始まる「第2幕」　成長物語から大人の世界へ",
+      "url": "https://mainichi.jp/articles/20250606/k00/00m/200/047000c",
+      "source": "毎日新聞",
+      "category": "総合",
+      "published": "",
+      "summary": "",
+      "fetch_timestamp": "2025-06-07T05:54:00.354930"
+    },
+    {
+      "title": "水俣病誤表現のトライ、再発防止策公表　担当者増員、理解深める研修",
+      "url": "https://mainichi.jp/articles/20250607/k00/00m/040/006000c",
+      "source": "毎日新聞",
+      "category": "総合",
+      "published": "",
+      "summary": "",
+      "fetch_timestamp": "2025-06-07T05:54:00.354938"
+    },
+    {
+      "title": "米国株式市場＝反発、雇用統計受け景気懸念緩和　テスラに買い戻し",
+      "url": "https://jp.reuters.com/markets/us/6MURCYO6LNMJBI22EIOQRJKZZA-2025-06-06/",
+      "source": "ロイター（経済）",
+      "category": "経済",
+      "published": "Fri, 06 Jun 2025 20:52:45 +0000",
+      "summary": "米国株式市場は反発して終了した。５月の米雇用統計が堅調で景気懸念が和らいだことに加え、前日に急落した電気自動車（ＥＶ）大手テスラが上昇に転じたことで押し上げられた。",
+      "fetch_timestamp": "2025-06-07T05:54:05.009875"
+    },
+    {
+      "title": "米、中国の原発向け関連機器の輸出許可を停止＝関係筋",
+      "url": "https://jp.reuters.com/markets/commodities/OT3E4BG6RVJMLJUM5SGCV2P7ZM-2025-06-06/",
+      "source": "ロイター（経済）",
+      "category": "経済",
+      "published": "Fri, 06 Jun 2025 20:49:59 +0000",
+      "summary": "米国はここ数日で、中国の原子力発電所向けに原子力関連機器を販売するサプライヤーのライセンスを停止したもよう。事情に詳しい４人の関係者が明らかにした。",
+      "fetch_timestamp": "2025-06-07T05:54:05.009889"
+    },
+    {
+      "title": "シカゴ日経平均先物（6日）",
+      "url": "https://jp.reuters.com/markets/japan/funds/ZYRWQJQFLZLFZKYHXL2SKFYQ7Y-2025-06-06/",
+      "source": "ロイター（経済）",
+      "category": "経済",
+      "published": "Fri, 06 Jun 2025 20:41:30 +0000",
+      "summary": "",
+      "fetch_timestamp": "2025-06-07T05:54:05.009894"
+    },
+    {
+      "title": "ＮＹ外為市場＝ドル上昇、雇用統計受け利下げ急がずとの見方",
+      "url": "https://jp.reuters.com/markets/us/5F35PLSEM5NO3K7OFSMEWEVP7I-2025-06-06/",
+      "source": "ロイター（経済）",
+      "category": "経済",
+      "published": "Fri, 06 Jun 2025 20:36:42 +0000",
+      "summary": "ニューヨーク外為市場でドルが主要通貨に対し上昇した。５月の米雇用統計で労働市場が底堅く推移していることが示され、連邦準備理事会（ＦＲＢ）は利下げを急がないとの見方が改めて裏付けられた。",
+      "fetch_timestamp": "2025-06-07T05:54:05.009899"
+    },
+    {
+      "title": "欧州市場サマリー（6日）",
+      "url": "https://jp.reuters.com/markets/europe/GDMGYGUTHVOWXC73PA5CABYCMQ-2025-06-06/",
+      "source": "ロイター（経済）",
+      "category": "経済",
+      "published": "Fri, 06 Jun 2025 19:22:27 +0000",
+      "summary": "＜ロンドン株式市場＞　上昇して取引を終えた。雇用統計を受けて米国の景気減速に対する懸念が和らいだことで、金融など幅広い銘柄が買われた。中型株で構成するＦＴＳＥ２５０種指数は０．４２％高。週間では０．６１％高。ＦＴＳＥ１００種は週間で０．７５％上昇した。\n５月の米雇用統計で非農業部門雇用者数の伸びは前月から減速したものの、賃金上昇が堅調で経済拡大が当面続くとの見方が強まった。関税措置の不確実性から経",
+      "fetch_timestamp": "2025-06-07T05:54:05.009904"
+    },
+    {
+      "title": "エミン氏｢日経平均は来年5万円､30年に7万円超｣ | 最新の週刊東洋経済 | 東洋経済オンライン",
+      "url": "https://toyokeizai.net/articles/-/882392?utm_source=rss&utm_medium=http&utm_campaign=link_back",
+      "source": "東洋経済オンライン",
+      "category": "経済",
+      "published": "Sat, 07 Jun 2025 05:40:00 +0900",
+      "summary": "トランプ米大統領の発言次第で激動する株式相場。日本企業の今期業績は6年ぶりに減益となる見通しだが、…",
+      "fetch_timestamp": "2025-06-07T05:54:05.178763"
+    },
+    {
+      "title": "ユニクロのポロシャツを着て失敗する人の盲点 | 今さら聞けないビジネスファッションの作法 | 東洋経済オンライン",
+      "url": "https://toyokeizai.net/articles/-/882764?utm_source=rss&utm_medium=http&utm_campaign=link_back",
+      "source": "東洋経済オンライン",
+      "category": "経済",
+      "published": "Sat, 07 Jun 2025 05:30:00 +0900",
+      "summary": "「色は合っているのに、ポロシャツ姿がパッとしない」——そんな悩みを耳にします。近年は紳士服量販店で…",
+      "fetch_timestamp": "2025-06-07T05:54:05.178794"
+    },
+    {
+      "title": "かつやの｢539円モーニング｣に深く酔いしれる朝 | チェーン店最強のモーニングを探して | 東洋経済オンライン",
+      "url": "https://toyokeizai.net/articles/-/882612?utm_source=rss&utm_medium=http&utm_campaign=link_back",
+      "source": "東洋経済オンライン",
+      "category": "経済",
+      "published": "Sat, 07 Jun 2025 05:15:00 +0900",
+      "summary": "『マツコの知らない世界』（TBS系）にも出演した、チェーン店の外食モーニングをこよなく愛するライター…",
+      "fetch_timestamp": "2025-06-07T05:54:05.178805"
+    },
+    {
+      "title": "岐阜の｢巨大な県営団地｣個性豊かな\"部屋の内部\" | ｢フシギな物件｣のぞいて見てもいいですか？ | 東洋経済オンライン",
+      "url": "https://toyokeizai.net/articles/-/879356?utm_source=rss&utm_medium=http&utm_campaign=link_back",
+      "source": "東洋経済オンライン",
+      "category": "経済",
+      "published": "Sat, 07 Jun 2025 05:01:00 +0900",
+      "summary": "思わず足を止めて眺めてしまうような、街中にある少し変わった形をした物件ーー。いったいなぜ、そのよう…",
+      "fetch_timestamp": "2025-06-07T05:54:05.178816"
+    },
+    {
+      "title": "岐阜にある｢巨大な県営団地｣4棟の\"圧巻の美\" | ｢フシギな物件｣のぞいて見てもいいですか？ | 東洋経済オンライン",
+      "url": "https://toyokeizai.net/articles/-/878882?utm_source=rss&utm_medium=http&utm_campaign=link_back",
+      "source": "東洋経済オンライン",
+      "category": "経済",
+      "published": "Sat, 07 Jun 2025 05:00:00 +0900",
+      "summary": "思わず足を止めて眺めてしまうような、街中にある少し変わった形をした物件ーー。いったいなぜ、そのよう…",
+      "fetch_timestamp": "2025-06-07T05:54:05.178827"
+    },
+    {
+      "title": "iPhoneの「メモ」がMarkdownに対応予定と報じられるもMarkdown発明者は「メモにMarkdownは不要」とコメント",
+      "url": "https://gigazine.net/news/20250606-markdown-ios-notes-john-gruber/",
+      "source": "GIGAZINE",
+      "category": "テクノロジー",
+      "published": "Fri, 06 Jun 2025 23:00:00 +0900",
+      "summary": "Markdownはシンプルな記号を使って見出しや太字といったテキストの装飾を指定しつつ文章を執筆できるマークアップ言語です。このMarkdownにAppleの「メモ(Notes)」が対応することが報道されているのですが、Markdownの発明者であるジョン・グルーバー氏は「メモにMarkdown機能は不要だ」という持論を展開しています。<p><b><a href=\"https://gigazine",
+      "fetch_timestamp": "2025-06-07T05:54:08.678761"
+    },
+    {
+      "title": "作品を公開したのに誰も反応してくれない状態でも延々と作り続けるために必要な考え方",
+      "url": "https://gigazine.net/news/20250606-keep-going-create/",
+      "source": "GIGAZINE",
+      "category": "テクノロジー",
+      "published": "Fri, 06 Jun 2025 22:00:00 +0900",
+      "summary": "「継続は力なり」という言葉があるように、たとえ最初は見向きもされないような作品だったとしても、とにかく作り続けることが大切だとよく言われます。そうは言っても誰にも注目されないというのは悲しいもの。そんな状況を乗り越えるためのアドバイスを、スポーツ系アプリ「Swift」などを開発したジート・メータ氏が語っています。<p><b><a href=\"https://gigazine.net/news/20",
+      "fetch_timestamp": "2025-06-07T05:54:08.678781"
+    },
+    {
+      "title": "日本語にも対応したテキスト読み上げモデル「Eleven v3」で実際にGIGAZINEの記事を音声化するとこうなる",
+      "url": "https://gigazine.net/news/20250606-eleven-labs-eleven-v3/",
+      "source": "GIGAZINE",
+      "category": "テクノロジー",
+      "published": "Fri, 06 Jun 2025 20:00:00 +0900",
+      "summary": "AI企業・ElevenLabsの開発するText to Speech(テキスト読み上げ)モデル「Eleven」のバージョン3アルファ版に当たる「Eleven v3(alpha)」が2025年6月6日にリリースされました。Eleven v3(alpha)では、これまで切望されてきた日本語の読み上げが可能になり、さらにこれまでのモデルにはなかった「感情」と「対話」が可能になっています。<p><b><a",
+      "fetch_timestamp": "2025-06-07T05:54:08.678790"
+    },
+    {
+      "title": "ウォルマートがドローン配達の規模をさらに100店舗拡大へ、Google兄弟企業のWingが協力",
+      "url": "https://gigazine.net/news/20250606-wing-walmart-drone-delivery/",
+      "source": "GIGAZINE",
+      "category": "テクノロジー",
+      "published": "Fri, 06 Jun 2025 19:15:00 +0900",
+      "summary": "2021年からドローン配達を展開しているアメリカの大手小売店チェーン・ウォルマートが、さらにアトランタやヒューストンなどの都市の合計100店舗でより迅速に荷物を届けられるドローン配達を導入する方針を明らかにしました。これで、ウォルマートのドローン配達が利用可能な州は5つに増えます。<p><b><a href=\"https://gigazine.net/news/20250606&#45;wing&",
+      "fetch_timestamp": "2025-06-07T05:54:08.678799"
+    },
+    {
+      "title": "記憶に視覚的要素が欠けており過去の出来事を心の中で「追体験」する能力が低い「SDAM(重度の自伝的記憶障害)」とは？「アファンタジア」との関連は？",
+      "url": "https://gigazine.net/news/20250606-sdam-remember-episode/",
+      "source": "GIGAZINE",
+      "category": "テクノロジー",
+      "published": "Fri, 06 Jun 2025 19:00:00 +0900",
+      "summary": "心の中でイメージを思い浮かべられず、過去の記憶を映像のようにして振り返ることができない「アファンタジア」という状態にある人は、人口の約2～5％ほど存在するといわれています。自身をアファンタジアだと認めるマルコ・ジャンコッティ氏は、アファンタジアに加えて個人的な体験を一人称視点で鮮明に思い出すことができないという「重度の自伝的記憶障害(SDAM)」、あるいはそれに近い症状を患っていると公表し、SDA",
+      "fetch_timestamp": "2025-06-07T05:54:08.678807"
+    },
+    {
+      "title": "[ITmedia ビジネスオンライン] まさかの「備蓄米ブーム」到来……　米の価格は下落するのか？　各社の「仕入れ量」「取り組み」総まとめ",
+      "url": "https://www.itmedia.co.jp/business/articles/2506/07/news008.html",
+      "source": "ITmedia",
+      "category": "テクノロジー",
+      "published": "Sat, 07 Jun 2025 05:00:00 +0900",
+      "summary": "空前の米価高騰で、備蓄米ブームが起きている。各社の取り組みをまとめる。",
+      "fetch_timestamp": "2025-06-07T05:54:08.848034"
+    },
+    {
+      "title": "[ITmedia Mobile] JTOWER、ドコモから取得した鉄塔でキャリア4社の共用開始　オープンRAN対応の5G共用無線機も発表",
+      "url": "https://www.itmedia.co.jp/mobile/articles/2506/06/news112.html",
+      "source": "ITmedia",
+      "category": "テクノロジー",
+      "published": "Fri, 06 Jun 2025 18:31:00 +0900",
+      "summary": "JTOWERがは6月6日、通信事業者から取得した通信鉄塔において、4キャリアによるタワーシェアリングの運用を初めて開始すると発表した。沖縄県の鉄塔にて、各キャリアの準備が整い次第、順次運用をスタートさせる予定だ。あわせて、JTOWERは国内で初めてとなるオープンRAN対応の5G Sub6帯域共用無線機の開発を完了した。",
+      "fetch_timestamp": "2025-06-07T05:54:08.848053"
+    },
+    {
+      "title": "[ITmedia News] 愛知県で、NHK放送料の「一部未払い」発覚　最長32年間、未払い金額は計2000万円超",
+      "url": "https://www.itmedia.co.jp/news/articles/2506/06/news110.html",
+      "source": "ITmedia",
+      "category": "テクノロジー",
+      "published": "Fri, 06 Jun 2025 17:55:00 +0900",
+      "summary": "愛知県は、県が管理する一部のテレビ放送受信機器において、NHKとの放送受信契約が未契約だったと発表した。未払い金額は2071万9630円で、速やかに支払い手続きを進めるとしている。",
+      "fetch_timestamp": "2025-06-07T05:54:08.848064"
+    },
+    {
+      "title": "[ITmedia Mobile] Y!mobileの「Pixel 8a」が一括2万9800円、「OPPO Reno 11 A」が一括4980円に",
+      "url": "https://www.itmedia.co.jp/mobile/articles/2506/06/news109.html",
+      "source": "ITmedia",
+      "category": "テクノロジー",
+      "published": "Fri, 06 Jun 2025 17:47:00 +0900",
+      "summary": "Y!mobileオンラインストアの「Google Pixel 8a」「OPPO Reno 11 A」が価格を変更。MNPかつシンプル2 M/Lへ契約した場合、Google Pixel 8aは2万9800円（税込み、以下同）、OPPO Reno 11 Aは4980円で購入できる。",
+      "fetch_timestamp": "2025-06-07T05:54:08.848074"
+    },
+    {
+      "title": "[ITmedia ビジネスオンライン] 役所手続き、オンライン派と窓口派それぞれ4割弱　自治体DXが進む中、利用者の実態は？",
+      "url": "https://www.itmedia.co.jp/business/articles/2506/06/news108.html",
+      "source": "ITmedia",
+      "category": "テクノロジー",
+      "published": "Fri, 06 Jun 2025 17:45:00 +0900",
+      "summary": "役所手続きのオンライン化や開庁時間の短縮などについて、利用者はどう考えているのだろうか。",
+      "fetch_timestamp": "2025-06-07T05:54:08.848085"
+    },
+    {
+      "title": "ゲーミングPCが最大7.2万円オフ＆送料無料！パソコンショップSEVENのお得なセール情報",
+      "url": "https://ascii.jp/elem/000/004/280/4280089/?rss",
+      "source": "ASCII.jp",
+      "category": "テクノロジー",
+      "published": "Sat, 07 Jun 2025 00:00:00 +0900",
+      "summary": "<p><img align=\"left\" height=\"60\" src=\"https://ascii.jp/img/2025/06/06/4231527/s/9a5f0c2fabb3ef57.png\" width=\"60\" />パソコンショップSEVENが6月7日に24時間限定セールを開催し、高性能ゲーミングPCが最大72,000円オフに。</p><br clear=\"left\" />",
+      "fetch_timestamp": "2025-06-07T05:54:09.934491"
+    },
+    {
+      "title": "ピンポイントで涼しい！ 工事不要で電気代もお得「USBスポットアイスファン」",
+      "url": "https://ascii.jp/elem/000/004/280/4280031/?rss",
+      "source": "ASCII.jp",
+      "category": "テクノロジー",
+      "published": "Fri, 06 Jun 2025 21:00:00 +0900",
+      "summary": "<p><img align=\"left\" height=\"60\" src=\"https://ascii.jp/img/2025/04/14/4192590/s/237356221637ca48.jpg\" width=\"60\" />冷感体験を実現する新製品「USBスポットアイスファン」を発売中。</p><br clear=\"left\" />",
+      "fetch_timestamp": "2025-06-07T05:54:09.934509"
+    },
+    {
+      "title": "『紅の錬金術士と白の守護者 ～レスレリアーナのアトリエ～』の発売日を発表！公式生放送が6月13日21時より配信",
+      "url": "https://ascii.jp/elem/000/004/280/4280181/?rss",
+      "source": "ASCII.jp",
+      "category": "テクノロジー",
+      "published": "Fri, 06 Jun 2025 20:20:00 +0900",
+      "summary": "<p><img align=\"left\" height=\"60\" src=\"https://ascii.jp/img/2025/06/06/4231702/s/f96ed905311ef6ba.jpg\" width=\"60\" />2025年6月6日、コーエーテクモゲームスは2025年発売予定の『紅の錬金術士と白の守護者 ～レスレリアーナのアトリエ～』［PlayStation 5／PlayStati",
+      "fetch_timestamp": "2025-06-07T05:54:09.934519"
+    },
+    {
+      "title": "グーグルが「インターネット古参会入会資格審査」をやってるが自分はグーグルより古参だぜ",
+      "url": "https://ascii.jp/elem/000/004/280/4280165/?rss",
+      "source": "ASCII.jp",
+      "category": "テクノロジー",
+      "published": "Fri, 06 Jun 2025 20:00:00 +0900",
+      "summary": "<p><img align=\"left\" height=\"60\" src=\"https://ascii.jp/img/2025/06/06/4231659/s/54f2875c36d3cea6.png\" width=\"60\" />「インターネット古参会入会資格審査 中級」が、Google Japanの公式Xアカウントで公開されています。6月1日に公開されネット上の一部で話題になった問題よりも、難易",
+      "fetch_timestamp": "2025-06-07T05:54:09.934528"
+    },
+    {
+      "title": "『神魔狩りのツクヨミ』にて「盈月奉納ノ儀 JUDGMENT -1st-」が6月8日20時より生配信で開催決定！",
+      "url": "https://ascii.jp/elem/000/004/280/4280176/?rss",
+      "source": "ASCII.jp",
+      "category": "テクノロジー",
+      "published": "Fri, 06 Jun 2025 19:55:00 +0900",
+      "summary": "<p><img align=\"left\" height=\"60\" src=\"https://ascii.jp/img/2025/06/06/4231700/s/cd695fcd6bc3136e.jpg\" width=\"60\" />2025年6月6日、コロプラはスマートフォン／PC（Steam）向けゲーム『神魔狩りのツクヨミ』にて、6月8日20時より公式イベント「盈月奉納ノ儀 JUDGMENT -1",
+      "fetch_timestamp": "2025-06-07T05:54:09.934536"
+    },
+    {
+      "title": "Trump pleads not guilty to 34 felony counts",
+      "url": "https://edition.cnn.com/webview/politics/live-news/trump-indictment-stormy-daniels-news-04-03-23/index.html",
+      "source": "CNN",
+      "category": "国際",
+      "published": "",
+      "summary": "",
+      "fetch_timestamp": "2025-06-07T05:54:10.549914"
+    },
+    {
+      "title": "Haberman reveals why Trump attacked judge and his family in speech",
+      "url": "https://www.cnn.com/videos/politics/2023/04/05/maggie-haberman-donald-trump-speech-indictment-reaction-sot-cnntm-vpx.cnn",
+      "source": "CNN",
+      "category": "国際",
+      "published": "Wed, 05 Apr 2023 13:30:09 GMT",
+      "summary": "CNN political contributor Maggie Haberman explains the reasoning behind Donald Trump's attacks on the judge and his family during a speech at his Mar-a-Lago resort after he was arraigned on felony cha",
+      "fetch_timestamp": "2025-06-07T05:54:10.549931"
+    },
+    {
+      "title": "What to know about the Trump indictment on the eve of his court appearance",
+      "url": "https://www.cnn.com/collections/intl-trump-040223/",
+      "source": "CNN",
+      "category": "国際",
+      "published": "Wed, 05 Apr 2023 22:50:06 GMT",
+      "summary": "",
+      "fetch_timestamp": "2025-06-07T05:54:10.549938"
+    },
+    {
+      "title": "READ: Trump indictment related to hush money payment",
+      "url": "https://cnn.it/411KYN7",
+      "source": "CNN",
+      "category": "国際",
+      "published": "",
+      "summary": "",
+      "fetch_timestamp": "2025-06-07T05:54:10.549945"
+    },
+    {
+      "title": "Russian authorities detain suspect over St. Petersburg cafe blast",
+      "url": "https://edition.cnn.com/webview/europe/live-news/russia-ukraine-war-news-04-03-23/index.html",
+      "source": "CNN",
+      "category": "国際",
+      "published": "",
+      "summary": "",
+      "fetch_timestamp": "2025-06-07T05:54:10.549952"
+    },
+    {
+      "title": "Group stranded with Ice in Djibouti shipping container after removal from US",
+      "url": "https://www.theguardian.com/us-news/2025/jun/06/migrants-djibouti-ice",
+      "source": "Guardian",
+      "category": "国際",
+      "published": "Fri, 06 Jun 2025 14:03:22 GMT",
+      "summary": "<p>Deportees and officers are ‘ill’ and face risks after flight to South Sudan was stopped by US court in late May</p><p>A group of men removed from the US to <a href=\"https://www.theguardian.com/worl",
+      "fetch_timestamp": "2025-06-07T05:54:10.999877"
+    },
+    {
+      "title": "Dehorning rhinos reduces poaching by 80%, study finds",
+      "url": "https://www.theguardian.com/environment/2025/jun/05/dehorning-rhinos-deters-poachers-rangers-helicopters-aoe",
+      "source": "Guardian",
+      "category": "国際",
+      "published": "Thu, 05 Jun 2025 18:00:12 GMT",
+      "summary": "<p>Cutting off the animals’ horns more effective than traditional protection methods such as rangers and costs less, say experts</p><p>Cutting the horns off rhinos causes a large reduction in poaching",
+      "fetch_timestamp": "2025-06-07T05:54:10.999889"
+    },
+    {
+      "title": "Idris Elba: ‘I want to build the African Odeon’",
+      "url": "https://www.theguardian.com/film/2025/jun/05/idris-elba-i-want-to-build-the-african-odeon",
+      "source": "Guardian",
+      "category": "国際",
+      "published": "Thu, 05 Jun 2025 16:06:23 GMT",
+      "summary": "<p>Speaking at an SXSW London event, the actor outlined his desire to ignite the cinema experience for a new generation across the continent </p><p>Idris Elba has spoken of his ambition to create the ",
+      "fetch_timestamp": "2025-06-07T05:54:10.999894"
+    },
+    {
+      "title": "Venezuela says being in US is ‘great risk’ as countries respond to Trump travel ban",
+      "url": "https://www.theguardian.com/us-news/2025/jun/05/venezuela-warns-us-is-dangerous-anyway-in-trump-travel-ban-retort",
+      "source": "Guardian",
+      "category": "国際",
+      "published": "Thu, 05 Jun 2025 13:21:31 GMT",
+      "summary": "<p>Caracas describes US government as fascist, Somalia vows to address security and Iranian Americans express regret</p><ul><li><p><a href=\"https://www.theguardian.com/us-news/live/2025/jun/05/donald-",
+      "fetch_timestamp": "2025-06-07T05:54:10.999899"
+    },
+    {
+      "title": "Home Office accused of ‘racist crackdown’ on Nigerians after denial of visit visa",
+      "url": "https://www.theguardian.com/politics/2025/jun/04/home-office-accused-of-racist-crackdown-on-nigerians-after-denial-of-visit-visa",
+      "source": "Guardian",
+      "category": "国際",
+      "published": "Wed, 04 Jun 2025 06:00:58 GMT",
+      "summary": "<p>Officials refused entry to man who runs top security firm in Nigeria and his family to spend holiday with his sister</p><p>The Home Office has been accused of a “racist crackdown on Nigerians” afte",
+      "fetch_timestamp": "2025-06-07T05:54:10.999904"
+    },
+    {
+      "title": "Behind-the-scenes at DreamCon: How YouTube fueled connection & community",
+      "url": "https://blog.youtube/inside-youtube/dreamcon-recap-2025/",
+      "source": "YouTube Creator Blog",
+      "category": "ユーチューバー",
+      "published": "Tue, 03 Jun 2025 15:00:00 +0000",
+      "summary": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/DSC04452.max-600x600.format-webp.webp\" />Experience DreamCon! Get a behind-the-scenes look at creator-focused events, YouTube'",
+      "fetch_timestamp": "2025-06-07T05:54:12.751283"
+    },
+    {
+      "title": "Trending now: Italian brainrot, NFL schedule release videos, 100 men vs 1 gorilla & more",
+      "url": "https://blog.youtube/culture-and-trends/trending-now-june-2025/",
+      "source": "YouTube Creator Blog",
+      "category": "ユーチューバー",
+      "published": "Mon, 02 Jun 2025 15:00:00 +0000",
+      "summary": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/June-Trending-Hero.max-600x600.format-webp.webp\" />Uncover the latest YouTube trends in gaming, memes, sports and animation wi",
+      "fetch_timestamp": "2025-06-07T05:54:12.751302"
+    },
+    {
+      "title": "Turning views into ventures with Doctor Fashion",
+      "url": "https://blog.youtube/creator-and-artist-stories/turning-views-into-ventures-with-doctor-fashion/",
+      "source": "YouTube Creator Blog",
+      "category": "ユーチューバー",
+      "published": "Mon, 02 Jun 2025 09:34:00 +0000",
+      "summary": "",
+      "fetch_timestamp": "2025-06-07T05:54:12.751310"
+    },
+    {
+      "title": "How well do you know YouTube's May announcements?",
+      "url": "https://blog.youtube/news-and-events/youtube-may-2025-quiz/",
+      "source": "YouTube Creator Blog",
+      "category": "ユーチューバー",
+      "published": "Fri, 30 May 2025 15:58:00 +0000",
+      "summary": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/BINK_YouTube_UX_Updates_v4.max-600x600.format-webp.webp\" />Take our quiz to prove how much you know about our big May news, in",
+      "fetch_timestamp": "2025-06-07T05:54:12.751319"
+    },
+    {
+      "title": "Accelerating F1: The YouTube creators driving the sport's new era",
+      "url": "https://blog.youtube/culture-and-trends/formula-one/",
+      "source": "YouTube Creator Blog",
+      "category": "ユーチューバー",
+      "published": "Fri, 23 May 2025 13:00:00 +0000",
+      "summary": "Celebrate the creators and drivers who put you in the cockpit, revealing the untold stories and complex tech behind Formula 1.",
+      "fetch_timestamp": "2025-06-07T05:54:12.751327"
+    },
+    {
+      "title": "MrBeast taps former YouTube, TikTok, and Meta exec to get him more brand and media partnerships",
+      "url": "https://www.tubefilter.com/2025/06/05/mrbeast-beau-avril-youtube-exec-head-media-brand-partnerships/",
+      "source": "TubeFilter",
+      "category": "ユーチューバー",
+      "published": "Thu, 05 Jun 2025 23:08:13 +0000",
+      "summary": "<p><img alt=\"\" class=\"attachment-featured-image size-featured-image wp-post-image\" height=\"720\" src=\"https://www.tubefilter.com/wp-content/uploads/2025/06/beau.jpg\" style=\"float: left; margin: 0 15px ",
+      "fetch_timestamp": "2025-06-07T05:54:12.963507"
+    },
+    {
+      "title": "Democrats are spending $20 million trying to get Joe Rogan listeners to like them",
+      "url": "https://www.tubefilter.com/2025/06/05/democrats-speaking-with-american-men-youtube-study/",
+      "source": "TubeFilter",
+      "category": "ユーチューバー",
+      "published": "Thu, 05 Jun 2025 22:22:26 +0000",
+      "summary": "<p><img alt=\"\" class=\"attachment-featured-image size-featured-image wp-post-image\" height=\"1600\" src=\"https://www.tubefilter.com/wp-content/uploads/2025/06/luke-michael-Tdwu35bCUj0-unsplash.jpg\" style",
+      "fetch_timestamp": "2025-06-07T05:54:12.963520"
+    },
+    {
+      "title": "The Try Guys tried making their own streaming service–and it’s working, with Vimeo’s tools",
+      "url": "https://www.tubefilter.com/2025/06/05/the-try-guys-tried-making-their-own-streaming-serivce-and-its-working-with-vimeos-tools/",
+      "source": "TubeFilter",
+      "category": "ユーチューバー",
+      "published": "Thu, 05 Jun 2025 21:04:37 +0000",
+      "summary": "<p><img alt=\"\" class=\"attachment-featured-image size-featured-image wp-post-image\" height=\"905\" src=\"https://www.tubefilter.com/wp-content/uploads/2025/06/try-guys.jpg\" style=\"float: left; margin: 0 1",
+      "fetch_timestamp": "2025-06-07T05:54:12.963527"
+    },
+    {
+      "title": "Miracle Mop maker Joy Mangano sold millions of products on QVC and HSN. She’s taking her next invention to TikTok Shop instead.",
+      "url": "https://www.tubefilter.com/2025/06/04/joy-mangano-cleanboss-orca-tiktok-shop/",
+      "source": "TubeFilter",
+      "category": "ユーチューバー",
+      "published": "Wed, 04 Jun 2025 22:34:30 +0000",
+      "summary": "<p><img alt=\"\" class=\"attachment-featured-image size-featured-image wp-post-image\" height=\"595\" src=\"https://www.tubefilter.com/wp-content/uploads/2025/06/480950520_1190953475721767_796726132840329546",
+      "fetch_timestamp": "2025-06-07T05:54:12.963532"
+    },
+    {
+      "title": "Viral Nation is known for being one of the biggest digital talent agencies in the world. But it does a lot more than representation.",
+      "url": "https://www.tubefilter.com/2025/06/04/viral-nation-talent-agency-social-media-marketing-agency/",
+      "source": "TubeFilter",
+      "category": "ユーチューバー",
+      "published": "Wed, 04 Jun 2025 18:37:23 +0000",
+      "summary": "<p><img alt=\"\" class=\"attachment-featured-image size-featured-image wp-post-image\" height=\"867\" src=\"https://www.tubefilter.com/wp-content/uploads/2025/06/viral-nation.png\" style=\"float: left; margin:",
+      "fetch_timestamp": "2025-06-07T05:54:12.963537"
+    },
+    {
+      "title": "【さようなら、ドラえもん】最終回みたいな話が第6巻に掲載されている理由は？",
+      "url": "https://www.buzzfeed.com/jp/kenjiando/doraemon-future",
+      "source": "BuzzFeed Japan",
+      "category": "炎上",
+      "published": "Thu, 05 Jun 2025 17:07:02 -0400",
+      "summary": "<h1>国民的なキャラクターとなった『ドラえもん』。第6巻の巻末にある「さようなら、ドラえもん」は、スタート当初の苦難に満ちた歴史を今に伝えています。</h1><p><img src=\"https://img.buzzfeed.com/buzzfeed-static/static/2025-06/03/09/subbuzz/MBiRWWDWp.jpg?crop=1081:721;234,432&a",
+      "fetch_timestamp": "2025-06-07T05:54:14.409710"
+    },
+    {
+      "title": "【楽天スーパーSALE3選】かわいすぎる…！夏にぴったりフルラのバケットバッグが半額ですと！？",
+      "url": "https://www.buzzfeed.com/jp/buzzfeedjapanshopping/rakuten-ss-bags",
+      "source": "BuzzFeed Japan",
+      "category": "炎上",
+      "published": "Fri, 06 Jun 2025 05:01:02 -0400",
+      "summary": "<h1>6月4日20時スタートの楽天スーパーSALEの目玉は半額セール！ FURLA（フルラ） 、 MARNI（マル二） の半額になっているバッグを紹介します。</h1><p><img src=\"https://img.buzzfeed.com/buzzfeed-static/static/2025-06/04/05/thumb/bQGQ6z0XK.jpg?crop=3650:2433;0,0&a",
+      "fetch_timestamp": "2025-06-07T05:54:14.409724"
+    },
+    {
+      "title": "【恐怖】直感で画像を選んでいくと「一番聞かれたくないこと」がバレる診断",
+      "url": "https://www.buzzfeed.com/jp/hironakobashi/kikare-takunai",
+      "source": "BuzzFeed Japan",
+      "category": "炎上",
+      "published": "Sat, 19 Aug 2017 06:01:06 -0400",
+      "summary": "<h1>それは聞かないでェ…</h1><p><img src=\"https://img.buzzfeed.com/buzzfeed-static/static/2017-08/16/23/enhanced/buzzfeed-prod-fastlane-02/original-27839-1502941730-3.jpg?crop=1520:1009;45,53&amp;resize=1250:83",
+      "fetch_timestamp": "2025-06-07T05:54:14.409730"
+    },
+    {
+      "title": "真のクラシック好きにしかわからない！音楽用語クイズ",
+      "url": "https://www.buzzfeed.com/jp/hikaruyoza/classic-q",
+      "source": "BuzzFeed Japan",
+      "category": "炎上",
+      "published": "Tue, 20 Jun 2017 01:33:23 -0400",
+      "summary": "<h1>正しく読める？</h1><p><img src=\"https://img.buzzfeed.com/buzzfeed-static/static/2017-06/20/1/tmp/buzzfeed-prod-fastlane-01/8dd4a5c028e8b4958bdd558b483637f5-1.jpg?crop=625:415;0,0&amp;resize=1250:830\" /><",
+      "fetch_timestamp": "2025-06-07T05:54:14.409736"
+    },
+    {
+      "title": "助けて…この「文字クイズ」が難しすぎて分からないんです",
+      "url": "https://www.buzzfeed.com/jp/hiroshiishii/noutore6",
+      "source": "BuzzFeed Japan",
+      "category": "炎上",
+      "published": "Sun, 07 Nov 2021 17:31:03 -0500",
+      "summary": "<h1>「十」→「た」、「一」→「ひ」、「＝」→「め」。それでは「ル」は？</h1><p><img src=\"https://img.buzzfeed.com/buzzfeed-static/static/2021-11/5/5/asset/81add2bb0349/sub-buzz-2903-1636091702-24.jpg?crop=625:417;0,0&amp;resize=1250:8",
+      "fetch_timestamp": "2025-06-07T05:54:14.409740"
+    },
+    {
+      "title": "6月24日開始予定の「iPhoneのマイナンバーカード機能」を使うために準備しておきたい4つのこと",
+      "url": "https://www.gizmodo.jp/2025/06/iphone-my-number-6-24.html",
+      "source": "Gizmodo Japan",
+      "category": "テクノロジー",
+      "published": "Fri, 06 Jun 2025 23:00:00 +0900",
+      "summary": "Image:デジタル庁どのくらい生活が便利になるのか。Apple（アップル）がiPhoneの『ウォレット』アプリにマイナンバーカードを追加できるようにすると発表してから早1年。そろそろかな？と心待ちにしていたところ、ついにデジタル庁がiPhoneのマイナンバーカード機能を6月24日（火）から開始予定と発表しました。iPhoneにマイナンバーカードを追加するために確認しておきたいことiPhoneにマ",
+      "fetch_timestamp": "2025-06-07T05:54:17.026385"
+    },
+    {
+      "title": "ネアンデルタール人が4万年前に残した「赤い点」の謎",
+      "url": "https://www.gizmodo.jp/2025/06/worlds-first-red-paint.html",
+      "source": "Gizmodo Japan",
+      "category": "テクノロジー",
+      "published": "Fri, 06 Jun 2025 22:00:00 +0900",
+      "summary": "Image:Álvarez-Alonsoetal.2025;CCBY4.0これを塗ったネアンデルタール人のみが知る。スペインで見つかった岩に付いた赤い点が歴史を塗り替えるかもしれません。この赤い点は約4万3000年前の鉱物製の顔料で描かれ、その上にはおよそ4万年前に絶滅したと言われるネアンデルタール人の指紋が残っていたと報告されています。人類最古の指紋の可能性大、だそうです。Image:Álvar",
+      "fetch_timestamp": "2025-06-07T05:54:17.026405"
+    },
+    {
+      "title": "【月曜の夜26時から】WWDC25、ギズモードはリアルタイムで情報をお届けします",
+      "url": "https://www.gizmodo.jp/2025/06/wwdc25_gizmodo.html",
+      "source": "Gizmodo Japan",
+      "category": "テクノロジー",
+      "published": "Fri, 06 Jun 2025 21:30:00 +0900",
+      "summary": "Image:Apple月曜日は夜更かしの準備をしなくちゃ。2025年6月10日の午前2時（6月9日の26時）より、「WWDC25」が始まります。WWDCとは、Apple（アップル）の開発者向けカンファレンス、「AppleWorldwideDevelopersConference」の略称。ソフトウェアやアプリの開発者に向けて、Apple製品のさまざまな新機能をお披露目するイベントです。過去のイベント",
+      "fetch_timestamp": "2025-06-07T05:54:17.026415"
+    },
+    {
+      "title": "氷河の39%がすでに消失確定。そこから先は「0.1度」の違いで運命が変わる",
+      "url": "https://www.gizmodo.jp/2025/06/almost-40-of-worlds-glaciers-already-doomed-due-to-climate-crisis.html",
+      "source": "Gizmodo Japan",
+      "category": "テクノロジー",
+      "published": "Fri, 06 Jun 2025 21:00:00 +0900",
+      "summary": "地球温暖化が現在のペースで進めば、世界中の氷河の3分の2以上が消えてしまう。国際的な科学者チームが、そんな衝撃的な未来を示す研究結果を科学誌Scienceに発表しました。",
+      "fetch_timestamp": "2025-06-07T05:54:17.026426"
+    },
+    {
+      "title": "めちゃ軽で肌あたりも良き。はっ水加工だから、雨の日も強いシャツ",
+      "url": "https://www.gizmodo.jp/2025/06/descente_allterrain_untrimmed_seamless_h-s_shirt.html",
+      "source": "Gizmodo Japan",
+      "category": "テクノロジー",
+      "published": "Fri, 06 Jun 2025 20:30:00 +0900",
+      "summary": "Image:DESCENTE気温はそこまで高くはないももの、さっそくズズズっと雨のシーズンに突入した今日このごろ。今回は、はっ水素材で、どんな雨でもへっちゃらで涼し気なハーフスリーブシャツをご紹介しましょう。特殊な技術素材でストレスフリーImage:DESCENTEご紹介するのは、スポーツブランドDESCENTE（デサント）のファッション性を融合させたハイエンドコレクション、DESCENTEALL",
+      "fetch_timestamp": "2025-06-07T05:54:17.026435"
+    }
+  ],
+  "last_updated": "2025-06-07T05:54:17.306082",
+  "total_sources": 59,
+  "total_articles": 75
+}

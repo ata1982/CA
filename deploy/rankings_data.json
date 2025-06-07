@@ -1,0 +1,725 @@
+{
+  "app_store": [
+    {
+      "rank": 1,
+      "name": "マジックパズルウォーズ",
+      "category": "Entertainment",
+      "rating": 4.5,
+      "downloads": "4139万+",
+      "price": "Free",
+      "change": "→",
+      "change_value": -1
+    },
+    {
+      "rank": 2,
+      "name": "パズル&ドラゴンズ",
+      "category": "Productivity",
+      "rating": 4.8,
+      "downloads": "9383万+",
+      "price": "Free",
+      "change": "→",
+      "change_value": 10
+    },
+    {
+      "rank": 3,
+      "name": "ツムツム",
+      "category": "Social",
+      "rating": 3.7,
+      "downloads": "3826万+",
+      "price": "Free",
+      "change": "↑",
+      "change_value": -3
+    },
+    {
+      "rank": 4,
+      "name": "プロセカ",
+      "category": "Productivity",
+      "rating": 4.3,
+      "downloads": "469万+",
+      "price": "Free",
+      "change": "→",
+      "change_value": 0
+    },
+    {
+      "rank": 5,
+      "name": "ハイパーカジュアルウォーズ",
+      "category": "Finance",
+      "rating": 4.8,
+      "downloads": "4348万+",
+      "price": "Free",
+      "change": "↓",
+      "change_value": 4
+    },
+    {
+      "rank": 6,
+      "name": "FGO",
+      "category": "Entertainment",
+      "rating": 3.9,
+      "downloads": "8136万+",
+      "price": "Free",
+      "change": "→",
+      "change_value": 14
+    },
+    {
+      "rank": 7,
+      "name": "レジェンドシミュレーションヒーロー",
+      "category": "Productivity",
+      "rating": 4.8,
+      "downloads": "1285万+",
+      "price": "Free",
+      "change": "↓",
+      "change_value": -5
+    },
+    {
+      "rank": 8,
+      "name": "モンスターストライク",
+      "category": "Entertainment",
+      "rating": 4.8,
+      "downloads": "881万+",
+      "price": "¥455",
+      "change": "↑",
+      "change_value": 7
+    },
+    {
+      "rank": 9,
+      "name": "ドリームカジュアルウォーズ",
+      "category": "Productivity",
+      "rating": 4.7,
+      "downloads": "2713万+",
+      "price": "Free",
+      "change": "↓",
+      "change_value": 9
+    },
+    {
+      "rank": 10,
+      "name": "マジックパズルヒーロー",
+      "category": "Productivity",
+      "rating": 3.6,
+      "downloads": "7433万+",
+      "price": "Free",
+      "change": "↓",
+      "change_value": 10
+    },
+    {
+      "rank": 11,
+      "name": "YouTube",
+      "category": "Games",
+      "rating": 4.5,
+      "downloads": "7767万+",
+      "price": "¥1921",
+      "change": "↓",
+      "change_value": -3
+    },
+    {
+      "rank": 12,
+      "name": "ポケモンGO",
+      "category": "Social",
+      "rating": 5.0,
+      "downloads": "9287万+",
+      "price": "Free",
+      "change": "→",
+      "change_value": -5
+    },
+    {
+      "rank": 13,
+      "name": "ドリームパズルウォーズ",
+      "category": "Productivity",
+      "rating": 4.9,
+      "downloads": "1292万+",
+      "price": "Free",
+      "change": "↑",
+      "change_value": -3
+    },
+    {
+      "rank": 14,
+      "name": "荒野行動",
+      "category": "Productivity",
+      "rating": 4.3,
+      "downloads": "2162万+",
+      "price": "¥2947",
+      "change": "↑",
+      "change_value": 14
+    },
+    {
+      "rank": 15,
+      "name": "FGO",
+      "category": "Finance",
+      "rating": 4.5,
+      "downloads": "4931万+",
+      "price": "Free",
+      "change": "→",
+      "change_value": 0
+    },
+    {
+      "rank": 16,
+      "name": "PUBG",
+      "category": "Productivity",
+      "rating": 3.8,
+      "downloads": "1648万+",
+      "price": "Free",
+      "change": "→",
+      "change_value": 13
+    },
+    {
+      "rank": 17,
+      "name": "ドリームアクションレジェンド",
+      "category": "Games",
+      "rating": 4.3,
+      "downloads": "4080万+",
+      "price": "Free",
+      "change": "↑",
+      "change_value": -5
+    },
+    {
+      "rank": 18,
+      "name": "YouTube",
+      "category": "Finance",
+      "rating": 4.2,
+      "downloads": "4898万+",
+      "price": "¥1736",
+      "change": "→",
+      "change_value": 6
+    },
+    {
+      "rank": 19,
+      "name": "FGO",
+      "category": "Entertainment",
+      "rating": 4.1,
+      "downloads": "7602万+",
+      "price": "¥2914",
+      "change": "↓",
+      "change_value": 0
+    },
+    {
+      "rank": 20,
+      "name": "TikTok",
+      "category": "Finance",
+      "rating": 4.5,
+      "downloads": "2261万+",
+      "price": "¥1066",
+      "change": "↓",
+      "change_value": 15
+    }
+  ],
+  "live_streaming": [
+    {
+      "rank": 1,
+      "name": "配信者171",
+      "platform": "YouTube Live",
+      "category": "料理",
+      "viewers": 47493,
+      "status": "LIVE",
+      "duration": "5時間24分",
+      "thumbnail": "stream_thumb_9.jpg",
+      "verified": false
+    },
+    {
+      "rank": 2,
+      "name": "配信者717",
+      "platform": "YouTube Live",
+      "category": "アート",
+      "viewers": 44013,
+      "status": "LIVE",
+      "duration": "1時間22分",
+      "thumbnail": "stream_thumb_2.jpg",
+      "verified": true
+    },
+    {
+      "rank": 3,
+      "name": "配信者953",
+      "platform": "ニコ生",
+      "category": "コラボ",
+      "viewers": 41254,
+      "status": "LIVE",
+      "duration": "3時間49分",
+      "thumbnail": "stream_thumb_6.jpg",
+      "verified": false
+    },
+    {
+      "rank": 4,
+      "name": "配信者974",
+      "platform": "ニコ生",
+      "category": "コラボ",
+      "viewers": 40684,
+      "status": "LIVE",
+      "duration": "1時間29分",
+      "thumbnail": "stream_thumb_10.jpg",
+      "verified": false
+    },
+    {
+      "rank": 5,
+      "name": "ひめTV",
+      "platform": "Twitch",
+      "category": "アート",
+      "viewers": 37228,
+      "status": "LIVE",
+      "duration": "2時間41分",
+      "thumbnail": "stream_thumb_7.jpg",
+      "verified": false
+    },
+    {
+      "rank": 6,
+      "name": "みくGaming",
+      "platform": "ツイキャス",
+      "category": "勉強",
+      "viewers": 30643,
+      "status": "LIVE",
+      "duration": "4時間33分",
+      "thumbnail": "stream_thumb_14.jpg",
+      "verified": false
+    },
+    {
+      "rank": 7,
+      "name": "配信者768",
+      "platform": "Twitch",
+      "category": "ASMR",
+      "viewers": 28548,
+      "status": "LIVE",
+      "duration": "8時間50分",
+      "thumbnail": "stream_thumb_5.jpg",
+      "verified": false
+    },
+    {
+      "rank": 8,
+      "name": "配信者145",
+      "platform": "ニコ生",
+      "category": "勉強",
+      "viewers": 27595,
+      "status": "LIVE",
+      "duration": "4時間50分",
+      "thumbnail": "stream_thumb_3.jpg",
+      "verified": false
+    },
+    {
+      "rank": 9,
+      "name": "配信者332",
+      "platform": "Twitch",
+      "category": "ASMR",
+      "viewers": 26439,
+      "status": "LIVE",
+      "duration": "3時間53分",
+      "thumbnail": "stream_thumb_12.jpg",
+      "verified": false
+    },
+    {
+      "rank": 10,
+      "name": "配信者419",
+      "platform": "ツイキャス",
+      "category": "ASMR",
+      "viewers": 22160,
+      "status": "LIVE",
+      "duration": "1時間44分",
+      "thumbnail": "stream_thumb_4.jpg",
+      "verified": true
+    },
+    {
+      "rank": 11,
+      "name": "配信者872",
+      "platform": "YouTube Live",
+      "category": "コラボ",
+      "viewers": 19979,
+      "status": "LIVE",
+      "duration": "4時間19分",
+      "thumbnail": "stream_thumb_13.jpg",
+      "verified": true
+    },
+    {
+      "rank": 12,
+      "name": "配信者238",
+      "platform": "ツイキャス",
+      "category": "ASMR",
+      "viewers": 18558,
+      "status": "LIVE",
+      "duration": "6時間30分",
+      "thumbnail": "stream_thumb_8.jpg",
+      "verified": false
+    },
+    {
+      "rank": 13,
+      "name": "配信者335",
+      "platform": "Twitch",
+      "category": "アート",
+      "viewers": 10986,
+      "status": "LIVE",
+      "duration": "1時間19分",
+      "thumbnail": "stream_thumb_1.jpg",
+      "verified": false
+    },
+    {
+      "rank": 14,
+      "name": "配信者669",
+      "platform": "ニコ生",
+      "category": "コラボ",
+      "viewers": 5626,
+      "status": "LIVE",
+      "duration": "5時間52分",
+      "thumbnail": "stream_thumb_15.jpg",
+      "verified": true
+    },
+    {
+      "rank": 15,
+      "name": "配信者156",
+      "platform": "YouTube Live",
+      "category": "コラボ",
+      "viewers": 1929,
+      "status": "LIVE",
+      "duration": "1時間17分",
+      "thumbnail": "stream_thumb_11.jpg",
+      "verified": false
+    }
+  ],
+  "sns_buzz": [
+    {
+      "rank": 1,
+      "keyword": "新機能",
+      "platform": "YouTube",
+      "buzz_type": "トレンド",
+      "mentions": 82465,
+      "growth_rate": "+1589%",
+      "related_tags": [
+        "#急上昇",
+        "#ゲーム",
+        "#拡散希望"
+      ],
+      "peak_time": "4時頃"
+    },
+    {
+      "rank": 2,
+      "keyword": "コラボ企画",
+      "platform": "YouTube",
+      "buzz_type": "話題",
+      "mentions": 123003,
+      "growth_rate": "+952%",
+      "related_tags": [
+        "#アニメ",
+        "#トレンド"
+      ],
+      "peak_time": "20時頃"
+    },
+    {
+      "rank": 3,
+      "keyword": "限定グッズ",
+      "platform": "YouTube",
+      "buzz_type": "トレンド",
+      "mentions": 385125,
+      "growth_rate": "+1024%",
+      "related_tags": [
+        "#配信",
+        "#トレンド"
+      ],
+      "peak_time": "14時頃"
+    },
+    {
+      "rank": 4,
+      "keyword": "新作アニメ",
+      "platform": "TikTok",
+      "buzz_type": "トレンド",
+      "mentions": 266092,
+      "growth_rate": "+167%",
+      "related_tags": [
+        "#バズり中",
+        "#話題"
+      ],
+      "peak_time": "3時頃"
+    },
+    {
+      "rank": 5,
+      "keyword": "サプライズ発表",
+      "platform": "TikTok",
+      "buzz_type": "トレンド",
+      "mentions": 51853,
+      "growth_rate": "+863%",
+      "related_tags": [
+        "#トレンド",
+        "#アニメ",
+        "#バズり中",
+        "#ゲーム"
+      ],
+      "peak_time": "13時頃"
+    },
+    {
+      "rank": 6,
+      "keyword": "新機能",
+      "platform": "Instagram",
+      "buzz_type": "バイラル",
+      "mentions": 65797,
+      "growth_rate": "+1666%",
+      "related_tags": [
+        "#エンタメ",
+        "#トレンド"
+      ],
+      "peak_time": "6時頃"
+    },
+    {
+      "rank": 7,
+      "keyword": "アップデート",
+      "platform": "Instagram",
+      "buzz_type": "話題",
+      "mentions": 8389,
+      "growth_rate": "+255%",
+      "related_tags": [
+        "#急上昇",
+        "#トレンド"
+      ],
+      "peak_time": "18時頃"
+    },
+    {
+      "rank": 8,
+      "keyword": "声優結婚",
+      "platform": "YouTube",
+      "buzz_type": "急上昇",
+      "mentions": 369530,
+      "growth_rate": "+225%",
+      "related_tags": [
+        "#アニメ",
+        "#話題",
+        "#配信",
+        "#拡散希望"
+      ],
+      "peak_time": "17時頃"
+    },
+    {
+      "rank": 9,
+      "keyword": "ゲーム配信",
+      "platform": "YouTube",
+      "buzz_type": "バズり中",
+      "mentions": 33392,
+      "growth_rate": "+443%",
+      "related_tags": [
+        "#バズり中",
+        "#話題",
+        "#拡散希望"
+      ],
+      "peak_time": "15時頃"
+    },
+    {
+      "rank": 10,
+      "keyword": "アップデート",
+      "platform": "YouTube",
+      "buzz_type": "トレンド",
+      "mentions": 432530,
+      "growth_rate": "+1896%",
+      "related_tags": [
+        "#エンタメ",
+        "#急上昇",
+        "#拡散希望"
+      ],
+      "peak_time": "23時頃"
+    }
+  ],
+  "crypto": [
+    {
+      "rank": 1,
+      "name": "Bitcoin (BTC)",
+      "symbol": "BTC",
+      "price": "¥49,611.66",
+      "change_24h": "+2.91%",
+      "volume_24h": "¥8692億",
+      "market_cap": "¥342兆",
+      "trend": "📈"
+    },
+    {
+      "rank": 2,
+      "name": "Ethereum (ETH)",
+      "symbol": "ETH",
+      "price": "¥36,813.43",
+      "change_24h": "-0.93%",
+      "volume_24h": "¥7762億",
+      "market_cap": "¥478兆",
+      "trend": "📉"
+    },
+    {
+      "rank": 3,
+      "name": "Cardano (ADA)",
+      "symbol": "ADA",
+      "price": "¥6,822.91",
+      "change_24h": "+18.96%",
+      "volume_24h": "¥2688億",
+      "market_cap": "¥480兆",
+      "trend": "🔥"
+    },
+    {
+      "rank": 4,
+      "name": "Solana (SOL)",
+      "symbol": "SOL",
+      "price": "¥27,338.36",
+      "change_24h": "+2.30%",
+      "volume_24h": "¥9643億",
+      "market_cap": "¥135兆",
+      "trend": "📈"
+    },
+    {
+      "rank": 5,
+      "name": "Dogecoin (DOGE)",
+      "symbol": "DOGE",
+      "price": "¥40,451.38",
+      "change_24h": "+6.86%",
+      "volume_24h": "¥7306億",
+      "market_cap": "¥317兆",
+      "trend": "📈"
+    },
+    {
+      "rank": 6,
+      "name": "Shiba Inu (SHIB)",
+      "symbol": "SHIB",
+      "price": "¥47,057.46",
+      "change_24h": "-6.40%",
+      "volume_24h": "¥4147億",
+      "market_cap": "¥108兆",
+      "trend": "📉"
+    },
+    {
+      "rank": 7,
+      "name": "Polygon (MATIC)",
+      "symbol": "MATIC",
+      "price": "¥36,629.92",
+      "change_24h": "+4.72%",
+      "volume_24h": "¥5504億",
+      "market_cap": "¥346兆",
+      "trend": "📈"
+    },
+    {
+      "rank": 8,
+      "name": "Chainlink (LINK)",
+      "symbol": "LINK",
+      "price": "¥37,311.23",
+      "change_24h": "-11.60%",
+      "volume_24h": "¥9402億",
+      "market_cap": "¥497兆",
+      "trend": "📉"
+    },
+    {
+      "rank": 9,
+      "name": "Avalanche (AVAX)",
+      "symbol": "AVAX",
+      "price": "¥4,897.13",
+      "change_24h": "+6.34%",
+      "volume_24h": "¥3200億",
+      "market_cap": "¥323兆",
+      "trend": "📈"
+    },
+    {
+      "rank": 10,
+      "name": "Polkadot (DOT)",
+      "symbol": "DOT",
+      "price": "¥6,729.54",
+      "change_24h": "+11.64%",
+      "volume_24h": "¥9722億",
+      "market_cap": "¥132兆",
+      "trend": "🔥"
+    }
+  ],
+  "youtube_trending": [
+    {
+      "rank": 1,
+      "title": "【解説】今話題のニュースを詳しく分析",
+      "channel": "テクノロジー解説",
+      "category": "ニュース",
+      "views": "365万回",
+      "upload_time": "6時間前",
+      "duration": "7:57",
+      "likes": "27万",
+      "comments": "9820件"
+    },
+    {
+      "rank": 2,
+      "title": "【コラボ】人気VTuberと初共演してみた！",
+      "channel": "スポーツ情報",
+      "category": "ニュース",
+      "views": "545万回",
+      "upload_time": "5時間前",
+      "duration": "10:21",
+      "likes": "36万",
+      "comments": "9025件"
+    },
+    {
+      "rank": 3,
+      "title": "【歌ってみた】話題の楽曲をカバー",
+      "channel": "ファッション情報",
+      "category": "ゲーム",
+      "views": "371万回",
+      "upload_time": "10時間前",
+      "duration": "6:40",
+      "likes": "47万",
+      "comments": "3039件"
+    },
+    {
+      "rank": 4,
+      "title": "【実況】新作ゲームを初見プレイ！",
+      "channel": "ゲーム実況チャンネル",
+      "category": "テクノロジー",
+      "views": "585万回",
+      "upload_time": "10時間前",
+      "duration": "3:59",
+      "likes": "34万",
+      "comments": "402件"
+    },
+    {
+      "rank": 5,
+      "title": "【解説】今話題のニュースを詳しく分析",
+      "channel": "ファッション情報",
+      "category": "音楽",
+      "views": "496万回",
+      "upload_time": "12時間前",
+      "duration": "28:47",
+      "likes": "33万",
+      "comments": "171件"
+    },
+    {
+      "rank": 6,
+      "title": "【歌ってみた】話題の楽曲をカバー",
+      "channel": "スポーツ情報",
+      "category": "テクノロジー",
+      "views": "635万回",
+      "upload_time": "6時間前",
+      "duration": "13:40",
+      "likes": "37万",
+      "comments": "5532件"
+    },
+    {
+      "rank": 7,
+      "title": "【コラボ】人気VTuberと初共演してみた！",
+      "channel": "ライフスタイル",
+      "category": "ニュース",
+      "views": "180万回",
+      "upload_time": "12時間前",
+      "duration": "15:57",
+      "likes": "36万",
+      "comments": "7664件"
+    },
+    {
+      "rank": 8,
+      "title": "【衝撃】新作ゲームをプレイしてみた結果www",
+      "channel": "ゲーム実況チャンネル",
+      "category": "エンタメ",
+      "views": "395万回",
+      "upload_time": "14時間前",
+      "duration": "1:55",
+      "likes": "16万",
+      "comments": "1679件"
+    },
+    {
+      "rank": 9,
+      "title": "【速報】あの人気配信者の正体が判明！？",
+      "channel": "ライフスタイル",
+      "category": "音楽",
+      "views": "507万回",
+      "upload_time": "8時間前",
+      "duration": "16:24",
+      "likes": "10万",
+      "comments": "9064件"
+    },
+    {
+      "rank": 10,
+      "title": "【コラボ】人気VTuberと初共演してみた！",
+      "channel": "アニメ解説ch",
+      "category": "音楽",
+      "views": "30万回",
+      "upload_time": "22時間前",
+      "duration": "14:22",
+      "likes": "16万",
+      "comments": "7337件"
+    }
+  ],
+  "last_updated": "2025-06-06T20:44:44.326512+00:00"
+}
